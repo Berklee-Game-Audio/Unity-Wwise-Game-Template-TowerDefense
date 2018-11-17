@@ -1,0 +1,50 @@
+Event	ID	Name			Wwise Object Path	Notes
+	184505919	game_levelLose			\Default Work Unit\game_levelLose	
+	636067499	game_menu			\Default Work Unit\game_menu	
+	733168346	game_start			\Default Work Unit\game_start	
+	848228196	ui_optionsSelectButton			\Default Work Unit\ui_optionsSelectButton	
+	1013525255	ui_levelSelectButtonPart2			\Default Work Unit\ui_levelSelectButtonPart2	
+	1593593619	ui_backButton			\Default Work Unit\ui_backButton	
+	1688641372	ui_objectAttackSound			\Default Work Unit\ui_objectAttackSound	
+	1726823933	ui_startWaveButton			\Default Work Unit\ui_startWaveButton	
+	1843602067	ui_objectSellButton			\Default Work Unit\ui_objectSellButton	
+	2611829248	ui_objectChargeSound			\Default Work Unit\ui_objectChargeSound	
+	2671938355	ui_quitSelectButton			\Default Work Unit\ui_quitSelectButton	
+	2799761671	ui_objectDeath			\Default Work Unit\ui_objectDeath	
+	3058981574	game_levelWin			\Default Work Unit\game_levelWin	
+	3377525770	ui_objectFireProjectile			\Default Work Unit\ui_objectFireProjectile	
+	3680374304	ui_levelSelectButton			\Default Work Unit\ui_levelSelectButton	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	165186924	MG 11	Y:\Desktop\Unity-Tower-Defense-Game-Kit\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Mac\SFX\MG 11_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\ui_objectAttack_MG\MG 11		16604
+	196701407	Destruction 4	Y:\Desktop\Unity-Tower-Defense-Game-Kit\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Mac\SFX\Destruction 4_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\ui_objectDeath\Destruction 4		352864
+	225556179	game_menu	Y:\Desktop\Unity-Tower-Defense-Game-Kit\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Mac\SFX\game_menu_8956FC97.wem		\Interactive Music Hierarchy\Default Work Unit\game_menu\game_menu		181584
+	294585128	ui_objectSellButton	Y:\Desktop\Unity-Tower-Defense-Game-Kit\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Mac\SFX\ui_objectSellButton_8956FC97.wem		\Interactive Music Hierarchy\Default Work Unit\ui_objectSellButton\ui_objectSellButton		364788
+	302777284	Destruction 1	Y:\Desktop\Unity-Tower-Defense-Game-Kit\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Mac\SFX\Destruction 1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\ui_objectDeath\Destruction 1		352864
+	309364037	MG 8	Y:\Desktop\Unity-Tower-Defense-Game-Kit\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Mac\SFX\MG 8_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\ui_objectAttack_MG\MG 8		17104
+	311042904	MG 12	Y:\Desktop\Unity-Tower-Defense-Game-Kit\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Mac\SFX\MG 12_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\ui_objectAttack_MG\MG 12		17844
+	345793350	MG 1	Y:\Desktop\Unity-Tower-Defense-Game-Kit\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Mac\SFX\MG 1_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\ui_objectAttack_MG\MG 1		15364
+	431152931	ui_startWaveButton	Y:\Desktop\Unity-Tower-Defense-Game-Kit\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Mac\SFX\ui_startWaveButton_8956FC97.wem		\Interactive Music Hierarchy\Default Work Unit\ui_startWaveButton\ui_startWaveButton		369032
+	441549464	game_levelWin	Y:\Desktop\Unity-Tower-Defense-Game-Kit\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Mac\SFX\game_levelWin_8956FC97.wem		\Interactive Music Hierarchy\Default Work Unit\game_levelWin\game_levelWin		246452
+	444913882	ui_backButton	Y:\Desktop\Unity-Tower-Defense-Game-Kit\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Mac\SFX\ui_backButton_8956FC97.wem		\Interactive Music Hierarchy\Default Work Unit\ui_backButton\ui_backButton		295424
+	470210217	ui_optionsSelectButton	Y:\Desktop\Unity-Tower-Defense-Game-Kit\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Mac\SFX\ui_optionsSelectButton_8956FC97.wem		\Interactive Music Hierarchy\Default Work Unit\ui_optionsSelectButton\ui_optionsSelectButton		419244
+	539877189	game_levelLose	Y:\Desktop\Unity-Tower-Defense-Game-Kit\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Mac\SFX\game_levelLose_8956FC97.wem		\Interactive Music Hierarchy\Default Work Unit\game_levelLose\game_levelLose		219300
+	541990930	MG 10	Y:\Desktop\Unity-Tower-Defense-Game-Kit\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Mac\SFX\MG 10_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\ui_objectAttack_MG\MG 10		16604
+	568618962	MG 6	Y:\Desktop\Unity-Tower-Defense-Game-Kit\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Mac\SFX\MG 6_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\ui_objectAttack_MG\MG 6		16544
+	584648914	MG 9	Y:\Desktop\Unity-Tower-Defense-Game-Kit\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Mac\SFX\MG 9_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\ui_objectAttack_MG\MG 9		17136
+	597527391	MG 3	Y:\Desktop\Unity-Tower-Defense-Game-Kit\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Mac\SFX\MG 3_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\ui_objectAttack_MG\MG 3		16040
+	616328867	game_start	Y:\Desktop\Unity-Tower-Defense-Game-Kit\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Mac\SFX\game_start_8956FC97.wem		\Interactive Music Hierarchy\Default Work Unit\game_start\game_start		172472
+	640446327	ui_levelSelectButton	Y:\Desktop\Unity-Tower-Defense-Game-Kit\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Mac\SFX\ui_levelSelectButton_8956FC97.wem		\Interactive Music Hierarchy\Default Work Unit\ui_levelSelectButton\ui_levelSelectButton		333272
+	684435947	Destruction 5	Y:\Desktop\Unity-Tower-Defense-Game-Kit\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Mac\SFX\Destruction 5_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\ui_objectDeath\Destruction 5		352864
+	697881925	ui_quitSelectButton	Y:\Desktop\Unity-Tower-Defense-Game-Kit\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Mac\SFX\ui_quitSelectButton_8956FC97.wem		\Interactive Music Hierarchy\Default Work Unit\ui_quitSelectButton\ui_quitSelectButton		393992
+	708128615	MG 7	Y:\Desktop\Unity-Tower-Defense-Game-Kit\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Mac\SFX\MG 7_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\ui_objectAttack_MG\MG 7		14688
+	745947002	MG 5	Y:\Desktop\Unity-Tower-Defense-Game-Kit\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Mac\SFX\MG 5_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\ui_objectAttack_MG\MG 5		15532
+	757382845	MG 2	Y:\Desktop\Unity-Tower-Defense-Game-Kit\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Mac\SFX\MG 2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\ui_objectAttack_MG\MG 2		16208
+	766273231	Destruction 3	Y:\Desktop\Unity-Tower-Defense-Game-Kit\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Mac\SFX\Destruction 3_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\ui_objectDeath\Destruction 3		352864
+	852595168	ui_objectFireProjectile	Y:\Desktop\Unity-Tower-Defense-Game-Kit\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Mac\SFX\ui_objectFireProjectile_8956FC97.wem		\Interactive Music Hierarchy\Default Work Unit\ui_objectFireProjectile\ui_objectFireProjectile		432332
+	867584577	MG 13	Y:\Desktop\Unity-Tower-Defense-Game-Kit\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Mac\SFX\MG 13_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\ui_objectAttack_MG\MG 13		16900
+	878495983	Destruction 2	Y:\Desktop\Unity-Tower-Defense-Game-Kit\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Mac\SFX\Destruction 2_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\ui_objectDeath\Destruction 2		352864
+	900756079	MG 4	Y:\Desktop\Unity-Tower-Defense-Game-Kit\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Mac\SFX\MG 4_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\ui_objectAttack_MG\MG 4		15532
+	922593991	ui_levelSelectButtonPart2	Y:\Desktop\Unity-Tower-Defense-Game-Kit\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Mac\SFX\ui_levelSelectButtonPart2_8956FC97.wem		\Interactive Music Hierarchy\Default Work Unit\ui_levelSelectButtonPart2\ui_levelSelectButtonPart2		535324
+	1068159164	MG 14	Y:\Desktop\Unity-Tower-Defense-Game-Kit\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Mac\SFX\MG 14_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\ui_objectAttack_MG\MG 14		16604
+

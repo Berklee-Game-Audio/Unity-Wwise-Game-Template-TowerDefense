@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{BE8C3F26-B972-44E9-A058-FB361623A058}" SchemaVersion="89">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{BE8C3F26-B972-44E9-A058-FB361623A058}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Tower_Defense_Soundbank" ID="{7A826CA3-74EF-4C2B-9FB8-CB366A257945}">
+					<ObjectInclusionList>
+						<ObjectRef Name="ui_objectFireProjectile" ID="{E4FD8637-B8E9-426A-93FF-5B2259EA1688}" WorkUnitID="{565D4456-153C-4E4B-882F-E17408A9A089}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="game_levelWin" ID="{5F8AC8E9-32C9-42B6-AFBB-D682E4559DDB}" WorkUnitID="{565D4456-153C-4E4B-882F-E17408A9A089}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="ui_levelSelectButton" ID="{0E8F09F0-3052-42DA-8C13-0727FE0D98EF}" WorkUnitID="{565D4456-153C-4E4B-882F-E17408A9A089}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="game_levelLose" ID="{2C8CC40E-9744-4305-A12F-94397EA818B7}" WorkUnitID="{565D4456-153C-4E4B-882F-E17408A9A089}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="ui_backButton" ID="{68E80C2E-B824-439D-95F1-FEB4D1539B1C}" WorkUnitID="{565D4456-153C-4E4B-882F-E17408A9A089}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="ui_startWaveButton" ID="{DF7BB5AB-C5C8-44EA-B34F-79EABB0AD296}" WorkUnitID="{565D4456-153C-4E4B-882F-E17408A9A089}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="ui_quitSelectButton" ID="{CDE5F305-5670-4780-9232-F63DE342B872}" WorkUnitID="{565D4456-153C-4E4B-882F-E17408A9A089}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="game_menu" ID="{1F743B94-0F81-47B3-8597-AE224125EF87}" WorkUnitID="{565D4456-153C-4E4B-882F-E17408A9A089}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="ui_levelSelectButtonPart2" ID="{B9220A16-24FC-4952-A9BD-68835BEB8707}" WorkUnitID="{565D4456-153C-4E4B-882F-E17408A9A089}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="ui_objectChargeSound" ID="{99484D31-D9F6-49BC-9C4E-F5A765500BAB}" WorkUnitID="{565D4456-153C-4E4B-882F-E17408A9A089}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="game_start" ID="{8D47A50D-66E9-4B3A-AF85-A548F3059AEE}" WorkUnitID="{565D4456-153C-4E4B-882F-E17408A9A089}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="ui_objectDeath" ID="{D7055216-5446-4B43-BC85-1C45BB221B2A}" WorkUnitID="{565D4456-153C-4E4B-882F-E17408A9A089}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="ui_objectSellButton" ID="{5433DF77-553B-4CE4-8CA3-780845A52BAA}" WorkUnitID="{565D4456-153C-4E4B-882F-E17408A9A089}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="ui_optionsSelectButton" ID="{5863656A-9CC8-4D34-B7F7-A3385FDE0BBD}" WorkUnitID="{565D4456-153C-4E4B-882F-E17408A9A089}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="ui_objectAttackSound" ID="{F631F2D6-669C-4ED9-BDAD-1D1086C274FF}" WorkUnitID="{565D4456-153C-4E4B-882F-E17408A9A089}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>
