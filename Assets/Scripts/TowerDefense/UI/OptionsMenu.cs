@@ -36,8 +36,8 @@ namespace TowerDefense.UI
 		{
 			if (GameManager.instanceExists)
 			{
-                WWiseEventPlayer myEventPlayer = gameObject.AddComponent(typeof(WWiseEventPlayer)) as WWiseEventPlayer;
-                myEventPlayer.PlayWwiseEvent("ui_optionsSelectButton"); 
+                //WWiseEventPlayer myEventPlayer = gameObject.AddComponent(typeof(WWiseEventPlayer)) as WWiseEventPlayer;
+                //myEventPlayer.PlayWwiseEvent("ui_optionsSelectButton"); 
 
                 float master, sfx, music;
 				GameManager.instance.GetVolumes(out master, out sfx, out music);

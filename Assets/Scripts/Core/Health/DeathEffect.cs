@@ -64,8 +64,8 @@ namespace Core.Health
 				return;
 			}
 
-            WWiseEventPlayer myEventPlayer = gameObject.AddComponent(typeof(WWiseEventPlayer)) as WWiseEventPlayer;
-            myEventPlayer.PlayWwiseEvent("ui_objectDeath");
+            //WWiseEventPlayer myEventPlayer = gameObject.AddComponent(typeof(WWiseEventPlayer)) as WWiseEventPlayer;
+            //myEventPlayer.PlayWwiseEvent("ui_objectDeath");
 
             var pfx = Poolable.TryGetPoolable<ParticleSystem>(deathParticleSystemPrefab.gameObject);
 			pfx.transform.position = transform.position + deathEffectOffset;

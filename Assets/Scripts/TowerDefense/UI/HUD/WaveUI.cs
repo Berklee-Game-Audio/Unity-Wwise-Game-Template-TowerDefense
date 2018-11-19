@@ -46,9 +46,15 @@ namespace TowerDefense.UI.HUD
 			int currentWave = LevelManager.instance.waveManager.waveNumber;
 			string output = string.Format("{0}/{1}", currentWave, m_TotalWaves);
 			display.text = output;
-		}
+            WWiseEventPlayer myEventPlayer = gameObject.AddComponent(typeof(WWiseEventPlayer)) as WWiseEventPlayer;
+            myEventPlayer.PlayWwiseEvent("ui_newWave");
 
-		protected virtual void Update()
+            //WwiseSendParameter mySendParameter = gameObject.AddComponent(typeof(WwiseSendParameter)) as WwiseSendParameter;
+            //mySendParameter.SendWwiseParameter("waveNumberXXX", currentWave);
+
+        }
+
+        protected virtual void Update()
 		{
 			waveFillImage.fillAmount = LevelManager.instance.waveManager.waveProgress;
 		}

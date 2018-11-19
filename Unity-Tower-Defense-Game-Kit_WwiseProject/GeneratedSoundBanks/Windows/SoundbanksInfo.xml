@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="132">
 	<RootPaths>
-		<ProjectRoot>/Users/msweet/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/y:/Desktop/Unity-Tower-Defense-Game-Kit/Unity-Tower-Defense-Game-Kit_WwiseProject/</ProjectRoot>
-		<SourceFilesRoot>/Users/msweet/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/y:/Desktop/Unity-Tower-Defense-Game-Kit/Unity-Tower-Defense-Game-Kit_WwiseProject/.cache/Windows/</SourceFilesRoot>
-		<SoundBanksRoot>/Users/msweet/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/y:/Desktop/Unity-Tower-Defense-Game-Kit/Unity-Tower-Defense-Game-Kit_WwiseProject/GeneratedSoundBanks/Windows/</SoundBanksRoot>
+		<ProjectRoot>/Users/msweet/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/y:/Desktop/Work/Berklee/GIT/Unity-Wwise-Game-Template-TowerDefense/Unity-Tower-Defense-Game-Kit_WwiseProject/</ProjectRoot>
+		<SourceFilesRoot>/Users/msweet/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/y:/Desktop/Work/Berklee/GIT/Unity-Wwise-Game-Template-TowerDefense/Unity-Tower-Defense-Game-Kit_WwiseProject/.cache/Windows/</SourceFilesRoot>
+		<SoundBanksRoot>/Users/msweet/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/y:/Desktop/Work/Berklee/GIT/Unity-Wwise-Game-Template-TowerDefense/Unity-Tower-Defense-Game-Kit_WwiseProject/GeneratedSoundBanks/Windows/</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>/Users/msweet/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/y:/Desktop/Unity-Tower-Defense-Game-Kit/Unity-Tower-Defense-Game-Kit_WwiseProject/GeneratedSoundBanks/Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>/Users/msweet/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/y:/Desktop/Work/Berklee/GIT/Unity-Wwise-Game-Template-TowerDefense/Unity-Tower-Defense-Game-Kit_WwiseProject/GeneratedSoundBanks/Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -25,142 +25,84 @@
 				<Event Id="3058981574" Name="game_levelWin" ObjectPath="\Events\Default Work Unit\game_levelWin"/>
 				<Event Id="636067499" Name="game_menu" ObjectPath="\Events\Default Work Unit\game_menu"/>
 				<Event Id="733168346" Name="game_start" ObjectPath="\Events\Default Work Unit\game_start"/>
-				<Event Id="1593593619" Name="ui_backButton" ObjectPath="\Events\Default Work Unit\ui_backButton"/>
 				<Event Id="3680374304" Name="ui_levelSelectButton" ObjectPath="\Events\Default Work Unit\ui_levelSelectButton"/>
 				<Event Id="1013525255" Name="ui_levelSelectButtonPart2" ObjectPath="\Events\Default Work Unit\ui_levelSelectButtonPart2"/>
-				<Event Id="1688641372" Name="ui_objectAttackSound" ObjectPath="\Events\Default Work Unit\ui_objectAttackSound"/>
-				<Event Id="2611829248" Name="ui_objectChargeSound" ObjectPath="\Events\Default Work Unit\ui_objectChargeSound"/>
-				<Event Id="2799761671" Name="ui_objectDeath" ObjectPath="\Events\Default Work Unit\ui_objectDeath"/>
-				<Event Id="3377525770" Name="ui_objectFireProjectile" ObjectPath="\Events\Default Work Unit\ui_objectFireProjectile"/>
-				<Event Id="1843602067" Name="ui_objectSellButton" ObjectPath="\Events\Default Work Unit\ui_objectSellButton"/>
-				<Event Id="848228196" Name="ui_optionsSelectButton" ObjectPath="\Events\Default Work Unit\ui_optionsSelectButton"/>
-				<Event Id="2671938355" Name="ui_quitSelectButton" ObjectPath="\Events\Default Work Unit\ui_quitSelectButton"/>
-				<Event Id="1726823933" Name="ui_startWaveButton" ObjectPath="\Events\Default Work Unit\ui_startWaveButton"/>
+				<Event Id="1043510291" Name="ui_newWave" ObjectPath="\Events\Default Work Unit\ui_newWave"/>
+				<Event Id="1726823933" Name="ui_startWaveButton" ObjectPath="\Events\Default Work Unit\ui_startWaveButton" MaxAttenuation="0.000000"/>
+				<Event Id="170582342" Name="ui_testEvent" ObjectPath="\Events\Default Work Unit\ui_testEvent"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
-				<File Id="165186924" Language="SFX">
-					<ShortName>MG 11.wav</ShortName>
-					<Path>SFX/MG 11_56D34C19.wem</Path>
+				<File Id="127898900" Language="SFX">
+					<ShortName>music_intensity_07.wav</ShortName>
+					<Path>SFX/music_intensity_07_8956FC97.wem</Path>
 				</File>
-				<File Id="196701407" Language="SFX">
-					<ShortName>Destruction 4.wav</ShortName>
-					<Path>SFX/Destruction 4_56D34C19.wem</Path>
+				<File Id="180042438" Language="SFX">
+					<ShortName>ui_newWave.wav</ShortName>
+					<Path>SFX/ui_newWave_8956FC97.wem</Path>
+				</File>
+				<File Id="204201443" Language="SFX">
+					<ShortName>music_intensity_05.wav</ShortName>
+					<Path>SFX/music_intensity_05_8956FC97.wem</Path>
 				</File>
 				<File Id="225556179" Language="SFX">
 					<ShortName>game_menu.wav</ShortName>
 					<Path>SFX/game_menu_8956FC97.wem</Path>
 				</File>
-				<File Id="294585128" Language="SFX">
-					<ShortName>ui_objectSellButton.wav</ShortName>
-					<Path>SFX/ui_objectSellButton_8956FC97.wem</Path>
-				</File>
-				<File Id="302777284" Language="SFX">
-					<ShortName>Destruction 1.wav</ShortName>
-					<Path>SFX/Destruction 1_56D34C19.wem</Path>
-				</File>
-				<File Id="309364037" Language="SFX">
-					<ShortName>MG 8.wav</ShortName>
-					<Path>SFX/MG 8_56D34C19.wem</Path>
-				</File>
-				<File Id="311042904" Language="SFX">
-					<ShortName>MG 12.wav</ShortName>
-					<Path>SFX/MG 12_56D34C19.wem</Path>
-				</File>
-				<File Id="345793350" Language="SFX">
-					<ShortName>MG 1.wav</ShortName>
-					<Path>SFX/MG 1_56D34C19.wem</Path>
-				</File>
-				<File Id="431152931" Language="SFX">
-					<ShortName>ui_startWaveButton.wav</ShortName>
-					<Path>SFX/ui_startWaveButton_8956FC97.wem</Path>
-				</File>
 				<File Id="441549464" Language="SFX">
 					<ShortName>game_levelWin.wav</ShortName>
 					<Path>SFX/game_levelWin_8956FC97.wem</Path>
 				</File>
-				<File Id="444913882" Language="SFX">
-					<ShortName>ui_backButton.wav</ShortName>
-					<Path>SFX/ui_backButton_8956FC97.wem</Path>
-				</File>
-				<File Id="470210217" Language="SFX">
-					<ShortName>ui_optionsSelectButton.wav</ShortName>
-					<Path>SFX/ui_optionsSelectButton_8956FC97.wem</Path>
+				<File Id="510824865" Language="SFX">
+					<ShortName>music_intensity_04.wav</ShortName>
+					<Path>SFX/music_intensity_04_8956FC97.wem</Path>
 				</File>
 				<File Id="539877189" Language="SFX">
 					<ShortName>game_levelLose.wav</ShortName>
 					<Path>SFX/game_levelLose_8956FC97.wem</Path>
 				</File>
-				<File Id="541990930" Language="SFX">
-					<ShortName>MG 10.wav</ShortName>
-					<Path>SFX/MG 10_56D34C19.wem</Path>
+				<File Id="551719863" Language="SFX">
+					<ShortName>music_intensity_00.wav</ShortName>
+					<Path>SFX/music_intensity_00_8956FC97.wem</Path>
 				</File>
-				<File Id="568618962" Language="SFX">
-					<ShortName>MG 6.wav</ShortName>
-					<Path>SFX/MG 6_56D34C19.wem</Path>
+				<File Id="565049497" Language="SFX">
+					<ShortName>music_intensity_09.wav</ShortName>
+					<Path>SFX/music_intensity_09_8956FC97.wem</Path>
 				</File>
-				<File Id="584648914" Language="SFX">
-					<ShortName>MG 9.wav</ShortName>
-					<Path>SFX/MG 9_56D34C19.wem</Path>
-				</File>
-				<File Id="597527391" Language="SFX">
-					<ShortName>MG 3.wav</ShortName>
-					<Path>SFX/MG 3_56D34C19.wem</Path>
-				</File>
-				<File Id="616328867" Language="SFX">
-					<ShortName>game_start.wav</ShortName>
-					<Path>SFX/game_start_8956FC97.wem</Path>
+				<File Id="607032336" Language="SFX">
+					<ShortName>music_intensity_10.wav</ShortName>
+					<Path>SFX/music_intensity_10_8956FC97.wem</Path>
 				</File>
 				<File Id="640446327" Language="SFX">
 					<ShortName>ui_levelSelectButton.wav</ShortName>
 					<Path>SFX/ui_levelSelectButton_8956FC97.wem</Path>
 				</File>
-				<File Id="684435947" Language="SFX">
-					<ShortName>Destruction 5.wav</ShortName>
-					<Path>SFX/Destruction 5_56D34C19.wem</Path>
+				<File Id="692081263" Language="SFX">
+					<ShortName>ui_testEvent.wav</ShortName>
+					<Path>SFX/ui_testEvent_8956FC97.wem</Path>
 				</File>
-				<File Id="697881925" Language="SFX">
-					<ShortName>ui_quitSelectButton.wav</ShortName>
-					<Path>SFX/ui_quitSelectButton_8956FC97.wem</Path>
+				<File Id="694574826" Language="SFX">
+					<ShortName>music_intensity_01.wav</ShortName>
+					<Path>SFX/music_intensity_01_8956FC97.wem</Path>
 				</File>
-				<File Id="708128615" Language="SFX">
-					<ShortName>MG 7.wav</ShortName>
-					<Path>SFX/MG 7_56D34C19.wem</Path>
+				<File Id="722576986" Language="SFX">
+					<ShortName>music_intensity_08.wav</ShortName>
+					<Path>SFX/music_intensity_08_8956FC97.wem</Path>
 				</File>
-				<File Id="745947002" Language="SFX">
-					<ShortName>MG 5.wav</ShortName>
-					<Path>SFX/MG 5_56D34C19.wem</Path>
+				<File Id="792939503" Language="SFX">
+					<ShortName>music_intensity_06.wav</ShortName>
+					<Path>SFX/music_intensity_06_8956FC97.wem</Path>
 				</File>
-				<File Id="757382845" Language="SFX">
-					<ShortName>MG 2.wav</ShortName>
-					<Path>SFX/MG 2_56D34C19.wem</Path>
+				<File Id="794319706" Language="SFX">
+					<ShortName>music_intensity_02.wav</ShortName>
+					<Path>SFX/music_intensity_02_8956FC97.wem</Path>
 				</File>
-				<File Id="766273231" Language="SFX">
-					<ShortName>Destruction 3.wav</ShortName>
-					<Path>SFX/Destruction 3_56D34C19.wem</Path>
-				</File>
-				<File Id="852595168" Language="SFX">
-					<ShortName>ui_objectFireProjectile.wav</ShortName>
-					<Path>SFX/ui_objectFireProjectile_8956FC97.wem</Path>
-				</File>
-				<File Id="867584577" Language="SFX">
-					<ShortName>MG 13.wav</ShortName>
-					<Path>SFX/MG 13_56D34C19.wem</Path>
-				</File>
-				<File Id="878495983" Language="SFX">
-					<ShortName>Destruction 2.wav</ShortName>
-					<Path>SFX/Destruction 2_56D34C19.wem</Path>
-				</File>
-				<File Id="900756079" Language="SFX">
-					<ShortName>MG 4.wav</ShortName>
-					<Path>SFX/MG 4_56D34C19.wem</Path>
+				<File Id="911006166" Language="SFX">
+					<ShortName>music_intensity_03.wav</ShortName>
+					<Path>SFX/music_intensity_03_8956FC97.wem</Path>
 				</File>
 				<File Id="922593991" Language="SFX">
 					<ShortName>ui_levelSelectButtonPart2.wav</ShortName>
 					<Path>SFX/ui_levelSelectButtonPart2_8956FC97.wem</Path>
-				</File>
-				<File Id="1068159164" Language="SFX">
-					<ShortName>MG 14.wav</ShortName>
-					<Path>SFX/MG 14_56D34C19.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

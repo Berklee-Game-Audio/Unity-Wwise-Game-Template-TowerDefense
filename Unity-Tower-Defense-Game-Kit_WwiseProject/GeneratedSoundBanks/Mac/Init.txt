@@ -1,3 +1,29 @@
+Switch Group	ID	Name			Wwise Object Path	Notes
+	1353422267	level_intensity			\Default Work Unit\level_intensity	
+
+Switch	ID	Name	Switch Group			Notes
+	548264446	wave_10	level_intensity			
+	1453692850	wave_9	level_intensity			
+	1453692851	wave_8	level_intensity			
+	1453692856	wave_3	level_intensity			
+	1453692857	wave_2	level_intensity			
+	1453692858	wave_1	level_intensity			
+	1453692859	wave_0	level_intensity			
+	1453692860	wave_7	level_intensity			
+	1453692861	wave_6	level_intensity			
+	1453692862	wave_5	level_intensity			
+	1453692863	wave_4	level_intensity			
+
+State Group	ID	Name			Wwise Object Path	Notes
+	766723505	game_state			\Default Work Unit\game_state	
+
+State	ID	Name	State Group			Notes
+	0	None	game_state			
+	89505537	gameplay	game_state			
+	221232726	lose	game_state			
+	979765101	win	game_state			
+	2607556080	menu	game_state			
+
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 

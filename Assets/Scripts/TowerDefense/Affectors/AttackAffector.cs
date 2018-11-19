@@ -230,9 +230,9 @@ namespace TowerDefense.Affectors
 			}
 			if (randomAudioSource != null)
 			{
-				//randomAudioSource.PlayRandomClip();
-                WWiseEventPlayer myEventPlayer = gameObject.AddComponent(typeof(WWiseEventPlayer)) as WWiseEventPlayer;
-                myEventPlayer.PlayWwiseEvent("ui_objectFireProjectile");
+				randomAudioSource.PlayRandomClip();
+                //WWiseEventPlayer myEventPlayer = gameObject.AddComponent(typeof(WWiseEventPlayer)) as WWiseEventPlayer;
+                //myEventPlayer.PlayWwiseEvent("ui_objectFireProjectile");
             }
 		}
 

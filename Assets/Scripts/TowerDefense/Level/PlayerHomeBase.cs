@@ -63,9 +63,9 @@ namespace TowerDefense.Level
 			}
 			if (attackSound != null)
 			{
-				//attackSound.PlayRandomClip();
-                WWiseEventPlayer myEventPlayer = gameObject.AddComponent(typeof(WWiseEventPlayer)) as WWiseEventPlayer;
-                myEventPlayer.PlayWwiseEvent("ui_objectAttackSound");
+				attackSound.PlayRandomClip();
+                //WWiseEventPlayer myEventPlayer = gameObject.AddComponent(typeof(WWiseEventPlayer)) as WWiseEventPlayer;
+                //myEventPlayer.PlayWwiseEvent("ui_objectAttackSound");
 
             }
 		}
@@ -90,9 +90,9 @@ namespace TowerDefense.Level
 			}
 			if (chargeSound != null)
 			{
-				//chargeSound.PlayRandomClip();
-                WWiseEventPlayer myEventPlayer = gameObject.AddComponent(typeof(WWiseEventPlayer)) as WWiseEventPlayer;
-                myEventPlayer.PlayWwiseEvent("ui_objectChargeSound");
+				chargeSound.PlayRandomClip();
+                //WWiseEventPlayer myEventPlayer = gameObject.AddComponent(typeof(WWiseEventPlayer)) as WWiseEventPlayer;
+                //myEventPlayer.PlayWwiseEvent("ui_objectChargeSound");
             }
 		}
 		
