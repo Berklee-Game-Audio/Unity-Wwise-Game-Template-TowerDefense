@@ -8,17 +8,17 @@
 						<Property Name="UseGameParameter" Type="bool" Value="True"/>
 					</PropertyList>
 					<ChildrenList>
-						<Switch Name="wave_1" ID="{76AF580D-B54A-4579-B81C-B3066D198544}"/>
-						<Switch Name="wave_2" ID="{E34C24A5-F8F2-4ED8-8E6E-4A1301AF34C7}"/>
-						<Switch Name="wave_3" ID="{28BE6007-7268-4798-84C8-12631D20187C}"/>
-						<Switch Name="wave_4" ID="{009D0020-B11E-48E2-AB6E-126DD70DDBB4}"/>
-						<Switch Name="wave_5" ID="{87F5EB82-8E8D-4A91-B46C-E38D6F626EA1}"/>
-						<Switch Name="wave_6" ID="{10469BB9-B447-477F-8222-C3D67AE318AD}"/>
-						<Switch Name="wave_7" ID="{CB215E0A-A9BF-4191-971A-B41108B5E6DE}"/>
-						<Switch Name="wave_8" ID="{2EE3E120-61C4-4ECB-B224-5D803C8FD86D}"/>
-						<Switch Name="wave_9" ID="{5CE23651-711E-41A2-A500-B18F3EDFDCFC}"/>
-						<Switch Name="wave_10" ID="{1658F5AB-0745-4A18-AE8D-10D2BF98AA5F}"/>
-						<Switch Name="wave_0" ID="{AD804B77-2476-454C-A0D1-F164CFD078CF}"/>
+						<Switch Name="intensity_1" ID="{76AF580D-B54A-4579-B81C-B3066D198544}"/>
+						<Switch Name="intensity_2" ID="{E34C24A5-F8F2-4ED8-8E6E-4A1301AF34C7}"/>
+						<Switch Name="intensity_3" ID="{28BE6007-7268-4798-84C8-12631D20187C}"/>
+						<Switch Name="intensity_4" ID="{009D0020-B11E-48E2-AB6E-126DD70DDBB4}"/>
+						<Switch Name="intensity_5" ID="{87F5EB82-8E8D-4A91-B46C-E38D6F626EA1}"/>
+						<Switch Name="intensity_6" ID="{10469BB9-B447-477F-8222-C3D67AE318AD}"/>
+						<Switch Name="intensity_7" ID="{CB215E0A-A9BF-4191-971A-B41108B5E6DE}"/>
+						<Switch Name="intensity_8" ID="{2EE3E120-61C4-4ECB-B224-5D803C8FD86D}"/>
+						<Switch Name="intensity_9" ID="{5CE23651-711E-41A2-A500-B18F3EDFDCFC}"/>
+						<Switch Name="intensity_10" ID="{1658F5AB-0745-4A18-AE8D-10D2BF98AA5F}"/>
+						<Switch Name="intensity_0" ID="{AD804B77-2476-454C-A0D1-F164CFD078CF}"/>
 					</ChildrenList>
 					<SwitchOnRTPC>
 						<GameParameterRef Name="waveNumber" ID="{B39DCA80-FF76-4997-9DE4-72CB92A7930D}"/>
@@ -48,7 +48,7 @@
 									<Flags>0</Flags>
 								</Point>
 								<Point>
-									<XPos>4</XPos>
+									<XPos>4.10135</XPos>
 									<YPos>4</YPos>
 									<Flags>0</Flags>
 								</Point>
@@ -80,6 +80,87 @@
 								<Point>
 									<XPos>10</XPos>
 									<YPos>10</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>20</XPos>
+									<YPos>0</YPos>
+									<Flags>37</Flags>
+								</Point>
+							</PointList>
+						</Curve>
+					</SwitchOnRTPC>
+				</SwitchGroup>
+				<SwitchGroup Name="level_intensity_alt" ID="{CADCCE75-9EB9-456E-B073-6DE918BEB558}">
+					<PropertyList>
+						<Property Name="UseGameParameter" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Switch Name="intensity_1" ID="{4AD29BB8-4317-44F6-9746-CE81C004BC71}"/>
+						<Switch Name="intensity_2" ID="{501D0CE8-0D4A-4AEF-B62F-4E3AAA77C7AD}"/>
+						<Switch Name="intensity_3" ID="{03A7F78D-6269-4119-AFCB-3D6065EA4261}"/>
+						<Switch Name="intensity_0" ID="{9A5AD582-68AD-4953-9697-4F91B7C659E9}"/>
+					</ChildrenList>
+					<SwitchOnRTPC>
+						<GameParameterRef Name="waveNumber" ID="{B39DCA80-FF76-4997-9DE4-72CB92A7930D}"/>
+						<Curve Name="" ID="{6E90443B-8BEF-4C56-91C0-DABE2F2F091B}">
+							<PropertyList>
+								<Property Name="Flags" Type="int32" Value="65537"/>
+							</PropertyList>
+							<PointList>
+								<Point>
+									<XPos>0</XPos>
+									<YPos>4</YPos>
+									<Flags>5</Flags>
+								</Point>
+								<Point>
+									<XPos>1</XPos>
+									<YPos>1</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>2.03378</XPos>
+									<YPos>1</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>3.06757</XPos>
+									<YPos>1</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>4.16892</XPos>
+									<YPos>2</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>5</XPos>
+									<YPos>2</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>6</XPos>
+									<YPos>2</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>7</XPos>
+									<YPos>3</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>8.06757</XPos>
+									<YPos>3</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>9</XPos>
+									<YPos>3</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>10.13514</XPos>
+									<YPos>3</YPos>
 									<Flags>0</Flags>
 								</Point>
 								<Point>

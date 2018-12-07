@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="132">
 	<RootPaths>
-		<ProjectRoot>/Users/msweet/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/y:/Desktop/Work/Berklee/GIT/Unity-Wwise-Game-Template-TowerDefense/Unity-Tower-Defense-Game-Kit_WwiseProject/</ProjectRoot>
-		<SourceFilesRoot>/Users/msweet/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/y:/Desktop/Work/Berklee/GIT/Unity-Wwise-Game-Template-TowerDefense/Unity-Tower-Defense-Game-Kit_WwiseProject/.cache/Windows/</SourceFilesRoot>
-		<SoundBanksRoot>/Users/msweet/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/y:/Desktop/Work/Berklee/GIT/Unity-Wwise-Game-Template-TowerDefense/Unity-Tower-Defense-Game-Kit_WwiseProject/GeneratedSoundBanks/Windows/</SoundBanksRoot>
+		<ProjectRoot>/Users/michaelsweet/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/y:/Desktop/Work/Berklee/GIT/Unity-Wwise-Game-Template-TowerDefense/Unity-Tower-Defense-Game-Kit_WwiseProject/</ProjectRoot>
+		<SourceFilesRoot>/Users/michaelsweet/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/y:/Desktop/Work/Berklee/GIT/Unity-Wwise-Game-Template-TowerDefense/Unity-Tower-Defense-Game-Kit_WwiseProject/.cache/Windows/</SourceFilesRoot>
+		<SoundBanksRoot>/Users/michaelsweet/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/y:/Desktop/Work/Berklee/GIT/Unity-Wwise-Game-Template-TowerDefense/Unity-Tower-Defense-Game-Kit_WwiseProject/GeneratedSoundBanks/Windows/</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>/Users/msweet/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/y:/Desktop/Work/Berklee/GIT/Unity-Wwise-Game-Template-TowerDefense/Unity-Tower-Defense-Game-Kit_WwiseProject/GeneratedSoundBanks/Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>/Users/michaelsweet/Library/Application Support/Wwise2018/Bottles/wwise/dosdevices/y:/Desktop/Work/Berklee/GIT/Unity-Wwise-Game-Template-TowerDefense/Unity-Tower-Defense-Game-Kit_WwiseProject/GeneratedSoundBanks/Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -28,21 +28,13 @@
 				<Event Id="3680374304" Name="ui_levelSelectButton" ObjectPath="\Events\Default Work Unit\ui_levelSelectButton"/>
 				<Event Id="1013525255" Name="ui_levelSelectButtonPart2" ObjectPath="\Events\Default Work Unit\ui_levelSelectButtonPart2"/>
 				<Event Id="1043510291" Name="ui_newWave" ObjectPath="\Events\Default Work Unit\ui_newWave"/>
-				<Event Id="1726823933" Name="ui_startWaveButton" ObjectPath="\Events\Default Work Unit\ui_startWaveButton" MaxAttenuation="0.000000"/>
+				<Event Id="1726823933" Name="ui_startWaveButton" ObjectPath="\Events\Default Work Unit\ui_startWaveButton"/>
 				<Event Id="170582342" Name="ui_testEvent" ObjectPath="\Events\Default Work Unit\ui_testEvent"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
-				<File Id="127898900" Language="SFX">
-					<ShortName>music_intensity_07.wav</ShortName>
-					<Path>SFX/music_intensity_07_8956FC97.wem</Path>
-				</File>
 				<File Id="180042438" Language="SFX">
 					<ShortName>ui_newWave.wav</ShortName>
 					<Path>SFX/ui_newWave_8956FC97.wem</Path>
-				</File>
-				<File Id="204201443" Language="SFX">
-					<ShortName>music_intensity_05.wav</ShortName>
-					<Path>SFX/music_intensity_05_8956FC97.wem</Path>
 				</File>
 				<File Id="225556179" Language="SFX">
 					<ShortName>game_menu.wav</ShortName>
@@ -52,10 +44,6 @@
 					<ShortName>game_levelWin.wav</ShortName>
 					<Path>SFX/game_levelWin_8956FC97.wem</Path>
 				</File>
-				<File Id="510824865" Language="SFX">
-					<ShortName>music_intensity_04.wav</ShortName>
-					<Path>SFX/music_intensity_04_8956FC97.wem</Path>
-				</File>
 				<File Id="539877189" Language="SFX">
 					<ShortName>game_levelLose.wav</ShortName>
 					<Path>SFX/game_levelLose_8956FC97.wem</Path>
@@ -63,14 +51,6 @@
 				<File Id="551719863" Language="SFX">
 					<ShortName>music_intensity_00.wav</ShortName>
 					<Path>SFX/music_intensity_00_8956FC97.wem</Path>
-				</File>
-				<File Id="565049497" Language="SFX">
-					<ShortName>music_intensity_09.wav</ShortName>
-					<Path>SFX/music_intensity_09_8956FC97.wem</Path>
-				</File>
-				<File Id="607032336" Language="SFX">
-					<ShortName>music_intensity_10.wav</ShortName>
-					<Path>SFX/music_intensity_10_8956FC97.wem</Path>
 				</File>
 				<File Id="640446327" Language="SFX">
 					<ShortName>ui_levelSelectButton.wav</ShortName>
@@ -83,14 +63,6 @@
 				<File Id="694574826" Language="SFX">
 					<ShortName>music_intensity_01.wav</ShortName>
 					<Path>SFX/music_intensity_01_8956FC97.wem</Path>
-				</File>
-				<File Id="722576986" Language="SFX">
-					<ShortName>music_intensity_08.wav</ShortName>
-					<Path>SFX/music_intensity_08_8956FC97.wem</Path>
-				</File>
-				<File Id="792939503" Language="SFX">
-					<ShortName>music_intensity_06.wav</ShortName>
-					<Path>SFX/music_intensity_06_8956FC97.wem</Path>
 				</File>
 				<File Id="794319706" Language="SFX">
 					<ShortName>music_intensity_02.wav</ShortName>

@@ -32,7 +32,7 @@
 						<CurrentStateRef Name="menu" ID="{10FFC38B-10CF-4B9F-8AFB-3316AFB03B0B}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="wave_10" ID="{1658F5AB-0745-4A18-AE8D-10D2BF98AA5F}"/>
+						<CurrentSwitchRef Name="intensity_10" ID="{1658F5AB-0745-4A18-AE8D-10D2BF98AA5F}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>

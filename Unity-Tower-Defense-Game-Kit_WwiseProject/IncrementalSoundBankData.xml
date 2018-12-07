@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<IncrementalBankBuild Version="6" Flags="878078161">
+<IncrementalBankBuild Version="6" Flags="240381544">
 	<Platform GUID="{02EE3E24-588D-42C3-8EF0-C73032F150A3}">
 		<Banks>
 			<Language ID="393239870">
-				<File Name="Init" Hash="748911586" Timestamp="1542644146"/>
-				<File Name="Tower_Defense_Soundbank" Hash="2885165937" Timestamp="1542645457"/>
+				<File Name="Init" Hash="4173905664" Timestamp="1544150752"/>
+				<File Name="Tower_Defense_Soundbank" Hash="3601342623" Timestamp="1544150956"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="554511477" Timestamp="1542645457"/>
+				<File Name="" Hash="4104065639" Timestamp="1544150956"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
 	<Platform GUID="{A9B432A4-4028-4F36-89E6-952AE6AF7169}">
 		<Banks>
 			<Language ID="393239870">
-				<File Name="Init" Hash="996534104" Timestamp="1542644147"/>
-				<File Name="Tower_Defense_Soundbank" Hash="2885165937" Timestamp="1542645458"/>
+				<File Name="Init" Hash="1991530030" Timestamp="1544150753"/>
+				<File Name="Tower_Defense_Soundbank" Hash="3601342623" Timestamp="1544150956"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="2095191375" Timestamp="1542645458"/>
+				<File Name="" Hash="704077953" Timestamp="1544150956"/>
 			</Language>
 		</XMLInfo>
 	</Platform>

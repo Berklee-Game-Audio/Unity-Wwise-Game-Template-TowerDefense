@@ -5,13 +5,30 @@
 			<ChildrenList>
 				<Event Name="game_menu" ID="{1F743B94-0F81-47B3-8597-AE224125EF87}">
 					<ChildrenList>
+						<Action Name="" ID="{772FB8E1-CE26-492D-AB3D-8F3C6F94B28A}" ShortID="697240864">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+								<Property Name="FadeTime" Type="Real64" Value="3"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
 						<Action Name="" ID="{390EBBA1-680F-4F8D-8C52-EF8113169EC7}" ShortID="1060383286">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="game_menu" ID="{54CA2FC4-59DB-487A-9F5B-FBBE1A3D2FEB}" WorkUnitID="{55E7783B-14ED-4642-9156-B7BC13AE4E93}"/>
+									<ObjectRef Name="game_music_switch" ID="{DC78FF0A-16C5-4140-AE46-E58795640F24}" WorkUnitID="{55E7783B-14ED-4642-9156-B7BC13AE4E93}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{4DE09B57-F32A-416B-963A-16529AF7B5C0}" ShortID="880066385">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="menu" ID="{10FFC38B-10CF-4B9F-8AFB-3316AFB03B0B}" WorkUnitID="{A0439A88-9765-410A-8654-5A55DE25FD77}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -30,14 +47,13 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
-						<Action Name="" ID="{9B4FF27C-9B60-45B7-ABDC-515BDD07F5F4}" ShortID="788420828">
+						<Action Name="" ID="{1582E857-8302-41BF-896E-25ADBF49E19B}" ShortID="464922955">
 							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="1"/>
-								<Property Name="Delay" Type="Real64" Value="0.1"/>
+								<Property Name="ActionType" Type="int16" Value="22"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="game_music_intensity" ID="{8F1E67A4-72C9-475F-8B79-2D06EB9B8D72}" WorkUnitID="{55E7783B-14ED-4642-9156-B7BC13AE4E93}"/>
+									<ObjectRef Name="gameplay" ID="{86CC67F0-E05A-4BD1-9BA6-C2B0747F862F}" WorkUnitID="{A0439A88-9765-410A-8654-5A55DE25FD77}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -92,19 +108,13 @@
 				</Event>
 				<Event Name="game_levelWin" ID="{5F8AC8E9-32C9-42B6-AFBB-D682E4559DDB}">
 					<ChildrenList>
-						<Action Name="" ID="{357EF367-A505-4D00-954F-5125C597D365}" ShortID="557907130">
+						<Action Name="" ID="{02DEB657-14B4-48C4-983F-131098AF44A3}" ShortID="580854230">
 							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="3"/>
-							</PropertyList>
-							<ReferenceList/>
-						</Action>
-						<Action Name="" ID="{56E5E8ED-C8C8-47CB-99E7-5B8C4EDD15E0}" ShortID="572898166">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="ActionType" Type="int16" Value="22"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="game_levelWin" ID="{0E0F7F76-28F6-4D90-840E-7E56BA157A14}" WorkUnitID="{55E7783B-14ED-4642-9156-B7BC13AE4E93}"/>
+									<ObjectRef Name="win" ID="{9F8DB615-3765-419F-9F2D-E1FE6FEEB3DA}" WorkUnitID="{A0439A88-9765-410A-8654-5A55DE25FD77}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -112,19 +122,13 @@
 				</Event>
 				<Event Name="game_levelLose" ID="{2C8CC40E-9744-4305-A12F-94397EA818B7}">
 					<ChildrenList>
-						<Action Name="" ID="{6ACA7BAF-CFBC-41C3-92B0-6A95FF010BAB}" ShortID="192591032">
+						<Action Name="" ID="{10D371B3-4BB6-48A2-9FB2-99D4DAA5E285}" ShortID="519642460">
 							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="3"/>
-							</PropertyList>
-							<ReferenceList/>
-						</Action>
-						<Action Name="" ID="{FAE0D5AA-8288-4C2E-99AC-564C6B55BF04}" ShortID="507466631">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="ActionType" Type="int16" Value="22"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="game_levelLose" ID="{FE3D466F-0577-4653-899A-866F83013852}" WorkUnitID="{55E7783B-14ED-4642-9156-B7BC13AE4E93}"/>
+									<ObjectRef Name="lose" ID="{71ED24E5-3481-4EDD-89FC-B773CEF49B0D}" WorkUnitID="{A0439A88-9765-410A-8654-5A55DE25FD77}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -160,7 +164,7 @@
 							<PropertyList>
 								<Property Name="AbsoluteOrRelative" Type="int16" Value="1"/>
 								<Property Name="ActionType" Type="int16" Value="38"/>
-								<Property Name="GameParameterValue" Type="Real64" Value="0.199999999999999"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="1"/>
 								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
