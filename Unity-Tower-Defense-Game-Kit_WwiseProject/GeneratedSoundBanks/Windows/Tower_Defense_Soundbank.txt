@@ -2,6 +2,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	170582342	ui_testEvent			\Default Work Unit\ui_testEvent	
 	184505919	game_levelLose			\Default Work Unit\game_levelLose	
 	636067499	game_menu			\Default Work Unit\game_menu	
+	700883983	ui_restartLevelButton			\Default Work Unit\ui_restartLevelButton	
 	733168346	game_start			\Default Work Unit\game_start	
 	1013525255	ui_levelSelectButtonPart2			\Default Work Unit\ui_levelSelectButtonPart2	
 	1043510291	ui_newWave			\Default Work Unit\ui_newWave	
@@ -14,6 +15,7 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	180042438	ui_newWave	Y:\Desktop\Work\Berklee\GIT\Unity-Wwise-Game-Template-TowerDefense\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Windows\SFX\ui_newWave_8956FC97.wem		\Interactive Music Hierarchy\Default Work Unit\ui_newWave\ui_newWave		244664
+	208376835	ui_restartLevelButton	Y:\Desktop\Work\Berklee\GIT\Unity-Wwise-Game-Template-TowerDefense\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Windows\SFX\ui_restartLevelButton_8956FC97.wem		\Interactive Music Hierarchy\Default Work Unit\ui_restartLevelButton\ui_restartLevelButton		614728
 	225556179	game_menu	Y:\Desktop\Work\Berklee\GIT\Unity-Wwise-Game-Template-TowerDefense\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Windows\SFX\game_menu_8956FC97.wem		\Interactive Music Hierarchy\Default Work Unit\game_music_switch\game_menu_playlist\game_menu\game_menu		181584
 	441549464	game_levelWin	Y:\Desktop\Work\Berklee\GIT\Unity-Wwise-Game-Template-TowerDefense\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Windows\SFX\game_levelWin_8956FC97.wem		\Interactive Music Hierarchy\Default Work Unit\game_music_switch\game_levelWin\game_levelWin		246452
 	539877189	game_levelLose	Y:\Desktop\Work\Berklee\GIT\Unity-Wwise-Game-Template-TowerDefense\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Windows\SFX\game_levelLose_8956FC97.wem		\Interactive Music Hierarchy\Default Work Unit\game_music_switch\game_levelLose\game_levelLose		219300

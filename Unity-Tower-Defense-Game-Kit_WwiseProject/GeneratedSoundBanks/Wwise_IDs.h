@@ -20,6 +20,7 @@ namespace AK
         static const AkUniqueID UI_LEVELSELECTBUTTON = 3680374304U;
         static const AkUniqueID UI_LEVELSELECTBUTTONPART2 = 1013525255U;
         static const AkUniqueID UI_NEWWAVE = 1043510291U;
+        static const AkUniqueID UI_RESTARTLEVELBUTTON = 700883983U;
         static const AkUniqueID UI_STARTWAVEBUTTON = 1726823933U;
         static const AkUniqueID UI_TESTEVENT = 170582342U;
     } // namespace EVENTS

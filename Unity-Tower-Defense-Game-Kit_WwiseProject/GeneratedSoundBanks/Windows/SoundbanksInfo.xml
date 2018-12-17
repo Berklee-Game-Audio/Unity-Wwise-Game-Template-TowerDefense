@@ -28,6 +28,7 @@
 				<Event Id="3680374304" Name="ui_levelSelectButton" ObjectPath="\Events\Default Work Unit\ui_levelSelectButton"/>
 				<Event Id="1013525255" Name="ui_levelSelectButtonPart2" ObjectPath="\Events\Default Work Unit\ui_levelSelectButtonPart2"/>
 				<Event Id="1043510291" Name="ui_newWave" ObjectPath="\Events\Default Work Unit\ui_newWave"/>
+				<Event Id="700883983" Name="ui_restartLevelButton" ObjectPath="\Events\Default Work Unit\ui_restartLevelButton"/>
 				<Event Id="1726823933" Name="ui_startWaveButton" ObjectPath="\Events\Default Work Unit\ui_startWaveButton"/>
 				<Event Id="170582342" Name="ui_testEvent" ObjectPath="\Events\Default Work Unit\ui_testEvent"/>
 			</IncludedEvents>
@@ -35,6 +36,10 @@
 				<File Id="180042438" Language="SFX">
 					<ShortName>ui_newWave.wav</ShortName>
 					<Path>SFX/ui_newWave_8956FC97.wem</Path>
+				</File>
+				<File Id="208376835" Language="SFX">
+					<ShortName>ui_restartLevelButton.wav</ShortName>
+					<Path>SFX/ui_restartLevelButton_8956FC97.wem</Path>
 				</File>
 				<File Id="225556179" Language="SFX">
 					<ShortName>game_menu.wav</ShortName>

@@ -9,6 +9,7 @@
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="3"/>
 								<Property Name="FadeTime" Type="Real64" Value="3"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList/>
 						</Action>
@@ -170,6 +171,20 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="waveNumber" ID="{B39DCA80-FF76-4997-9DE4-72CB92A7930D}" WorkUnitID="{C799675F-7EDC-4E60-B107-15D12AF8DCB1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ui_restartLevelButton" ID="{7E991D5D-9399-44D9-AD68-160BAC3EFB5A}">
+					<ChildrenList>
+						<Action Name="" ID="{12F69CB4-82D9-4584-8F5A-972852E54747}" ShortID="802896564">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ui_restartLevelButton" ID="{E7DC6CC4-9C8B-49A1-8A28-5181B2C1CE74}" WorkUnitID="{55E7783B-14ED-4642-9156-B7BC13AE4E93}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

@@ -8,6 +8,7 @@
 						<ObjectRef Name="game_levelWin" ID="{5F8AC8E9-32C9-42B6-AFBB-D682E4559DDB}" WorkUnitID="{565D4456-153C-4E4B-882F-E17408A9A089}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="ui_levelSelectButton" ID="{0E8F09F0-3052-42DA-8C13-0727FE0D98EF}" WorkUnitID="{565D4456-153C-4E4B-882F-E17408A9A089}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="game_levelLose" ID="{2C8CC40E-9744-4305-A12F-94397EA818B7}" WorkUnitID="{565D4456-153C-4E4B-882F-E17408A9A089}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="ui_restartLevelButton" ID="{7E991D5D-9399-44D9-AD68-160BAC3EFB5A}" WorkUnitID="{565D4456-153C-4E4B-882F-E17408A9A089}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="ui_startWaveButton" ID="{DF7BB5AB-C5C8-44EA-B34F-79EABB0AD296}" WorkUnitID="{565D4456-153C-4E4B-882F-E17408A9A089}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="game_menu" ID="{1F743B94-0F81-47B3-8597-AE224125EF87}" WorkUnitID="{565D4456-153C-4E4B-882F-E17408A9A089}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="ui_newWave" ID="{10DBC0BE-FEA7-48EB-83CC-432685664DE6}" WorkUnitID="{565D4456-153C-4E4B-882F-E17408A9A089}" Filter="7" Origin="Manual"/>
