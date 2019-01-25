@@ -17,16 +17,6 @@ public class AkWwisePicker : UnityEditor.EditorWindow
 		PopulateTreeview();
 	}
 
-	private void OnEnable()
-	{
-		if (string.IsNullOrEmpty(WwiseSettings.LoadSettings().WwiseProjectPath))
-			return;
-
-		treeView.SaveExpansionStatus();
-		if (AkWwiseWWUBuilder.Populate())
-			PopulateTreeview();
-	}
-
 	public void OnGUI()
 	{
 		using (new UnityEngine.GUILayout.HorizontalScope("box"))
@@ -49,7 +39,9 @@ public class AkWwisePicker : UnityEditor.EditorWindow
 			if (UnityEngine.GUILayout.Button("Generate SoundBanks", UnityEngine.GUILayout.Width(200)))
 			{
 				if (AkUtilities.IsSoundbankGenerationAvailable())
+				{
 					AkUtilities.GenerateSoundbanks();
+				}
 				else
 				{
 					string errorMessage;

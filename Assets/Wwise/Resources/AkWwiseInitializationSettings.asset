@@ -4,7 +4,8 @@
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -15,8 +16,8 @@ MonoBehaviour:
   - Mac
   - Windows
   PlatformSettingsList:
-  - {fileID: 11400000, guid: 6783267cce0024cc4b84dfc1e6a60526, type: 2}
-  - {fileID: 11400000, guid: 37f6d71c880e94c25901bc42ef40f7e5, type: 2}
+  - {fileID: 11400000, guid: 04c96d9a354804e39a218a1e5bad8170, type: 2}
+  - {fileID: 11400000, guid: afc05d9cdeea74fc3aae3c36bad1b14d, type: 2}
   InvalidReferencePlatforms: []
   UserSettings:
     m_BasePath: Audio/GeneratedSoundBanks

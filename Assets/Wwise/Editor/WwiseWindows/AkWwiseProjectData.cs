@@ -55,11 +55,33 @@ public class AkWwiseProjectData : UnityEngine.ScriptableObject
 	public float GetEventMaxAttenuation(uint in_eventID)
 	{
 		foreach (var wwu in EventWwu)
+		{
 			foreach (var element in wwu.List)
+			{
 				if (element.Id.Equals(in_eventID))
+				{
 					return element.maxAttenuation;
+				}
+			}
+		}
 
 		return 0.0f;
+	}
+
+	public Event GetEventInfo(uint eventID)
+	{
+		foreach (var workUnit in EventWwu)
+		{
+			foreach (var entry in workUnit.List)
+			{
+				if (entry.Id == eventID)
+				{
+					return entry;
+				}
+			}
+		}
+
+		return null;
 	}
 
 	public void Reset()

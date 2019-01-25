@@ -56,7 +56,6 @@ public static class AkWwiseProjectInfo
 		return m_Data;
 	}
 
-
 	public static bool Populate()
 	{
 		var bDirty = false;
@@ -65,7 +64,9 @@ public static class AkWwiseProjectInfo
 			bDirty = AkWwiseWWUBuilder.Populate();
 			bDirty |= AkWwiseXMLBuilder.Populate();
 			if (bDirty)
+			{
 				UnityEditor.EditorUtility.SetDirty(GetData());
+			}
 		}
 
 		return bDirty;
@@ -77,7 +78,9 @@ public static class AkWwiseProjectInfo
 		var bDirty = AkWwiseWWUBuilder.Populate();
 		bDirty |= AkWwiseXMLBuilder.Populate();
 		if (bDirty)
+		{
 			UnityEditor.EditorUtility.SetDirty(GetData());
+		}
 	}
 }
 #endif

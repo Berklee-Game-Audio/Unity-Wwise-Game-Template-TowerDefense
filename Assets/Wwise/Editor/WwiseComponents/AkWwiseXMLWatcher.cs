@@ -7,10 +7,26 @@
 
 public class AkWwiseXMLWatcher
 {
-	private static AkWwiseXMLWatcher Instance;
+	private static readonly AkWwiseXMLWatcher instance = new AkWwiseXMLWatcher();
+
 	private readonly string SoundBankFolder;
 	private readonly System.IO.FileSystemWatcher XmlWatcher;
 
+	private bool fireEvent = false;
+
+	public event System.Action XMLUpdated;
+
+	public static AkWwiseXMLWatcher Instance
+	{
+		get
+		{
+			return instance;
+		}
+	}
+
+	static AkWwiseXMLWatcher()
+	{
+	}
 
 	private AkWwiseXMLWatcher()
 	{
@@ -28,36 +44,36 @@ public class AkWwiseXMLWatcher
 
 			XmlWatcher.Filter = "*.xml";
 			XmlWatcher.IncludeSubdirectories = true;
+			XmlWatcher.EnableRaisingEvents = true;
 		}
 		catch (System.Exception)
 		{
 			// Deliberately left empty
 		}
+
+		UnityEditor.EditorApplication.update += onEditorUpdate;
 	}
 
-	public static AkWwiseXMLWatcher GetInstance()
+	void onEditorUpdate()
 	{
-		if (Instance == null)
-			Instance = new AkWwiseXMLWatcher();
+		if (fireEvent)
+		{
+			AkWwiseXMLBuilder.Populate();
 
-		return Instance;
+			var callback = XMLUpdated;
+			if (callback != null)
+			{
+				callback();
+			}
+
+			fireEvent = false;
+		}
 	}
-
-	public void StartXMLWatcher()
-	{
-		XmlWatcher.EnableRaisingEvents = true;
-	}
-
-	public void StopXMLWatcher()
-	{
-		XmlWatcher.EnableRaisingEvents = false;
-	}
-
 
 	private void RaisePopulateFlag(object sender, System.IO.FileSystemEventArgs e)
 	{
 		// Signal the main thread it's time to populate (cannot run populate somewhere else than on main thread)
-		AkAmbientInspector.populateSoundBank = true;
+		fireEvent = true;
 	}
 }
 #endif

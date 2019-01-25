@@ -12,7 +12,9 @@ public class AkWwiseXMLBuilder
 	public static bool Populate()
 	{
 		if (UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode || UnityEditor.EditorApplication.isCompiling)
+		{
 			return false;
+		}
 
 		try
 		{
@@ -38,7 +40,9 @@ public class AkWwiseXMLBuilder
 
 			var time = System.IO.File.GetLastWriteTime(filename);
 			if (time <= s_LastParsed)
+			{
 				return false;
+			}
 
 			var doc = new System.Xml.XmlDocument();
 			doc.Load(filename);
@@ -49,7 +53,9 @@ public class AkWwiseXMLBuilder
 			{
 				var soundBank = soundBanks[i].SelectNodes("SoundBank");
 				for (var j = 0; j < soundBank.Count; j++)
+				{
 					bChanged = SerialiseSoundBank(soundBank[j]) || bChanged;
+				}
 			}
 
 			return bChanged;
@@ -68,7 +74,9 @@ public class AkWwiseXMLBuilder
 		{
 			var events = includedEvents[i].SelectNodes("Event");
 			for (var j = 0; j < events.Count; j++)
+			{
 				bChanged = SerialiseMaxAttenuation(events[j]) || SerialiseEstimatedDuration(events[j]) || bChanged;
+			}
 		}
 
 		return bChanged;
@@ -112,7 +120,9 @@ public class AkWwiseXMLBuilder
 					{
 						var minDuration = UnityEngine.Mathf.Infinity;
 						if (string.Compare(node.Attributes["DurationMin"].InnerText, "Infinite") != 0)
+						{
 							minDuration = float.Parse(node.Attributes["DurationMin"].InnerText);
+						}
 
 						if (AkWwiseProjectInfo.GetData().EventWwu[i].List[j].minDuration != minDuration)
 						{
@@ -125,7 +135,9 @@ public class AkWwiseXMLBuilder
 					{
 						var maxDuration = UnityEngine.Mathf.Infinity;
 						if (string.Compare(node.Attributes["DurationMax"].InnerText, "Infinite") != 0)
+						{
 							maxDuration = float.Parse(node.Attributes["DurationMax"].InnerText);
+						}
 
 						if (AkWwiseProjectInfo.GetData().EventWwu[i].List[j].maxDuration != maxDuration)
 						{

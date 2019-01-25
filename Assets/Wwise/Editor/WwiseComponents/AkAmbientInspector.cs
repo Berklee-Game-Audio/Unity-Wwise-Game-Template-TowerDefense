@@ -16,8 +16,6 @@ public class AkAmbientInspector : AkEventInspector
 		All_Events
 	}
 
-	public static bool populateSoundBank = true;
-
 	public static System.Collections.Generic.Dictionary<UnityEngine.Object, AttenuationSphereOptions> attSphereProperties =
 		new System.Collections.Generic.Dictionary<UnityEngine.Object, AttenuationSphereOptions>();
 
@@ -44,15 +42,14 @@ public class AkAmbientInspector : AkEventInspector
 
 		currentAttSphereOp = attSphereProperties[target];
 
-		AkWwiseXMLWatcher.GetInstance().StartXMLWatcher();
-
-		UnityEditor.EditorApplication.update += PopulateMaxAttenuation;
+		AkWwiseXMLWatcher.Instance.XMLUpdated += PopulateMaxAttenuation;
 	}
 
 	private void OnDisable()
 	{
 		DefaultHandles.Hidden = false;
-		UnityEditor.EditorApplication.update -= PopulateMaxAttenuation;
+
+		AkWwiseXMLWatcher.Instance.XMLUpdated -= PopulateMaxAttenuation;
 	}
 
 	private void DoMyWindow(int windowID)
@@ -228,9 +225,10 @@ public class AkAmbientInspector : AkEventInspector
 			UnityEditor.Handles.BeginGUI();
 
 			var size = new UnityEngine.Rect(0, 0, 200, 70);
-			UnityEngine.GUI.Window(0,
-				new UnityEngine.Rect(UnityEngine.Screen.width - size.width - 10, UnityEngine.Screen.height - size.height - 50,
-					size.width, size.height), DoMyWindow, "AkAmbient Tool Bar");
+			float xPosition = UnityEngine.Screen.width / UnityEditor.EditorGUIUtility.pixelsPerPoint - size.width - 10;
+			float yPosition = UnityEngine.Screen.height / UnityEditor.EditorGUIUtility.pixelsPerPoint - size.height - 50;
+
+			UnityEngine.GUI.Window(0, new UnityEngine.Rect(xPosition, yPosition, size.width, size.height), DoMyWindow, "AkAmbient Tool Bar");
 
 			UnityEditor.Handles.EndGUI();
 		}
@@ -324,12 +322,7 @@ public class AkAmbientInspector : AkEventInspector
 
 	public static void PopulateMaxAttenuation()
 	{
-		if (populateSoundBank)
-		{
-			AkWwiseXMLBuilder.Populate();
-			populateSoundBank = false;
-			UnityEditor.SceneView.RepaintAll();
-		}
+		UnityEditor.SceneView.RepaintAll();
 	}
 }
 #endif

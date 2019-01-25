@@ -47,6 +47,36 @@ public class AkWwiseWWUBuilder
 		}
 	}
 
+	public static void InitializeWwiseProjectData()
+	{
+		try
+		{
+			if (WwiseSetupWizard.Settings.WwiseProjectPath == null)
+				WwiseSettings.LoadSettings();
+
+			if (string.IsNullOrEmpty(WwiseSetupWizard.Settings.WwiseProjectPath))
+			{
+				UnityEngine.Debug.LogError("WwiseUnity: Wwise project needed to populate from Work Units. Aborting.");
+				return;
+			}
+
+			var fullWwiseProjectPath = AkUtilities.GetFullPath(UnityEngine.Application.dataPath, WwiseSetupWizard.Settings.WwiseProjectPath);
+			s_wwiseProjectPath = System.IO.Path.GetDirectoryName(fullWwiseProjectPath);
+
+			AkUtilities.IsWwiseProjectAvailable = System.IO.File.Exists(fullWwiseProjectPath);
+			if (!AkUtilities.IsWwiseProjectAvailable || UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode || string.IsNullOrEmpty(s_wwiseProjectPath) ||
+				UnityEditor.EditorApplication.isCompiling)
+				return;
+
+			var builder = new AkWwiseWWUBuilder();
+			builder.GatherModifiedFiles();
+			builder.UpdateFiles();
+		}
+		catch
+		{
+		}
+	}
+
 	public static bool Populate()
 	{
 		try
@@ -306,6 +336,8 @@ public class AkWwiseWWUBuilder
 
 	static AkWwiseWWUBuilder()
 	{
+		InitializeWwiseProjectData();
+
 #if UNITY_2017_2_OR_NEWER
 		UnityEditor.EditorApplication.playModeStateChanged += (UnityEditor.PlayModeStateChange playMode) => 
 		{

@@ -669,7 +669,7 @@ public partial class AkSoundEngine {
 			size += s.Length + 1;
 				
 		int sizeofChar = 2;	//Unicode
-		global::System.IntPtr pMem = global::System.Runtime.InteropServices.Marshal.AllocHGlobal(size * sizeofChar);
+		global::System.IntPtr pMem = global::System.Runtime.InteropServices.Marshal.AllocHGlobal(size * sizeofChar + 2);
 		
 		//Write the length of array
 		global::System.Runtime.InteropServices.Marshal.WriteInt16(pMem, (short)in_ppszString.Length);
@@ -699,7 +699,7 @@ public partial class AkSoundEngine {
 			size += s.Length + 1;
 				
 		int sizeofChar = 2;	//Unicode
-		global::System.IntPtr pMem = global::System.Runtime.InteropServices.Marshal.AllocHGlobal(size * sizeofChar);
+		global::System.IntPtr pMem = global::System.Runtime.InteropServices.Marshal.AllocHGlobal(size * sizeofChar + 2);
 		
 		//Write the length of array
 		global::System.Runtime.InteropServices.Marshal.WriteInt16(pMem, (short)in_ppszString.Length);
@@ -737,7 +737,7 @@ public partial class AkSoundEngine {
 			size += s.Length + 1;
 				
 		int sizeofChar = 2;	//Unicode
-		global::System.IntPtr pMem = global::System.Runtime.InteropServices.Marshal.AllocHGlobal(size * sizeofChar);
+		global::System.IntPtr pMem = global::System.Runtime.InteropServices.Marshal.AllocHGlobal(size * sizeofChar + 2);
 		
 		//Write the length of array
 		global::System.Runtime.InteropServices.Marshal.WriteInt16(pMem, (short)in_ppszGameSyncName.Length);
@@ -767,7 +767,7 @@ public partial class AkSoundEngine {
 			size += s.Length + 1;
 				
 		int sizeofChar = 2;	//Unicode
-		global::System.IntPtr pMem = global::System.Runtime.InteropServices.Marshal.AllocHGlobal(size * sizeofChar);
+		global::System.IntPtr pMem = global::System.Runtime.InteropServices.Marshal.AllocHGlobal(size * sizeofChar + 2);
 		
 		//Write the length of array
 		global::System.Runtime.InteropServices.Marshal.WriteInt16(pMem, (short)in_ppszGameSyncName.Length);

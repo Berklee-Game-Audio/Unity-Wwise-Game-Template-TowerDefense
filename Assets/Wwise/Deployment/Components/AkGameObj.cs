@@ -111,10 +111,17 @@ public class AkGameObj : UnityEngine.MonoBehaviour
 		if (AkUtilities.IsMigrating)
 			return;
 
-		if (gameObject != null && isStaticObject != gameObject.isStatic)
+		try
 		{
-			isStaticObject = gameObject.isStatic;
-			UnityEditor.EditorUtility.SetDirty(this);
+			if (gameObject != null && isStaticObject != gameObject.isStatic)
+			{
+				isStaticObject = gameObject.isStatic;
+				UnityEditor.EditorUtility.SetDirty(this);
+			}
+		}
+		catch
+		{
+			UnityEditor.EditorApplication.update -= CheckStaticStatus;
 		}
 #endif
 	}

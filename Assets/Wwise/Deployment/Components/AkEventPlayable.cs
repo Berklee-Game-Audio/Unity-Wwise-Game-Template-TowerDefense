@@ -7,73 +7,6 @@
 
 #if UNITY_2017_1_OR_NEWER
 
-#if UNITY_EDITOR
-public class MinMaxEventDuration
-{
-	private UnityEngine.Vector2 MinMaxDuration = UnityEngine.Vector2.zero;
-
-	public float MinDuration
-	{
-		get { return MinMaxDuration.x; }
-		set { MinMaxDuration.Set(value, MinMaxDuration.y); }
-	}
-
-	public float MaxDuration
-	{
-		get { return MinMaxDuration.y; }
-		set { MinMaxDuration.Set(MinMaxDuration.x, value); }
-	}
-
-	public static MinMaxEventDuration GetMinMaxDuration(AK.Wwise.Event akEvent)
-	{
-		var result = new MinMaxEventDuration();
-		var FullSoundbankPath = AkBasePathGetter.GetPlatformBasePath();
-		var filename = System.IO.Path.Combine(FullSoundbankPath, "SoundbanksInfo.xml");
-		var MaxDuration = 1000000.0f;
-		if (System.IO.File.Exists(filename))
-		{
-			var doc = new System.Xml.XmlDocument();
-			doc.Load(filename);
-
-			var soundBanks = doc.GetElementsByTagName("SoundBanks");
-			for (var i = 0; i < soundBanks.Count; i++)
-			{
-				var soundBank = soundBanks[i].SelectNodes("SoundBank");
-				for (var j = 0; j < soundBank.Count; j++)
-				{
-					var includedEvents = soundBank[j].SelectNodes("IncludedEvents");
-					for (var ie = 0; ie < includedEvents.Count; ie++)
-					{
-						var events = includedEvents[i].SelectNodes("Event");
-						for (var e = 0; e < events.Count; e++)
-						{
-							if (events[e].Attributes["Id"] != null && uint.Parse(events[e].Attributes["Id"].InnerText) == akEvent.Id)
-							{
-								if (events[e].Attributes["DurationType"] != null &&
-								    events[e].Attributes["DurationType"].InnerText == "Infinite")
-								{
-									// Set both min and max to MaxDuration for infinite events
-									result.MinDuration = MaxDuration;
-									result.MaxDuration = MaxDuration;
-								}
-
-								if (events[e].Attributes["DurationMin"] != null)
-									result.MinDuration = float.Parse(events[e].Attributes["DurationMin"].InnerText);
-								if (events[e].Attributes["DurationMax"] != null)
-									result.MaxDuration = float.Parse(events[e].Attributes["DurationMax"].InnerText);
-								break;
-							}
-						}
-					}
-				}
-			}
-		}
-
-		return result;
-	}
-}
-#endif //UNITY_EDITOR
-
 public class WwiseEventTracker
 {
 	public float currentDuration = -1.0f;
@@ -135,11 +68,39 @@ public class AkEventPlayable : UnityEngine.Playables.PlayableAsset, UnityEngine.
 		get
 		{
 			if (akEvent == null)
+			{
 				return base.duration;
+			}
 
 			return eventDurationMax;
 		}
 	}
+
+#if UNITY_EDITOR
+	public float EventDurationMin
+	{
+		get
+		{
+			return eventDurationMin;
+		}
+		set
+		{
+			eventDurationMin = value;
+		}
+	}
+
+	public float EventDurationMax
+	{
+		get
+		{
+			return eventDurationMax;
+		}
+		set
+		{
+			eventDurationMax = value;
+		}
+	}
+#endif
 
 	public UnityEngine.Timeline.ClipCaps clipCaps
 	{
@@ -202,26 +163,14 @@ public class AkEventPlayable : UnityEngine.Playables.PlayableAsset, UnityEngine.
 	}
 
 #if UNITY_EDITOR
-	private void updateWwiseEventDurations()
-	{
-		if (akEvent != null)
-		{
-			var MinMaxDuration = MinMaxEventDuration.GetMinMaxDuration(akEvent);
-			eventDurationMin = MinMaxDuration.MinDuration;
-			eventDurationMax = MinMaxDuration.MaxDuration;
-		}
-	}
-
-	//Used to track when the event has been changed in OnValidate so that the duration can be updated at the correct time.
-	private uint previousEventID;
+	public event System.Action EditorValidated;
 
 	public void OnValidate()
 	{
-		if (previousEventID != akEvent.Id)
+		var callback = EditorValidated;
+		if (callback != null)
 		{
-			previousEventID = akEvent.Id;
-			updateWwiseEventDurations();
-			if (owningClip != null) owningClip.duration = eventDurationMax;
+			callback();
 		}
 	}
 #endif
@@ -233,16 +182,17 @@ public class AkEventPlayable : UnityEngine.Playables.PlayableAsset, UnityEngine.
 /// - \ref AkEventPlayable
 public class AkEventPlayableBehavior : UnityEngine.Playables.PlayableBehaviour
 {
+	[System.Flags]
 	public enum AkPlayableAction
 	{
 		None = 0,
-		Playback = 1,
-		Retrigger = 2,
-		Stop = 4,
-		DelayedStop = 8,
-		Seek = 16,
-		FadeIn = 32,
-		FadeOut = 64
+		Playback = 1 << 0,
+		Retrigger = 1 << 1,
+		Stop = 1 << 2,
+		DelayedStop = 1 << 3,
+		Seek = 1 << 4,
+		FadeIn = 1 << 5,
+		FadeOut = 1 << 6
 	}
 
 	public static int scrubPlaybackLengthMs = 100;
@@ -266,7 +216,7 @@ public class AkEventPlayableBehavior : UnityEngine.Playables.PlayableBehaviour
 
 	public bool overrideTrackEmittorObject;
 
-	public uint requiredActions;
+	public AkPlayableAction requiredActions;
 
 	public override void PrepareFrame(UnityEngine.Playables.Playable playable, UnityEngine.Playables.FrameData info)
 	{
@@ -280,19 +230,19 @@ public class AkEventPlayableBehavior : UnityEngine.Playables.PlayableBehaviour
 			{
 				if (!eventTracker.eventIsPlaying)
 				{
-					requiredActions |= (uint) AkPlayableAction.Playback;
-					requiredActions |= (uint) AkPlayableAction.DelayedStop;
+					requiredActions |= AkPlayableAction.Playback;
+					requiredActions |= AkPlayableAction.DelayedStop;
 					checkForFadeIn((float) UnityEngine.Playables.PlayableExtensions.GetTime(playable));
 					checkForFadeOut(playable);
 				}
 
-				requiredActions |= (uint) AkPlayableAction.Seek;
+				requiredActions |= AkPlayableAction.Seek;
 			}
 			else // The clip is playing but the event hasn't been triggered. We need to start the event and jump to the correct time.
 			{
-				if (!eventTracker.eventIsPlaying && (requiredActions & (uint) AkPlayableAction.Playback) == 0)
+				if (!eventTracker.eventIsPlaying && (requiredActions & AkPlayableAction.Playback) == 0)
 				{
-					requiredActions |= (uint) AkPlayableAction.Retrigger;
+					requiredActions |= AkPlayableAction.Retrigger;
 					checkForFadeIn((float) UnityEngine.Playables.PlayableExtensions.GetTime(playable));
 				}
 
@@ -307,14 +257,14 @@ public class AkEventPlayableBehavior : UnityEngine.Playables.PlayableBehaviour
 		{
 			if (ShouldPlay(playable))
 			{
-				requiredActions |= (uint) AkPlayableAction.Playback;
+				requiredActions |= AkPlayableAction.Playback;
 				// If we've explicitly set the playhead, only play a small snippet.
 				// We disable scrubbing in edit mode, due to an issue with how FrameData.EvaluationType is handled in edit mode.
 				// This is a known issue and Unity are aware of it: https://fogbugz.unity3d.com/default.asp?953109_kitf7pso0vmjm0m0
 				if (info.evaluationType == UnityEngine.Playables.FrameData.EvaluationType.Evaluate &&
 				    UnityEngine.Application.isPlaying)
 				{
-					requiredActions |= (uint) AkPlayableAction.DelayedStop;
+					requiredActions |= AkPlayableAction.DelayedStop;
 					checkForFadeIn((float) UnityEngine.Playables.PlayableExtensions.GetTime(playable));
 					checkForFadeOut(playable);
 				}
@@ -324,7 +274,7 @@ public class AkEventPlayableBehavior : UnityEngine.Playables.PlayableBehaviour
 					var alph = 0.05f;
 					// we need to jump to the correct position in the case where the event is played from some non-start position.
 					if (proportionalTime > alph)
-						requiredActions |= (uint) AkPlayableAction.Seek;
+						requiredActions |= AkPlayableAction.Seek;
 					checkForFadeIn((float) UnityEngine.Playables.PlayableExtensions.GetTime(playable));
 					checkForFadeOut(playable);
 				}
@@ -376,7 +326,7 @@ public class AkEventPlayableBehavior : UnityEngine.Playables.PlayableBehaviour
 
 	private bool actionIsRequired(AkPlayableAction actionType)
 	{
-		return (requiredActions & (uint) actionType) != 0;
+		return (requiredActions & actionType) == actionType;
 	}
 
 	/** Check the playable time against the Wwise event duration to see if playback should occur.
@@ -415,7 +365,7 @@ public class AkEventPlayableBehavior : UnityEngine.Playables.PlayableBehaviour
 	private void checkForFadeIn(float currentClipTime)
 	{
 		if (fadeInRequired(currentClipTime))
-			requiredActions |= (uint) AkPlayableAction.FadeIn;
+			requiredActions |= AkPlayableAction.FadeIn;
 	}
 
 	private void checkForFadeInImmediate(float currentClipTime)
@@ -450,7 +400,7 @@ public class AkEventPlayableBehavior : UnityEngine.Playables.PlayableBehaviour
 	private void checkForFadeOut(UnityEngine.Playables.Playable playable)
 	{
 		if (eventTracker != null && !eventTracker.fadeoutTriggered && fadeOutRequired(playable))
-			requiredActions |= (uint) AkPlayableAction.FadeOut;
+			requiredActions |= AkPlayableAction.FadeOut;
 	}
 
 	protected void triggerFadeIn(float currentClipTime)
