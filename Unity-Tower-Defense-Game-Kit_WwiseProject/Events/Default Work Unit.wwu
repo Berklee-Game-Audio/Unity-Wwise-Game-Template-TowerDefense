@@ -190,6 +190,20 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="ui_backButton" ID="{26B7AB3C-EA69-4F4B-9525-4EBFF098485F}">
+					<ChildrenList>
+						<Action Name="" ID="{80E86CD1-C817-4B40-9418-AC28F6720A11}" ShortID="740247896">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ui_backButton" ID="{86A16341-97AD-4243-A8B7-38C2C39404DA}" WorkUnitID="{55E7783B-14ED-4642-9156-B7BC13AE4E93}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

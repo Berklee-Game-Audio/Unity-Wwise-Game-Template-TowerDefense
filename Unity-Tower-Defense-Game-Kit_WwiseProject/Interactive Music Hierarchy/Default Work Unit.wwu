@@ -2333,6 +2333,62 @@
 						</MusicCue>
 					</CueList>
 				</MusicSegment>
+				<MusicSegment Name="ui_backButton" ID="{86A16341-97AD-4243-A8B7-38C2C39404DA}" ShortID="1017434976">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{18C168E6-9BC6-4066-AFDD-070F4D9B74B4}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{366F3FA0-DCF9-4EC5-9824-7F4936BE80DA}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicTrack Name="ui_backButton" ID="{D8FD0D4E-DF72-483C-9251-246A1187E0EC}" ShortID="552029008">
+							<ReferenceList>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{366F3FA0-DCF9-4EC5-9824-7F4936BE80DA}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ui_backButton" ID="{FB282095-1C3C-4C4B-8DE6-605ECCC49ACC}" ShortID="287391411">
+									<Language>SFX</Language>
+									<AudioFile>ui_backButton.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{1B385162-3A45-48E7-85CF-296C6884353D}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<SequenceList>
+								<MusicTrackSequence Name="" ID="{B05AB724-00C0-4C6C-B0C6-BD86C012B713}">
+									<ClipList>
+										<MusicClip Name="ui_backButton" ID="{21FB16F0-BC75-4DBF-ADDE-A97601FE5373}">
+											<PropertyList>
+												<Property Name="EndTrimOffset" Type="Real64" Value="1770.04166666667"/>
+												<Property Name="FadeInMode" Type="int16" Value="0"/>
+												<Property Name="FadeOutMode" Type="int16" Value="0"/>
+											</PropertyList>
+											<AudioSourceRef Name="ui_backButton" ID="{FB282095-1C3C-4C4B-8DE6-605ECCC49ACC}"/>
+										</MusicClip>
+									</ClipList>
+								</MusicTrackSequence>
+							</SequenceList>
+						</MusicTrack>
+					</ChildrenList>
+					<CueList>
+						<MusicCue Name="Entry Cue" ID="{240B0C24-292D-4E63-BE6D-F31170481BEB}"/>
+						<MusicCue Name="Exit Cue" ID="{275BF6AC-53C9-477B-8249-CAC82B61AD9F}">
+							<PropertyList>
+								<Property Name="CueType" Type="int16" Value="1"/>
+								<Property Name="TimeMs" Type="Real64" Value="1770.04166666667"/>
+							</PropertyList>
+						</MusicCue>
+					</CueList>
+				</MusicSegment>
 			</ChildrenList>
 		</WorkUnit>
 	</InteractiveMusic>

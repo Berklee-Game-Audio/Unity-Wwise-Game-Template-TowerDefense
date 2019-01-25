@@ -17,6 +17,7 @@ namespace AK
         static const AkUniqueID GAME_LEVELWIN = 3058981574U;
         static const AkUniqueID GAME_MENU = 636067499U;
         static const AkUniqueID GAME_START = 733168346U;
+        static const AkUniqueID UI_BACKBUTTON = 1593593619U;
         static const AkUniqueID UI_LEVELSELECTBUTTON = 3680374304U;
         static const AkUniqueID UI_LEVELSELECTBUTTONPART2 = 1013525255U;
         static const AkUniqueID UI_NEWWAVE = 1043510291U;

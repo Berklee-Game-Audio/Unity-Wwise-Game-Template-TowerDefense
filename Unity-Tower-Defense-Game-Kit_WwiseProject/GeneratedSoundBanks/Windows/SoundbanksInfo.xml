@@ -25,6 +25,7 @@
 				<Event Id="3058981574" Name="game_levelWin" ObjectPath="\Events\Default Work Unit\game_levelWin"/>
 				<Event Id="636067499" Name="game_menu" ObjectPath="\Events\Default Work Unit\game_menu"/>
 				<Event Id="733168346" Name="game_start" ObjectPath="\Events\Default Work Unit\game_start"/>
+				<Event Id="1593593619" Name="ui_backButton" ObjectPath="\Events\Default Work Unit\ui_backButton"/>
 				<Event Id="3680374304" Name="ui_levelSelectButton" ObjectPath="\Events\Default Work Unit\ui_levelSelectButton"/>
 				<Event Id="1013525255" Name="ui_levelSelectButtonPart2" ObjectPath="\Events\Default Work Unit\ui_levelSelectButtonPart2"/>
 				<Event Id="1043510291" Name="ui_newWave" ObjectPath="\Events\Default Work Unit\ui_newWave"/>
@@ -44,6 +45,10 @@
 				<File Id="225556179" Language="SFX">
 					<ShortName>game_menu.wav</ShortName>
 					<Path>SFX/game_menu_CB1F3167.wem</Path>
+				</File>
+				<File Id="287391411" Language="SFX">
+					<ShortName>ui_backButton.wav</ShortName>
+					<Path>SFX/ui_backButton_CB1F3167.wem</Path>
 				</File>
 				<File Id="441549464" Language="SFX">
 					<ShortName>game_levelWin.wav</ShortName>

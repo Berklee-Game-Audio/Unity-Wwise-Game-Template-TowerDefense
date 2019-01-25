@@ -15,6 +15,7 @@
 						<ObjectRef Name="ui_levelSelectButtonPart2" ID="{B9220A16-24FC-4952-A9BD-68835BEB8707}" WorkUnitID="{565D4456-153C-4E4B-882F-E17408A9A089}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="game_start" ID="{8D47A50D-66E9-4B3A-AF85-A548F3059AEE}" WorkUnitID="{565D4456-153C-4E4B-882F-E17408A9A089}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="ui_testEvent" ID="{86F97F9E-8F84-4CB8-93B7-ED3B98FEEB50}" WorkUnitID="{565D4456-153C-4E4B-882F-E17408A9A089}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="ui_backButton" ID="{26B7AB3C-EA69-4F4B-9525-4EBFF098485F}" WorkUnitID="{565D4456-153C-4E4B-882F-E17408A9A089}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

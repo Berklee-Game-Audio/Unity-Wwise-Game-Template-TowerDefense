@@ -4,12 +4,12 @@
 		<Banks>
 			<Language ID="393239870">
 				<File Name="Init" Hash="4173905664" Timestamp="1544150752"/>
-				<File Name="Tower_Defense_Soundbank" Hash="885338558" Timestamp="1548374446"/>
+				<File Name="Tower_Defense_Soundbank" Hash="152170830" Timestamp="1548447734"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="1976257398" Timestamp="1548374446"/>
+				<File Name="" Hash="2559120914" Timestamp="1548447734"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
@@ -17,12 +17,12 @@
 		<Banks>
 			<Language ID="393239870">
 				<File Name="Init" Hash="1991530030" Timestamp="1544150753"/>
-				<File Name="Tower_Defense_Soundbank" Hash="885338558" Timestamp="1548374447"/>
+				<File Name="Tower_Defense_Soundbank" Hash="152170830" Timestamp="1548447736"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="1189826928" Timestamp="1548374447"/>
+				<File Name="" Hash="2836963000" Timestamp="1548447736"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
