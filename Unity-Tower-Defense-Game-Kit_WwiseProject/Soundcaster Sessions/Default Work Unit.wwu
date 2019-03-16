@@ -6,12 +6,24 @@
 				<SoundcasterSession Name="New Soundcaster Session" ID="{D167745C-E8A7-4984-A452-63C1D3563931}">
 					<ModuleList>
 						<Module>
-							<ObjectRef Name="game_start" ID="{8D47A50D-66E9-4B3A-AF85-A548F3059AEE}" WorkUnitID="{565D4456-153C-4E4B-882F-E17408A9A089}"/>
+							<ObjectRef Name="game_menu" ID="{1F743B94-0F81-47B3-8597-AE224125EF87}" WorkUnitID="{565D4456-153C-4E4B-882F-E17408A9A089}"/>
 							<Position X="0" Y="0"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="game_start" ID="{8D47A50D-66E9-4B3A-AF85-A548F3059AEE}" WorkUnitID="{565D4456-153C-4E4B-882F-E17408A9A089}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="ui_newWave" ID="{10DBC0BE-FEA7-48EB-83CC-432685664DE6}" WorkUnitID="{565D4456-153C-4E4B-882F-E17408A9A089}"/>
-							<Position X="1" Y="0"/>
+							<Position X="0" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="game_levelLose" ID="{2C8CC40E-9744-4305-A12F-94397EA818B7}" WorkUnitID="{565D4456-153C-4E4B-882F-E17408A9A089}"/>
+							<Position X="0" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="game_levelWin" ID="{5F8AC8E9-32C9-42B6-AFBB-D682E4559DDB}" WorkUnitID="{565D4456-153C-4E4B-882F-E17408A9A089}"/>
+							<Position X="1" Y="3"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
@@ -21,18 +33,19 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="levelNumber" ID="{88664FE9-0474-4791-A90D-9289532D959F}"/>
-							<Value>10</Value>
+							<Value>41.1047297297297</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="waveNumber" ID="{B39DCA80-FF76-4997-9DE4-72CB92A7930D}"/>
-							<Value>5.5</Value>
+							<Value>0</Value>
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="menu" ID="{10FFC38B-10CF-4B9F-8AFB-3316AFB03B0B}"/>
+						<CurrentStateRef Name="gameplay" ID="{86CC67F0-E05A-4BD1-9BA6-C2B0747F862F}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="intensity_10" ID="{1658F5AB-0745-4A18-AE8D-10D2BF98AA5F}"/>
+						<CurrentSwitchRef Name="level_10" ID="{7C062549-565B-4D47-AE0D-9678D6266ABE}"/>
+						<CurrentSwitchRef Name="intensity_0" ID="{9A5AD582-68AD-4953-9697-4F91B7C659E9}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>

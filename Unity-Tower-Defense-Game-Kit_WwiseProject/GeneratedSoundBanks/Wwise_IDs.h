@@ -45,26 +45,6 @@ namespace AK
 
     namespace SWITCHES
     {
-        namespace LEVEL_INTENSITY
-        {
-            static const AkUniqueID GROUP = 1353422267U;
-
-            namespace SWITCH
-            {
-                static const AkUniqueID INTENSITY_0 = 3700547913U;
-                static const AkUniqueID INTENSITY_1 = 3700547912U;
-                static const AkUniqueID INTENSITY_2 = 3700547915U;
-                static const AkUniqueID INTENSITY_3 = 3700547914U;
-                static const AkUniqueID INTENSITY_4 = 3700547917U;
-                static const AkUniqueID INTENSITY_5 = 3700547916U;
-                static const AkUniqueID INTENSITY_6 = 3700547919U;
-                static const AkUniqueID INTENSITY_7 = 3700547918U;
-                static const AkUniqueID INTENSITY_8 = 3700547905U;
-                static const AkUniqueID INTENSITY_9 = 3700547904U;
-                static const AkUniqueID INTENSITY_10 = 2175116392U;
-            } // namespace SWITCH
-        } // namespace LEVEL_INTENSITY
-
         namespace LEVEL_INTENSITY_ALT
         {
             static const AkUniqueID GROUP = 3133676099U;
@@ -77,6 +57,25 @@ namespace AK
                 static const AkUniqueID INTENSITY_3 = 3700547914U;
             } // namespace SWITCH
         } // namespace LEVEL_INTENSITY_ALT
+
+        namespace LEVEL_SWITCH_GROUP
+        {
+            static const AkUniqueID GROUP = 3170614304U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID LEVEL_1 = 1290008369U;
+                static const AkUniqueID LEVEL_2 = 1290008370U;
+                static const AkUniqueID LEVEL_3 = 1290008371U;
+                static const AkUniqueID LEVEL_4 = 1290008372U;
+                static const AkUniqueID LEVEL_5 = 1290008373U;
+                static const AkUniqueID LEVEL_6 = 1290008374U;
+                static const AkUniqueID LEVEL_7 = 1290008375U;
+                static const AkUniqueID LEVEL_8 = 1290008376U;
+                static const AkUniqueID LEVEL_9 = 1290008377U;
+                static const AkUniqueID LEVEL_10 = 1004413459U;
+            } // namespace SWITCH
+        } // namespace LEVEL_SWITCH_GROUP
 
     } // namespace SWITCHES
 
