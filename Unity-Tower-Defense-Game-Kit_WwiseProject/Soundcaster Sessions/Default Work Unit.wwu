@@ -37,7 +37,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="waveNumber" ID="{B39DCA80-FF76-4997-9DE4-72CB92A7930D}"/>
-							<Value>0</Value>
+							<Value>2.43918918918919</Value>
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
