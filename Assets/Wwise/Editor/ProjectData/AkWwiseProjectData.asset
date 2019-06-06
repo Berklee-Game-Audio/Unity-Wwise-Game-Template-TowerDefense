@@ -12,14 +12,402 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b996de2c5a7747e9ad018b3b908c762, type: 3}
   m_Name: AkWwiseProjectData
   m_EditorClassIdentifier: 
-  AcousticTextureWwu: []
-  AuxBusWwu: []
-  BankWwu: []
-  EventWwu: []
-  RtpcWwu: []
-  StateWwu: []
-  SwitchWwu: []
-  TriggerWwu: []
+  AcousticTextureWwu:
+  - PhysicalPath: Virtual Acoustics/Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 00000000000000000000000000000000
+    GuidInternal: 
+    m_lastTime: -8586417705684775808
+    List: []
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy/Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 00000000000000000000000000000000
+    GuidInternal: 
+    m_lastTime: -8586417705684775808
+    List: []
+  BankWwu:
+  - PhysicalPath: SoundBanks/Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 00000000000000000000000000000000
+    GuidInternal: 
+    m_lastTime: -8586417705684775808
+    List:
+    - name: Tower_Defense_Soundbank
+      guid: a36c827aef742b4c9fb8cb366a257945
+      id: 2295945583
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Tower_Defense_Soundbank
+        ObjectType: 7
+      Path: Default Work Unit/Tower_Defense_Soundbank
+  EventWwu:
+  - PhysicalPath: Events/Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 00000000000000000000000000000000
+    GuidInternal: 
+    m_lastTime: -8586417705684775808
+    List:
+    - name: game_levelLose
+      guid: 0ec48c2c44970543a12f94397ea818b7
+      id: 184505919
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: game_levelLose
+        ObjectType: 3
+      Path: Default Work Unit/game_levelLose
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: game_levelWin
+      guid: e9c88a5fc932b642afbbd682e4559ddb
+      id: 3058981574
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: game_levelWin
+        ObjectType: 3
+      Path: Default Work Unit/game_levelWin
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: game_menu
+      guid: 943b741f810fb3478597ae224125ef87
+      id: 636067499
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: game_menu
+        ObjectType: 3
+      Path: Default Work Unit/game_menu
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: game_start
+      guid: 0da5478de9663a4baf85a548f3059aee
+      id: 733168346
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: game_start
+        ObjectType: 3
+      Path: Default Work Unit/game_start
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: ui_backButton
+      guid: 3cabb72669ea4b4f95254ebff098485f
+      id: 1593593619
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: ui_backButton
+        ObjectType: 3
+      Path: Default Work Unit/ui_backButton
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: ui_levelSelectButton
+      guid: f0098f0e5230da428c130727fe0d98ef
+      id: 3680374304
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: ui_levelSelectButton
+        ObjectType: 3
+      Path: Default Work Unit/ui_levelSelectButton
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: ui_levelSelectButtonPart2
+      guid: 160a22b9fc245249a9bd68835beb8707
+      id: 1013525255
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: ui_levelSelectButtonPart2
+        ObjectType: 3
+      Path: Default Work Unit/ui_levelSelectButtonPart2
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: ui_newWave
+      guid: bec0db10a7feeb4883cc432685664de6
+      id: 1043510291
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: ui_newWave
+        ObjectType: 3
+      Path: Default Work Unit/ui_newWave
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: ui_restartLevelButton
+      guid: 5d1d997e9993d944ad68160bac3efb5a
+      id: 700883983
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: ui_restartLevelButton
+        ObjectType: 3
+      Path: Default Work Unit/ui_restartLevelButton
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: ui_startWaveButton
+      guid: abb57bdfc8c5ea44b34f79eabb0ad296
+      id: 1726823933
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: ui_startWaveButton
+        ObjectType: 3
+      Path: Default Work Unit/ui_startWaveButton
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: ui_testEvent
+      guid: 9e7ff986848fb84c93b7ed3b98feeb50
+      id: 170582342
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: ui_testEvent
+        ObjectType: 3
+      Path: Default Work Unit/ui_testEvent
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+  RtpcWwu:
+  - PhysicalPath: Game Parameters/Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 00000000000000000000000000000000
+    GuidInternal: 
+    m_lastTime: -8586417705684775808
+    List:
+    - name: health
+      guid: bfe58a13c3b6ba40ad527f9fa5ab978a
+      id: 3677180323
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: health
+        ObjectType: 13
+      Path: Default Work Unit/health
+    - name: levelNumber
+      guid: e94f668874049147a90d9289532d959f
+      id: 3941060586
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: levelNumber
+        ObjectType: 13
+      Path: Default Work Unit/levelNumber
+    - name: waveNumber
+      guid: 80ca9db376ff97499de472cb92a7930d
+      id: 3188605873
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: waveNumber
+        ObjectType: 13
+      Path: Default Work Unit/waveNumber
+  StateWwu:
+  - PhysicalPath: States/Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 00000000000000000000000000000000
+    GuidInternal: 
+    m_lastTime: -8586417705684775808
+    List:
+    - name: game_state
+      guid: 2a3e55bfdd87f945b3d40f4554aa970d
+      id: 766723505
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: game_state
+        ObjectType: 9
+      Path: Default Work Unit/game_state
+      values:
+      - name: gameplay
+        guid: f067cc865ae0d14b9ba6c2b0747f862f
+        id: 89505537
+        PathAndIcons:
+        - ElementName: gameplay
+          ObjectType: 8
+      - name: lose
+        guid: e524ed718134dd4e89fcb773cef49b0d
+        id: 221232726
+        PathAndIcons:
+        - ElementName: lose
+          ObjectType: 8
+      - name: menu
+        guid: 8bc3ff10cf109f4b8afb3316afb03b0b
+        id: 2607556080
+        PathAndIcons:
+        - ElementName: menu
+          ObjectType: 8
+      - name: None
+        guid: e9e4b77029aaf74ba26f50bbf0afa567
+        id: 748895195
+        PathAndIcons:
+        - ElementName: None
+          ObjectType: 8
+      - name: win
+        guid: 15b68d9f65379f419f2de1fe6feeb3da
+        id: 979765101
+        PathAndIcons:
+        - ElementName: win
+          ObjectType: 8
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal:
+      - 
+      - 
+      - 
+      - 
+      - 
+  SwitchWwu:
+  - PhysicalPath: Switches/Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 00000000000000000000000000000000
+    GuidInternal: 
+    m_lastTime: -8586417705684775808
+    List:
+    - name: level_intensity_alt
+      guid: 75cedccab99e6e45b0736de918beb558
+      id: 3133676099
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: level_intensity_alt
+        ObjectType: 11
+      Path: Default Work Unit/level_intensity_alt
+      values:
+      - name: intensity_0
+        guid: 82d55a9aad68534996974f91b7c659e9
+        id: 3700547913
+        PathAndIcons:
+        - ElementName: intensity_0
+          ObjectType: 10
+      - name: intensity_1
+        guid: b89bd24a1743f6449746ce81c004bc71
+        id: 3700547912
+        PathAndIcons:
+        - ElementName: intensity_1
+          ObjectType: 10
+      - name: intensity_2
+        guid: e80c1d504a0def4ab62f4e3aaa77c7ad
+        id: 3700547915
+        PathAndIcons:
+        - ElementName: intensity_2
+          ObjectType: 10
+      - name: intensity_3
+        guid: 8df7a70369621941afcb3d6065ea4261
+        id: 3700547914
+        PathAndIcons:
+        - ElementName: intensity_3
+          ObjectType: 10
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal:
+      - 
+      - 
+      - 
+      - 
+    - name: level_switch_group
+      guid: 75a48cbdd58400409313f7ac90824f94
+      id: 3170614304
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: level_switch_group
+        ObjectType: 11
+      Path: Default Work Unit/level_switch_group
+      values:
+      - name: level_1
+        guid: ebcb8e4c5a93bd4790ff9b5a97013d7a
+        id: 1290008369
+        PathAndIcons:
+        - ElementName: level_1
+          ObjectType: 10
+      - name: level_10
+        guid: 4925067c5b56474dae0d9678d6266abe
+        id: 1004413459
+        PathAndIcons:
+        - ElementName: level_10
+          ObjectType: 10
+      - name: level_2
+        guid: d9cbe4dc35236a4ca6535ab9fb0a33a3
+        id: 1290008370
+        PathAndIcons:
+        - ElementName: level_2
+          ObjectType: 10
+      - name: level_3
+        guid: 58a63cae45535a42b73ae9d47518f662
+        id: 1290008371
+        PathAndIcons:
+        - ElementName: level_3
+          ObjectType: 10
+      - name: level_4
+        guid: edfd8e67af665849a0ab9d8a63ecc708
+        id: 1290008372
+        PathAndIcons:
+        - ElementName: level_4
+          ObjectType: 10
+      - name: level_5
+        guid: 3aa0a11fcf35ec47837b85cf2af7e6f4
+        id: 1290008373
+        PathAndIcons:
+        - ElementName: level_5
+          ObjectType: 10
+      - name: level_6
+        guid: a8769f168e9f1b46a0255f5a911fa89b
+        id: 1290008374
+        PathAndIcons:
+        - ElementName: level_6
+          ObjectType: 10
+      - name: level_7
+        guid: 4771e9a8526d2449a5182119b4289504
+        id: 1290008375
+        PathAndIcons:
+        - ElementName: level_7
+          ObjectType: 10
+      - name: level_8
+        guid: 6cbddf289695d842834c46b72ce10f13
+        id: 1290008376
+        PathAndIcons:
+        - ElementName: level_8
+          ObjectType: 10
+      - name: level_9
+        guid: 6b81cee768aed2468280ffa5f86e423b
+        id: 1290008377
+        PathAndIcons:
+        - ElementName: level_9
+          ObjectType: 10
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal:
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+  TriggerWwu:
+  - PhysicalPath: Triggers/Default Work Unit.wwu
+    ParentPhysicalPath: 
+    guid: 00000000000000000000000000000000
+    GuidInternal: 
+    m_lastTime: -8586417705684775808
+    List: []
   ExpandedItems: []
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

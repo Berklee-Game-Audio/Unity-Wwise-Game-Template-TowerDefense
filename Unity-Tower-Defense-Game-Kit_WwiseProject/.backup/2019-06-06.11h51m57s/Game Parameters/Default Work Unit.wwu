@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{C799675F-7EDC-4E60-B107-15D12AF8DCB1}" SchemaVersion="89">
+	<GameParameters>
+		<WorkUnit Name="Default Work Unit" ID="{C799675F-7EDC-4E60-B107-15D12AF8DCB1}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="health" ID="{138AE5BF-B6C3-40BA-AD52-7F9FA5AB978A}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="100"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="levelNumber" ID="{88664FE9-0474-4791-A90D-9289532D959F}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="1"/>
+						<Property Name="Min" Type="Real64" Value="1"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="waveNumber" ID="{B39DCA80-FF76-4997-9DE4-72CB92A7930D}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="20"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
+	</GameParameters>
+</WwiseDocument>
