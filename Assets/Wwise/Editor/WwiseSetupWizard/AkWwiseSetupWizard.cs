@@ -413,6 +413,8 @@ public class WwiseSetupWizard
 			if (UnityEditor.SceneManagement.EditorSceneManager.MarkSceneDirty(scene))
 				if (!UnityEditor.SceneManagement.EditorSceneManager.SaveScene(scene))
 					throw new System.Exception("Error occurred while saving migrated scenes.");
+
+			UnityEditor.SceneManagement.EditorSceneManager.CloseScene(scene, true);
 		}
 	}
 

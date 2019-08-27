@@ -91,6 +91,7 @@ public class AkWwiseInitializationSettings : AkCommonPlatformSettings
 		"AdvancedSettings.m_MaximumHardwareTimeoutMs",
 		"AdvancedSettings.m_SpatialAudioSettings.m_DiffractionShadowAttenuationFactor",
 		"AdvancedSettings.m_SpatialAudioSettings.m_DiffractionShadowDegrees",
+		"AdvancedSettings.m_RenderDuringFocusLoss",
 	};
 
 	public abstract class PlatformSettings : AkCommonPlatformSettings

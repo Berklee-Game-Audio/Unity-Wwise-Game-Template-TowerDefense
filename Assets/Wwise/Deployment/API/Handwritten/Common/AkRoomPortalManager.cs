@@ -36,6 +36,13 @@ public static class AkRoomPortalManager
 			m_PortalsToUpdate.Remove(portal);
 		}
 	}
+	public static void RegisterPortalUpdate(AkRoomPortal portal)
+	{
+		if (!m_PortalsToUpdate.Contains(portal))
+		{
+			m_PortalsToUpdate.Add(portal);
+		}
+	}
 
 	public static void RegisterRoomUpdate(AkRoom room)
 	{

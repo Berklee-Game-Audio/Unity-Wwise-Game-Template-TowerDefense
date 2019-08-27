@@ -29,7 +29,7 @@ public class AkRoomPortal : AkTriggerHandler
 		set
 		{
 			active = value;
-			UpdateSoundEngineRoomIDs();
+			AkRoomPortalManager.RegisterPortalUpdate(this);
 		}
 	}
 
@@ -99,12 +99,13 @@ public class AkRoomPortal : AkTriggerHandler
 		extent.Y = collider.size.y * transform.localScale.y / 2;
 		extent.Z = collider.size.z * transform.localScale.z / 2;
 
+		UpdateOverlappingRooms();
+		AkRoomPortalManager.RegisterPortal(this);
+
 		// set portal in it's initial state
 		portalActive = initialState != State.Closed;
 
 		RegisterTriggers(closePortalTriggerList, ClosePortal);
-
-		AkRoomPortalManager.RegisterPortal(this);
 
 		base.Awake();
 
@@ -115,8 +116,6 @@ public class AkRoomPortal : AkTriggerHandler
 
 	protected override void Start()
 	{
-		UpdateOverlappingRooms();
-
 		base.Start();
 
 		//Call the ClosePortal function if registered to the Start Trigger

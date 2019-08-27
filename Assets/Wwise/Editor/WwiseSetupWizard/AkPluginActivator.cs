@@ -300,15 +300,16 @@ public class AkPluginActivator
 			staticPluginRegistration.TryAddLibrary(pluginImporter.assetPath);
 		}
 
-		string[] missingPlugins = staticPluginRegistration.GetMissingPlugins(s_PerPlatformPlugins[deployementTargetName]);
-
-		if (missingPlugins.Length == 0)
+		var missingPlugins = staticPluginRegistration.GetMissingPlugins(s_PerPlatformPlugins[deployementTargetName]);
+		if (missingPlugins.Count == 0)
 		{
 			staticPluginRegistration.TryWriteToFile();
 		}
 		else
 		{
-			UnityEngine.Debug.LogErrorFormat("WwiseUnity: These plugins used by the Wwise project are missing from the Unity project: {0}. Please check folder Assets/Wwise/Deployment/Plugin/{1}.", string.Join(", ", missingPlugins), deployementTargetName);
+			UnityEngine.Debug.LogErrorFormat(
+				"WwiseUnity: These plugins used by the Wwise project are missing from the Unity project: {0}. Please check folder Assets/Wwise/Deployment/Plugin/{1}.", 
+				string.Join(", ", missingPlugins.ToArray()), deployementTargetName);
 		}
 	}
 
@@ -421,20 +422,23 @@ public class AkPluginActivator
 					pluginArch = splitPath[5];
 					pluginConfig = splitPath[6];
 
+					pluginImporter.SetPlatformData(UnityEditor.BuildTarget.WSAPlayer, "SDK", "AnySDK");
+
 					if (pluginArch == "WSA_UWP_Win32")
 					{
-						pluginImporter.SetPlatformData(UnityEditor.BuildTarget.WSAPlayer, "SDK", "AnySDK");
 						pluginImporter.SetPlatformData(UnityEditor.BuildTarget.WSAPlayer, "CPU", "X86");
 					}
 					else if (pluginArch == "WSA_UWP_x64")
 					{
-						pluginImporter.SetPlatformData(UnityEditor.BuildTarget.WSAPlayer, "SDK", "AnySDK");
 						pluginImporter.SetPlatformData(UnityEditor.BuildTarget.WSAPlayer, "CPU", "X64");
 					}
 					else if (pluginArch == "WSA_UWP_ARM")
 					{
-						pluginImporter.SetPlatformData(UnityEditor.BuildTarget.WSAPlayer, "SDK", "AnySDK");
 						pluginImporter.SetPlatformData(UnityEditor.BuildTarget.WSAPlayer, "CPU", "ARM");
+					}
+					else if (pluginArch == "WSA_UWP_ARM64")
+					{
+						pluginImporter.SetPlatformData(UnityEditor.BuildTarget.WSAPlayer, "CPU", "ARM64");
 					}
 					break;
 
@@ -880,9 +884,9 @@ public class AkPluginActivator
 					newPluginInfo.PluginID = rawPluginID;
 					newPluginInfo.DllName = dll;
 					
-					if (PluginIDToStaticLibName.ContainsKey(pluginID))
+					if (!PluginIDToStaticLibName.TryGetValue(pluginID, out newPluginInfo.StaticLibName))
 					{
-						newPluginInfo.StaticLibName = PluginIDToStaticLibName[pluginID];
+						newPluginInfo.StaticLibName = dll;
 					}
 
 					newPlugins.Add(newPluginInfo);
@@ -1000,21 +1004,24 @@ void *_pluginName_##_fp = (void*)&_pluginName_##Registration;
 			UnityEditor.AssetDatabase.Refresh();
 		}
 
-		public string[] GetMissingPlugins(System.Collections.Generic.HashSet<AkPluginInfo> usedPlugins)
+		public System.Collections.Generic.List<string> GetMissingPlugins(System.Collections.Generic.HashSet<AkPluginInfo> usedPlugins)
 		{
 			System.Collections.Generic.List<string> pluginList = new System.Collections.Generic.List<string>();
-
 			foreach (var plugin in usedPlugins)
 			{
+				if(string.IsNullOrEmpty(plugin.StaticLibName))
+				{
+					continue;
+				}
+				
 				string includeFilename = plugin.StaticLibName + "Factory.h";
-
 				if (!FactoriesHeaderFilenames.Contains(includeFilename))
 				{
 					pluginList.Add(plugin.StaticLibName);
 				}
 			}
 
-			return pluginList.ToArray();
+			return pluginList;
 		}
 
 		private string GetWwisePluginRelativeDSPFolder()

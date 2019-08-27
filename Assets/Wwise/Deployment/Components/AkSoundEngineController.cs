@@ -183,7 +183,7 @@ public class AkSoundEngineController
 
 	public void OnApplicationFocus(bool focus)
 	{
-		ActivateAudio(focus);
+		ActivateAudio(focus, AkWwiseInitializationSettings.ActivePlatformSettings.RenderDuringFocusLoss);
 	}
 #endif
 
@@ -208,14 +208,14 @@ public class AkSoundEngineController
 #endif
 
 #if UNITY_EDITOR || !UNITY_IOS
-	private void ActivateAudio(bool activate)
+	private void ActivateAudio(bool activate, bool renderAnyway = false)
 	{
 		if (AkSoundEngine.IsInitialized())
 		{
 			if (activate)
 				AkSoundEngine.WakeupFromSuspend();
 			else
-				AkSoundEngine.Suspend();
+				AkSoundEngine.Suspend(renderAnyway);
 
 			AkSoundEngine.RenderAudio();
 		}

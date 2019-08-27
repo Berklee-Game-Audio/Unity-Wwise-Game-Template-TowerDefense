@@ -2,50 +2,37 @@
 {
 	public virtual AkInitializationSettings AkInitializationSettings
 	{
-		get
-		{
-			return new AkInitializationSettings();
-		}
+		get { return new AkInitializationSettings(); }
 	}
 
 	public virtual AkSpatialAudioInitSettings AkSpatialAudioInitSettings
 	{
-		get
-		{
-			return new AkSpatialAudioInitSettings();
-		}
+		get { return new AkSpatialAudioInitSettings(); }
 	}
 
 	public virtual AkCallbackManager.InitializationSettings CallbackManagerInitializationSettings
 	{
-		get
-		{
-			return new AkCallbackManager.InitializationSettings();
-		}
+		get { return new AkCallbackManager.InitializationSettings(); }
 	}
 
 	public virtual string InitialLanguage
 	{
-		get
-		{
-			return "English(US)";
-		}
+		get { return "English(US)"; }
+	}
+
+	public virtual bool RenderDuringFocusLoss
+	{
+		get { return false; }
 	}
 
 	public virtual string SoundbankPath
 	{
-		get
-		{
-			return AkBasePathGetter.DefaultBasePath;
-		}
+		get { return AkBasePathGetter.DefaultBasePath; }
 	}
 
 	public virtual AkCommunicationSettings AkCommunicationSettings
 	{
-		get
-		{
-			return new AkCommunicationSettings();
-		}
+		get { return new AkCommunicationSettings(); }
 	}
 }
 
@@ -446,20 +433,23 @@ public class AkCommonAdvancedSettings : AkSettingsValidationHandler
 	{
 	}
 
-    public override void Validate()
-    {
-        if (m_SpatialAudioSettings.m_DiffractionShadowAttenuationFactor <= 0.0f)
-        {
-            UnityEngine.Debug.LogWarning("WwiseUnity: m_SpatialAudioSettings.m_DiffractionShadowAttenuationFactor must be greater than zero. Value was reset to the default (2.0)");
-            m_SpatialAudioSettings.m_DiffractionShadowAttenuationFactor = 2.0f;
-        }
+	[UnityEngine.Tooltip("The state of the \"in_bRenderAnyway\" argument passed to the AkSoundEngine.Suspend() function when the \"OnApplicationFocus\" Unity callback is received with \"false\" as its argument.")]
+	public bool m_RenderDuringFocusLoss;
 
-        if (m_SpatialAudioSettings.m_DiffractionShadowDegrees <= 0.0f)
-        {
-            UnityEngine.Debug.LogWarning("WwiseUnity: m_SpatialAudioSettings.m_DiffractionShadowDegrees must be greater than zero. Value was reset to the default (30.0)");
-            m_SpatialAudioSettings.m_DiffractionShadowDegrees = 30.0f;
-        }
-    }
+	public override void Validate()
+	{
+		if (m_SpatialAudioSettings.m_DiffractionShadowAttenuationFactor <= 0.0f)
+		{
+			UnityEngine.Debug.LogWarning("WwiseUnity: m_SpatialAudioSettings.m_DiffractionShadowAttenuationFactor must be greater than zero. Value was reset to the default (2.0)");
+			m_SpatialAudioSettings.m_DiffractionShadowAttenuationFactor = 2.0f;
+		}
+
+		if (m_SpatialAudioSettings.m_DiffractionShadowDegrees <= 0.0f)
+		{
+			UnityEngine.Debug.LogWarning("WwiseUnity: m_SpatialAudioSettings.m_DiffractionShadowDegrees must be greater than zero. Value was reset to the default (30.0)");
+			m_SpatialAudioSettings.m_DiffractionShadowDegrees = 30.0f;
+		}
+	}
 }
 
 [System.Serializable]
@@ -559,18 +549,17 @@ public abstract class AkCommonPlatformSettings : AkBasePlatformSettings
 
 	public override string InitialLanguage
 	{
-		get
-		{
-			return GetUserSettings().m_StartupLanguage;
-		}
+		get { return GetUserSettings().m_StartupLanguage; }
+	}
+
+	public override bool RenderDuringFocusLoss
+	{
+		get { return GetAdvancedSettings().m_RenderDuringFocusLoss; }
 	}
 
 	public override string SoundbankPath
 	{
-		get
-		{
-			return GetUserSettings().m_BasePath;
-		}
+		get { return GetUserSettings().m_BasePath; }
 	}
 
 	public override AkCommunicationSettings AkCommunicationSettings
