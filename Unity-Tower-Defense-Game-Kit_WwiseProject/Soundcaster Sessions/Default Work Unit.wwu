@@ -33,18 +33,18 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="levelNumber" ID="{88664FE9-0474-4791-A90D-9289532D959F}"/>
-							<Value>41.1047297297297</Value>
+							<Value>2</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="waveNumber" ID="{B39DCA80-FF76-4997-9DE4-72CB92A7930D}"/>
-							<Value>2.43918918918919</Value>
+							<Value>0</Value>
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
 						<CurrentStateRef Name="gameplay" ID="{86CC67F0-E05A-4BD1-9BA6-C2B0747F862F}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="level_10" ID="{7C062549-565B-4D47-AE0D-9678D6266ABE}"/>
+						<CurrentSwitchRef Name="level_5" ID="{1FA1A03A-35CF-47EC-837B-85CF2AF7E6F4}"/>
 						<CurrentSwitchRef Name="intensity_0" ID="{9A5AD582-68AD-4953-9697-4F91B7C659E9}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>

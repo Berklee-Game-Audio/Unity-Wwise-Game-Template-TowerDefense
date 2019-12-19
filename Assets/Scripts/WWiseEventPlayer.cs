@@ -14,7 +14,7 @@ public class WWiseEventPlayer : MonoBehaviour {
 
     public void PlayWwiseEvent(string WwiseEventOverride = ""){
         if(WwiseGlobal == null){
-            Debug.Log("WwiseGlobal not found.");
+            Debug.Log("PlayWwiseEvent - WwiseGlobal not found.");
             return;
         }
 
@@ -29,5 +29,20 @@ public class WWiseEventPlayer : MonoBehaviour {
         {
             AkSoundEngine.PostEvent(WwiseEventToPlay, WwiseGlobal);
         }
+    }
+
+    public void SetWwiseRTPC(string rtpcName, float value)
+    {
+        if (WwiseGlobal == null)
+        {
+            Debug.Log("SetWwiseRTPC - WwiseGlobal not found.");
+            return;
+        }
+
+        AkSoundEngine.SetRTPCValue(rtpcName, value);
+
+        return;
+        
+
     }
 }

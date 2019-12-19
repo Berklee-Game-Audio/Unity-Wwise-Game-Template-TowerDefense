@@ -44,18 +44,6 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
-						<Action Name="" ID="{77A259DD-515E-4C98-A22B-B7ED3B0DA0D6}" ShortID="766434580">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="38"/>
-								<Property Name="GameParameterValue" Type="Real64" Value="1"/>
-								<Property Name="Scope" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="levelNumber" ID="{88664FE9-0474-4791-A90D-9289532D959F}" WorkUnitID="{C799675F-7EDC-4E60-B107-15D12AF8DCB1}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="game_start" ID="{8D47A50D-66E9-4B3A-AF85-A548F3059AEE}">
