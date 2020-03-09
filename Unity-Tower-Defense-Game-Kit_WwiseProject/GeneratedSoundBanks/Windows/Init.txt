@@ -22,9 +22,9 @@ State Group	ID	Name			Wwise Object Path	Notes
 	766723505	game_state			\Default Work Unit\game_state	
 
 State	ID	Name	State Group			Notes
-	0	None	game_state			
 	89505537	gameplay	game_state			
 	221232726	lose	game_state			
+	748895195	None	game_state			
 	979765101	win	game_state			
 	2607556080	menu	game_state			
 

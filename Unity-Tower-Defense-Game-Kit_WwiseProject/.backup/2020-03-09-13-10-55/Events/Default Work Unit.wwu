@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{565D4456-153C-4E4B-882F-E17408A9A089}" SchemaVersion="94">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{565D4456-153C-4E4B-882F-E17408A9A089}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="game_menu" ID="{1F743B94-0F81-47B3-8597-AE224125EF87}">
+					<ChildrenList>
+						<Action Name="" ID="{772FB8E1-CE26-492D-AB3D-8F3C6F94B28A}" ShortID="697240864">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+								<Property Name="FadeTime" Type="Real64" Value="3"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+						<Action Name="" ID="{390EBBA1-680F-4F8D-8C52-EF8113169EC7}" ShortID="1060383286">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="game_music_switch" ID="{DC78FF0A-16C5-4140-AE46-E58795640F24}" WorkUnitID="{55E7783B-14ED-4642-9156-B7BC13AE4E93}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{4DE09B57-F32A-416B-963A-16529AF7B5C0}" ShortID="880066385">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="menu" ID="{10FFC38B-10CF-4B9F-8AFB-3316AFB03B0B}" WorkUnitID="{A0439A88-9765-410A-8654-5A55DE25FD77}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{3F8C8284-98A0-4020-A209-E49E95923084}" ShortID="382928896">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="waveNumber" ID="{B39DCA80-FF76-4997-9DE4-72CB92A7930D}" WorkUnitID="{C799675F-7EDC-4E60-B107-15D12AF8DCB1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="game_start" ID="{8D47A50D-66E9-4B3A-AF85-A548F3059AEE}">
+					<ChildrenList>
+						<Action Name="" ID="{923FAC9F-F4DF-454E-B78B-16C5C27867B6}" ShortID="624990989">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="waveNumber" ID="{B39DCA80-FF76-4997-9DE4-72CB92A7930D}" WorkUnitID="{C799675F-7EDC-4E60-B107-15D12AF8DCB1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{1582E857-8302-41BF-896E-25ADBF49E19B}" ShortID="464922955">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="gameplay" ID="{86CC67F0-E05A-4BD1-9BA6-C2B0747F862F}" WorkUnitID="{A0439A88-9765-410A-8654-5A55DE25FD77}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ui_startWaveButton" ID="{DF7BB5AB-C5C8-44EA-B34F-79EABB0AD296}">
+					<ChildrenList>
+						<Action Name="" ID="{E5BED363-A500-493D-83F2-81ECD70D4C64}" ShortID="1010254765">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ui_startWaveButton" ID="{61AFB4A0-7637-4BC3-9092-A65639026FEC}" WorkUnitID="{55E7783B-14ED-4642-9156-B7BC13AE4E93}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ui_levelSelectButton" ID="{0E8F09F0-3052-42DA-8C13-0727FE0D98EF}">
+					<ChildrenList>
+						<Action Name="" ID="{6504D12E-0B8A-46F8-AB57-1DD40513B883}" ShortID="164306150">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ui_levelSelectButton" ID="{234DDB48-3268-4265-8881-0350E6B01720}" WorkUnitID="{55E7783B-14ED-4642-9156-B7BC13AE4E93}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ui_levelSelectButtonPart2" ID="{B9220A16-24FC-4952-A9BD-68835BEB8707}">
+					<ChildrenList>
+						<Action Name="" ID="{CE7F2E51-BE9D-4012-AB22-8319AE277D98}" ShortID="402288902">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ui_levelSelectButtonPart2" ID="{4B93E088-E761-4A02-BCA7-E42886EED9CB}" WorkUnitID="{55E7783B-14ED-4642-9156-B7BC13AE4E93}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="game_levelWin" ID="{5F8AC8E9-32C9-42B6-AFBB-D682E4559DDB}">
+					<ChildrenList>
+						<Action Name="" ID="{02DEB657-14B4-48C4-983F-131098AF44A3}" ShortID="580854230">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="win" ID="{9F8DB615-3765-419F-9F2D-E1FE6FEEB3DA}" WorkUnitID="{A0439A88-9765-410A-8654-5A55DE25FD77}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="game_levelLose" ID="{2C8CC40E-9744-4305-A12F-94397EA818B7}">
+					<ChildrenList>
+						<Action Name="" ID="{10D371B3-4BB6-48A2-9FB2-99D4DAA5E285}" ShortID="519642460">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="lose" ID="{71ED24E5-3481-4EDD-89FC-B773CEF49B0D}" WorkUnitID="{A0439A88-9765-410A-8654-5A55DE25FD77}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ui_testEvent" ID="{86F97F9E-8F84-4CB8-93B7-ED3B98FEEB50}">
+					<ChildrenList>
+						<Action Name="" ID="{EB9D9F85-7BDC-4794-B977-A1CDB2CC5EB2}" ShortID="305399101">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ui_testEvent" ID="{57F99DD1-971F-45FD-9579-42CE776BED12}" WorkUnitID="{55E7783B-14ED-4642-9156-B7BC13AE4E93}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ui_newWave" ID="{10DBC0BE-FEA7-48EB-83CC-432685664DE6}">
+					<ChildrenList>
+						<Action Name="" ID="{92131DB7-074B-4A9B-BCB2-15290AC45DAD}" ShortID="712474081">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ui_newWave" ID="{1474F1E9-2B79-4CAE-AA01-4E7D88C931B5}" WorkUnitID="{55E7783B-14ED-4642-9156-B7BC13AE4E93}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{981ECC7C-CE3E-4FFC-988D-4D45787089CD}" ShortID="453735711">
+							<PropertyList>
+								<Property Name="AbsoluteOrRelative" Type="int16" Value="1"/>
+								<Property Name="ActionType" Type="int16" Value="38"/>
+								<Property Name="GameParameterValue" Type="Real64" Value="1"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="waveNumber" ID="{B39DCA80-FF76-4997-9DE4-72CB92A7930D}" WorkUnitID="{C799675F-7EDC-4E60-B107-15D12AF8DCB1}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ui_restartLevelButton" ID="{7E991D5D-9399-44D9-AD68-160BAC3EFB5A}">
+					<ChildrenList>
+						<Action Name="" ID="{12F69CB4-82D9-4584-8F5A-972852E54747}" ShortID="802896564">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ui_restartLevelButton" ID="{E7DC6CC4-9C8B-49A1-8A28-5181B2C1CE74}" WorkUnitID="{55E7783B-14ED-4642-9156-B7BC13AE4E93}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ui_backButton" ID="{26B7AB3C-EA69-4F4B-9525-4EBFF098485F}">
+					<ChildrenList>
+						<Action Name="" ID="{80E86CD1-C817-4B40-9418-AC28F6720A11}" ShortID="740247896">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ui_backButton" ID="{86A16341-97AD-4243-A8B7-38C2C39404DA}" WorkUnitID="{55E7783B-14ED-4642-9156-B7BC13AE4E93}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

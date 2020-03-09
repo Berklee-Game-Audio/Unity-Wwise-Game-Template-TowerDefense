@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{4F6B0843-653E-44E7-9473-C0E91D4486F2}" SchemaVersion="94">
+<WwiseDocument Type="WorkUnit" ID="{4F6B0843-653E-44E7-9473-C0E91D4486F2}" SchemaVersion="97">
 	<AudioObjects>
 		<WorkUnit Name="Default Work Unit" ID="{4F6B0843-653E-44E7-9473-C0E91D4486F2}" PersistMode="Standalone">
 			<ChildrenList>
@@ -23,9 +23,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="Destruction 1" ID="{ED295383-C9E4-46A9-B22A-05D379A73BE4}" ShortID="302777284">
+								<AudioFileSource Name="Destruction 1" ID="{ED295383-C9E4-46A9-B22A-05D379A73BE4}">
 									<Language>SFX</Language>
 									<AudioFile>Destruction 1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="302777284"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
@@ -42,9 +45,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="Destruction 2" ID="{3AF56B2D-7142-4B13-A2A9-269E803CFF1B}" ShortID="878495983">
+								<AudioFileSource Name="Destruction 2" ID="{3AF56B2D-7142-4B13-A2A9-269E803CFF1B}">
 									<Language>SFX</Language>
 									<AudioFile>Destruction 2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="878495983"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
@@ -61,9 +67,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="Destruction 3" ID="{FAA8B73F-C5D2-4A65-BD50-84E4EB5676C9}" ShortID="766273231">
+								<AudioFileSource Name="Destruction 3" ID="{FAA8B73F-C5D2-4A65-BD50-84E4EB5676C9}">
 									<Language>SFX</Language>
 									<AudioFile>Destruction 3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="766273231"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
@@ -80,9 +89,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="Destruction 4" ID="{EF787C9E-5CC0-4332-901F-ECDF7EC6FD88}" ShortID="196701407">
+								<AudioFileSource Name="Destruction 4" ID="{EF787C9E-5CC0-4332-901F-ECDF7EC6FD88}">
 									<Language>SFX</Language>
 									<AudioFile>Destruction 4.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="196701407"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
@@ -99,9 +111,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="Destruction 5" ID="{A317A14F-84E2-462A-B974-8C73E2002FD2}" ShortID="684435947">
+								<AudioFileSource Name="Destruction 5" ID="{A317A14F-84E2-462A-B974-8C73E2002FD2}">
 									<Language>SFX</Language>
 									<AudioFile>Destruction 5.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="684435947"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
@@ -120,9 +135,12 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<AudioFileSource Name="LaserFire" ID="{4EF27F0B-1E4B-4204-BCFD-71B4EF8422BD}" ShortID="400918840">
+						<AudioFileSource Name="LaserFire" ID="{4EF27F0B-1E4B-4204-BCFD-71B4EF8422BD}">
 							<Language>SFX</Language>
 							<AudioFile>LaserFire.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="400918840"/>
+							</MediaIDList>
 						</AudioFileSource>
 					</ChildrenList>
 					<ActiveSourceList>
@@ -149,9 +167,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="MG 1" ID="{87029F76-758B-4240-8EC3-0986F93E890B}" ShortID="345793350">
+								<AudioFileSource Name="MG 1" ID="{87029F76-758B-4240-8EC3-0986F93E890B}">
 									<Language>SFX</Language>
 									<AudioFile>MG 1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="345793350"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
@@ -168,9 +189,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="MG 2" ID="{D28E2E14-7230-4653-9CB4-27AC1FC95D13}" ShortID="757382845">
+								<AudioFileSource Name="MG 2" ID="{D28E2E14-7230-4653-9CB4-27AC1FC95D13}">
 									<Language>SFX</Language>
 									<AudioFile>MG 2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="757382845"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
@@ -187,9 +211,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="MG 3" ID="{97101A25-103A-46FD-B61A-FC4015B60F71}" ShortID="597527391">
+								<AudioFileSource Name="MG 3" ID="{97101A25-103A-46FD-B61A-FC4015B60F71}">
 									<Language>SFX</Language>
 									<AudioFile>MG 3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="597527391"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
@@ -206,9 +233,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="MG 4" ID="{55A573A7-EDED-4CA4-947C-42CFE5CE8E4E}" ShortID="900756079">
+								<AudioFileSource Name="MG 4" ID="{55A573A7-EDED-4CA4-947C-42CFE5CE8E4E}">
 									<Language>SFX</Language>
 									<AudioFile>MG 4.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="900756079"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
@@ -225,9 +255,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="MG 5" ID="{35716E6E-3891-4BA4-B5A3-3028465069AD}" ShortID="745947002">
+								<AudioFileSource Name="MG 5" ID="{35716E6E-3891-4BA4-B5A3-3028465069AD}">
 									<Language>SFX</Language>
 									<AudioFile>MG 5.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="745947002"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
@@ -244,9 +277,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="MG 6" ID="{8B32720C-BCD4-4DC6-BC25-3C65EC086655}" ShortID="568618962">
+								<AudioFileSource Name="MG 6" ID="{8B32720C-BCD4-4DC6-BC25-3C65EC086655}">
 									<Language>SFX</Language>
 									<AudioFile>MG 6.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="568618962"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
@@ -263,9 +299,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="MG 7" ID="{78EE01E0-BA95-40DD-9B64-7DEA04A7DB4C}" ShortID="708128615">
+								<AudioFileSource Name="MG 7" ID="{78EE01E0-BA95-40DD-9B64-7DEA04A7DB4C}">
 									<Language>SFX</Language>
 									<AudioFile>MG 7.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="708128615"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
@@ -282,9 +321,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="MG 8" ID="{741F95D2-1EAF-4ED1-9B08-066ECA7BA6CD}" ShortID="309364037">
+								<AudioFileSource Name="MG 8" ID="{741F95D2-1EAF-4ED1-9B08-066ECA7BA6CD}">
 									<Language>SFX</Language>
 									<AudioFile>MG 8.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="309364037"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
@@ -301,9 +343,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="MG 9" ID="{C2269F68-539E-4416-B672-3CA87AC9089A}" ShortID="584648914">
+								<AudioFileSource Name="MG 9" ID="{C2269F68-539E-4416-B672-3CA87AC9089A}">
 									<Language>SFX</Language>
 									<AudioFile>MG 9.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="584648914"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
@@ -320,9 +365,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="MG 10" ID="{AB634D38-15A3-481F-8D0A-6B9E74AE5AD4}" ShortID="541990930">
+								<AudioFileSource Name="MG 10" ID="{AB634D38-15A3-481F-8D0A-6B9E74AE5AD4}">
 									<Language>SFX</Language>
 									<AudioFile>MG 10.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="541990930"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
@@ -339,9 +387,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="MG 11" ID="{D25B20F6-0A6B-409E-A476-04D857447B22}" ShortID="165186924">
+								<AudioFileSource Name="MG 11" ID="{D25B20F6-0A6B-409E-A476-04D857447B22}">
 									<Language>SFX</Language>
 									<AudioFile>MG 11.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="165186924"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
@@ -358,9 +409,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="MG 12" ID="{F5D49963-A176-484D-BBB2-0D6D783D98AD}" ShortID="311042904">
+								<AudioFileSource Name="MG 12" ID="{F5D49963-A176-484D-BBB2-0D6D783D98AD}">
 									<Language>SFX</Language>
 									<AudioFile>MG 12.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="311042904"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
@@ -377,9 +431,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="MG 13" ID="{0B566245-4EE5-4680-91F4-B70BB487FBF3}" ShortID="867584577">
+								<AudioFileSource Name="MG 13" ID="{0B566245-4EE5-4680-91F4-B70BB487FBF3}">
 									<Language>SFX</Language>
 									<AudioFile>MG 13.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="867584577"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
@@ -396,9 +453,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="MG 14" ID="{96126FD9-FAAA-43CC-A14A-E997204471FF}" ShortID="1068159164">
+								<AudioFileSource Name="MG 14" ID="{96126FD9-FAAA-43CC-A14A-E997204471FF}">
 									<Language>SFX</Language>
 									<AudioFile>MG 14.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1068159164"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
@@ -427,9 +487,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="Enemies Exploding 1" ID="{90A50763-4AD6-4B08-BDEF-C95E24BC01E4}" ShortID="397512211">
+								<AudioFileSource Name="Enemies Exploding 1" ID="{90A50763-4AD6-4B08-BDEF-C95E24BC01E4}">
 									<Language>SFX</Language>
 									<AudioFile>Enemies Exploding 1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="397512211"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
@@ -446,9 +509,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="Enemies Exploding 2" ID="{F743331E-DCB9-44DB-B8DD-B95C02D7F7D6}" ShortID="892163985">
+								<AudioFileSource Name="Enemies Exploding 2" ID="{F743331E-DCB9-44DB-B8DD-B95C02D7F7D6}">
 									<Language>SFX</Language>
 									<AudioFile>Enemies Exploding 2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="892163985"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
@@ -465,9 +531,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="Enemies Exploding 3" ID="{C0051FAB-4F9E-47EE-A871-8339C35C70DD}" ShortID="417617785">
+								<AudioFileSource Name="Enemies Exploding 3" ID="{C0051FAB-4F9E-47EE-A871-8339C35C70DD}">
 									<Language>SFX</Language>
 									<AudioFile>Enemies Exploding 3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="417617785"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
@@ -484,9 +553,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="Enemies Exploding 4" ID="{EDB2C58B-780E-4363-AD9C-09159A8F702C}" ShortID="744522992">
+								<AudioFileSource Name="Enemies Exploding 4" ID="{EDB2C58B-780E-4363-AD9C-09159A8F702C}">
 									<Language>SFX</Language>
 									<AudioFile>Enemies Exploding 4.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="744522992"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
@@ -503,9 +575,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="Enemies Exploding 5" ID="{D5643C2B-CB5D-4BAE-B624-7FAFE54DD181}" ShortID="703832289">
+								<AudioFileSource Name="Enemies Exploding 5" ID="{D5643C2B-CB5D-4BAE-B624-7FAFE54DD181}">
 									<Language>SFX</Language>
 									<AudioFile>Enemies Exploding 5.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="703832289"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
@@ -534,9 +609,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="Weapon Placement 1" ID="{5504A2A3-E516-4EDC-9669-D125DFB65CC5}" ShortID="928467008">
+								<AudioFileSource Name="Weapon Placement 1" ID="{5504A2A3-E516-4EDC-9669-D125DFB65CC5}">
 									<Language>SFX</Language>
 									<AudioFile>Weapon Placement 1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="928467008"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
@@ -553,9 +631,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="Weapon Placement 2" ID="{8996C645-B0EA-4113-AD17-B30B6795F824}" ShortID="494137775">
+								<AudioFileSource Name="Weapon Placement 2" ID="{8996C645-B0EA-4113-AD17-B30B6795F824}">
 									<Language>SFX</Language>
 									<AudioFile>Weapon Placement 2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="494137775"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
@@ -574,9 +655,12 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<AudioFileSource Name="Rocket Tower Shoot" ID="{440B0B4B-3F61-4FFD-8050-0007E83B3517}" ShortID="196366451">
+						<AudioFileSource Name="Rocket Tower Shoot" ID="{440B0B4B-3F61-4FFD-8050-0007E83B3517}">
 							<Language>SFX</Language>
 							<AudioFile>Rocket Tower Shoot.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="196366451"/>
+							</MediaIDList>
 						</AudioFileSource>
 					</ChildrenList>
 					<ActiveSourceList>
@@ -603,9 +687,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="Super Tower Shot 1" ID="{29D44252-8B37-42C1-9D01-F75BE3C74EF3}" ShortID="384932319">
+								<AudioFileSource Name="Super Tower Shot 1" ID="{29D44252-8B37-42C1-9D01-F75BE3C74EF3}">
 									<Language>SFX</Language>
 									<AudioFile>Super Tower Shot 1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="384932319"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
@@ -622,9 +709,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="Super Tower Shot 2" ID="{01226227-119B-448D-8813-22897ABB2212}" ShortID="49736053">
+								<AudioFileSource Name="Super Tower Shot 2" ID="{01226227-119B-448D-8813-22897ABB2212}">
 									<Language>SFX</Language>
 									<AudioFile>Super Tower Shot 2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="49736053"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
@@ -641,9 +731,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="Super Tower Shot 3" ID="{CD36B9A8-5C92-41E3-B233-1EFFCAD99CDE}" ShortID="240071035">
+								<AudioFileSource Name="Super Tower Shot 3" ID="{CD36B9A8-5C92-41E3-B233-1EFFCAD99CDE}">
 									<Language>SFX</Language>
 									<AudioFile>Super Tower Shot 3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="240071035"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
@@ -660,9 +753,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="Super Tower Shot 4" ID="{076387BE-9206-48FD-8CB7-DFCBB38BB96D}" ShortID="970387866">
+								<AudioFileSource Name="Super Tower Shot 4" ID="{076387BE-9206-48FD-8CB7-DFCBB38BB96D}">
 									<Language>SFX</Language>
 									<AudioFile>Super Tower Shot 4.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="970387866"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
@@ -679,9 +775,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="Super Tower Shot 5" ID="{9814C74D-7A84-4DC7-B8FB-C6D92272FF7D}" ShortID="1038237832">
+								<AudioFileSource Name="Super Tower Shot 5" ID="{9814C74D-7A84-4DC7-B8FB-C6D92272FF7D}">
 									<Language>SFX</Language>
 									<AudioFile>Super Tower Shot 5.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1038237832"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
@@ -698,9 +797,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="Super Tower Shot 6" ID="{EFD258A5-5866-459A-A281-C8888C671B7C}" ShortID="552751816">
+								<AudioFileSource Name="Super Tower Shot 6" ID="{EFD258A5-5866-459A-A281-C8888C671B7C}">
 									<Language>SFX</Language>
 									<AudioFile>Super Tower Shot 6.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="552751816"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
@@ -717,9 +819,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="Super Tower Shot 7" ID="{673F08F3-49B0-4CA5-A6D5-2E064C52B887}" ShortID="607917041">
+								<AudioFileSource Name="Super Tower Shot 7" ID="{673F08F3-49B0-4CA5-A6D5-2E064C52B887}">
 									<Language>SFX</Language>
 									<AudioFile>Super Tower Shot 7.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="607917041"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
@@ -738,9 +843,12 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<AudioFileSource Name="base_attack" ID="{EAE4DBD7-31A5-496A-B342-BF7D3084B0AA}" ShortID="271505111">
+						<AudioFileSource Name="base_attack" ID="{EAE4DBD7-31A5-496A-B342-BF7D3084B0AA}">
 							<Language>SFX</Language>
 							<AudioFile>base_attack.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="271505111"/>
+							</MediaIDList>
 						</AudioFileSource>
 					</ChildrenList>
 					<ActiveSourceList>
@@ -757,9 +865,12 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<AudioFileSource Name="zone_enter" ID="{A94A6ED2-563E-4C0A-9E35-E9248BD8C893}" ShortID="931081324">
+						<AudioFileSource Name="zone_enter" ID="{A94A6ED2-563E-4C0A-9E35-E9248BD8C893}">
 							<Language>SFX</Language>
 							<AudioFile>zone_enter.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="931081324"/>
+							</MediaIDList>
 						</AudioFileSource>
 					</ChildrenList>
 					<ActiveSourceList>
@@ -776,9 +887,12 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<AudioFileSource Name="Enemy Fire" ID="{55B22CEB-BF4C-419F-A6CD-883128015D3C}" ShortID="956707441">
+						<AudioFileSource Name="Enemy Fire" ID="{55B22CEB-BF4C-419F-A6CD-883128015D3C}">
 							<Language>SFX</Language>
 							<AudioFile>Enemy Fire.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="956707441"/>
+							</MediaIDList>
 						</AudioFileSource>
 					</ChildrenList>
 					<ActiveSourceList>
@@ -795,9 +909,12 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<AudioFileSource Name="Macross Placement" ID="{3E7B54CC-9FD3-4068-948D-8567D6C4BC3F}" ShortID="428097807">
+						<AudioFileSource Name="Macross Placement" ID="{3E7B54CC-9FD3-4068-948D-8567D6C4BC3F}">
 							<Language>SFX</Language>
 							<AudioFile>Macross Placement.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="428097807"/>
+							</MediaIDList>
 						</AudioFileSource>
 					</ChildrenList>
 					<ActiveSourceList>
@@ -814,9 +931,12 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<AudioFileSource Name="TD Currency" ID="{AB33A30C-350D-42C1-B8EF-4C7C7D37CBE8}" ShortID="401778812">
+						<AudioFileSource Name="TD Currency" ID="{AB33A30C-350D-42C1-B8EF-4C7C7D37CBE8}">
 							<Language>SFX</Language>
 							<AudioFile>TD Currency.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="401778812"/>
+							</MediaIDList>
 						</AudioFileSource>
 					</ChildrenList>
 					<ActiveSourceList>
@@ -833,9 +953,12 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<AudioFileSource Name="TD Defeat " ID="{9B48002F-6D0A-46C0-A1CF-ACEE946F342A}" ShortID="161560246">
+						<AudioFileSource Name="TD Defeat " ID="{9B48002F-6D0A-46C0-A1CF-ACEE946F342A}">
 							<Language>SFX</Language>
 							<AudioFile>TD Defeat .wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="161560246"/>
+							</MediaIDList>
 						</AudioFileSource>
 					</ChildrenList>
 					<ActiveSourceList>
@@ -852,9 +975,12 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<AudioFileSource Name="TD EMP Idle" ID="{55A5096C-8EC9-44E4-8C9B-2C3381B22274}" ShortID="308716987">
+						<AudioFileSource Name="TD EMP Idle" ID="{55A5096C-8EC9-44E4-8C9B-2C3381B22274}">
 							<Language>SFX</Language>
 							<AudioFile>TD EMP Idle.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="308716987"/>
+							</MediaIDList>
 						</AudioFileSource>
 					</ChildrenList>
 					<ActiveSourceList>
@@ -871,9 +997,12 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<AudioFileSource Name="TD Tower Sell" ID="{B632D039-C12B-4264-A531-FDDBD0663CA4}" ShortID="23619968">
+						<AudioFileSource Name="TD Tower Sell" ID="{B632D039-C12B-4264-A531-FDDBD0663CA4}">
 							<Language>SFX</Language>
 							<AudioFile>TD Tower Sell.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="23619968"/>
+							</MediaIDList>
 						</AudioFileSource>
 					</ChildrenList>
 					<ActiveSourceList>
@@ -890,9 +1019,12 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<AudioFileSource Name="TD Tower Upgrade" ID="{DB1B863C-FBBA-4187-8105-78CD46E78733}" ShortID="892297116">
+						<AudioFileSource Name="TD Tower Upgrade" ID="{DB1B863C-FBBA-4187-8105-78CD46E78733}">
 							<Language>SFX</Language>
 							<AudioFile>TD Tower Upgrade.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="892297116"/>
+							</MediaIDList>
 						</AudioFileSource>
 					</ChildrenList>
 					<ActiveSourceList>
@@ -909,9 +1041,12 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<AudioFileSource Name="TD Victory" ID="{13A5AA1E-1E8A-4A50-BFDE-57CF53525EDF}" ShortID="669322150">
+						<AudioFileSource Name="TD Victory" ID="{13A5AA1E-1E8A-4A50-BFDE-57CF53525EDF}">
 							<Language>SFX</Language>
 							<AudioFile>TD Victory.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="669322150"/>
+							</MediaIDList>
 						</AudioFileSource>
 					</ChildrenList>
 					<ActiveSourceList>

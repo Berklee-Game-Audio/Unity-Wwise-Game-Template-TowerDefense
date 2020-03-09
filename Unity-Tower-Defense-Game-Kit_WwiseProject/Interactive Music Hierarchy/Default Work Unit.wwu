@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{55E7783B-14ED-4642-9156-B7BC13AE4E93}" SchemaVersion="94">
+<WwiseDocument Type="WorkUnit" ID="{55E7783B-14ED-4642-9156-B7BC13AE4E93}" SchemaVersion="97">
 	<InteractiveMusic>
 		<WorkUnit Name="Default Work Unit" ID="{55E7783B-14ED-4642-9156-B7BC13AE4E93}" PersistMode="Standalone">
 			<ChildrenList>
@@ -20,9 +20,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="game_start" ID="{2309CD81-6B54-4FBA-A16E-5EBE35DA78D2}" ShortID="616328867">
+								<AudioFileSource Name="game_start" ID="{2309CD81-6B54-4FBA-A16E-5EBE35DA78D2}">
 									<Language>SFX</Language>
 									<AudioFile>game_start.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="616328867"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<TransitionList>
@@ -106,9 +109,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="ui_startWaveButton" ID="{25706488-27EB-4601-AB4E-85D264DAFB26}" ShortID="431152931">
+								<AudioFileSource Name="ui_startWaveButton" ID="{25706488-27EB-4601-AB4E-85D264DAFB26}">
 									<Language>SFX</Language>
 									<AudioFile>ui_startWaveButton.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="431152931"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<TransitionList>
@@ -162,9 +168,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="ui_levelSelectButton" ID="{5740F8B1-7D23-461B-B4B5-88EEA4F9C4DC}" ShortID="640446327">
+								<AudioFileSource Name="ui_levelSelectButton" ID="{5740F8B1-7D23-461B-B4B5-88EEA4F9C4DC}">
 									<Language>SFX</Language>
 									<AudioFile>ui_levelSelectButton.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="640446327"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<TransitionList>
@@ -218,9 +227,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="ui_levelSelectButtonPart2" ID="{05B1A9E9-AF67-4C2D-8681-1A704561395B}" ShortID="922593991">
+								<AudioFileSource Name="ui_levelSelectButtonPart2" ID="{05B1A9E9-AF67-4C2D-8681-1A704561395B}">
 									<Language>SFX</Language>
 									<AudioFile>ui_levelSelectButtonPart2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="922593991"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<TransitionList>
@@ -274,9 +286,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="ui_testEvent" ID="{42BB11C8-D145-42B0-A52D-857BCAB6B359}" ShortID="692081263">
+								<AudioFileSource Name="ui_testEvent" ID="{42BB11C8-D145-42B0-A52D-857BCAB6B359}">
 									<Language>SFX</Language>
 									<AudioFile>ui_testEvent.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="692081263"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<TransitionList>
@@ -330,9 +345,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="ui_newWave" ID="{31FB391C-011D-43D4-8D75-C1294E4062AD}" ShortID="180042438">
+								<AudioFileSource Name="ui_newWave" ID="{31FB391C-011D-43D4-8D75-C1294E4062AD}">
 									<Language>SFX</Language>
 									<AudioFile>ui_newWave.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="180042438"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<TransitionList>
@@ -403,9 +421,12 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="game_levelLose" ID="{8FB131DF-A8D0-462F-A0E0-A204B90B5C32}" ShortID="539877189">
+										<AudioFileSource Name="game_levelLose" ID="{8FB131DF-A8D0-462F-A0E0-A204B90B5C32}">
 											<Language>SFX</Language>
 											<AudioFile>game_levelLose.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="539877189"/>
+											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<TransitionList>
@@ -459,9 +480,12 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="game_levelWin" ID="{48CFBD1F-6EC2-4D8C-AC94-8C7D648F9D0E}" ShortID="441549464">
+										<AudioFileSource Name="game_levelWin" ID="{48CFBD1F-6EC2-4D8C-AC94-8C7D648F9D0E}">
 											<Language>SFX</Language>
 											<AudioFile>game_levelWin.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="441549464"/>
+											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<TransitionList>
@@ -528,9 +552,12 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="game_menu" ID="{B33702B4-6A03-4A90-A74B-3C4A5B179A4A}" ShortID="225556179">
+												<AudioFileSource Name="game_menu" ID="{B33702B4-6A03-4A90-A74B-3C4A5B179A4A}">
 													<Language>SFX</Language>
 													<AudioFile>game_menu.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="225556179"/>
+													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<TransitionList>
@@ -647,12 +674,12 @@
 																</Reference>
 															</ReferenceList>
 															<ChildrenList>
-																<AudioFileSource Name="music_intensity_00" ID="{2F0A2CEF-B85C-4CAB-929A-758844621E50}" ShortID="162159300">
+																<AudioFileSource Name="music_intensity_00" ID="{2F0A2CEF-B85C-4CAB-929A-758844621E50}">
 																	<Language>SFX</Language>
 																	<AudioFile>music_intensity_00.wav</AudioFile>
-																	<ConvertedFileIDList>
-																		<File ID="551719863"/>
-																	</ConvertedFileIDList>
+																	<MediaIDList>
+																		<MediaID ID="551719863"/>
+																	</MediaIDList>
 																</AudioFileSource>
 															</ChildrenList>
 															<TransitionList>
@@ -749,12 +776,12 @@
 																</Reference>
 															</ReferenceList>
 															<ChildrenList>
-																<AudioFileSource Name="music_intensity_01" ID="{6970F7A3-471C-4034-8584-FDB09D22B16F}" ShortID="897127716">
+																<AudioFileSource Name="music_intensity_01" ID="{6970F7A3-471C-4034-8584-FDB09D22B16F}">
 																	<Language>SFX</Language>
 																	<AudioFile>music_intensity_01.wav</AudioFile>
-																	<ConvertedFileIDList>
-																		<File ID="694574826"/>
-																	</ConvertedFileIDList>
+																	<MediaIDList>
+																		<MediaID ID="694574826"/>
+																	</MediaIDList>
 																</AudioFileSource>
 															</ChildrenList>
 															<TransitionList>
@@ -910,12 +937,12 @@
 																</Reference>
 															</ReferenceList>
 															<ChildrenList>
-																<AudioFileSource Name="music_intensity_02" ID="{B132B479-1BAD-4560-AC80-E87548487930}" ShortID="483461576">
+																<AudioFileSource Name="music_intensity_02" ID="{B132B479-1BAD-4560-AC80-E87548487930}">
 																	<Language>SFX</Language>
 																	<AudioFile>music_intensity_02.wav</AudioFile>
-																	<ConvertedFileIDList>
-																		<File ID="794319706"/>
-																	</ConvertedFileIDList>
+																	<MediaIDList>
+																		<MediaID ID="794319706"/>
+																	</MediaIDList>
 																</AudioFileSource>
 															</ChildrenList>
 															<TransitionList>
@@ -1012,12 +1039,12 @@
 																</Reference>
 															</ReferenceList>
 															<ChildrenList>
-																<AudioFileSource Name="music_intensity_03" ID="{C9C88000-B38E-4119-A6FD-6D9FB3BB8232}" ShortID="638889974">
+																<AudioFileSource Name="music_intensity_03" ID="{C9C88000-B38E-4119-A6FD-6D9FB3BB8232}">
 																	<Language>SFX</Language>
 																	<AudioFile>music_intensity_03.wav</AudioFile>
-																	<ConvertedFileIDList>
-																		<File ID="911006166"/>
-																	</ConvertedFileIDList>
+																	<MediaIDList>
+																		<MediaID ID="911006166"/>
+																	</MediaIDList>
 																</AudioFileSource>
 															</ChildrenList>
 															<TransitionList>
@@ -1169,7 +1196,7 @@
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<AudioFileSource Name="level_2" ID="{CBB2F920-AEDC-41E3-8C93-756A97311A5B}" ShortID="849413659">
+														<AudioFileSource Name="level_2" ID="{CBB2F920-AEDC-41E3-8C93-756A97311A5B}">
 															<PropertyList>
 																<Property Name="LoopBegin" Type="Real64" Value="-0.001"/>
 																<Property Name="LoopEnd" Type="Real64" Value="-0.001"/>
@@ -1178,6 +1205,9 @@
 															</PropertyList>
 															<Language>SFX</Language>
 															<AudioFile>level_2.wav</AudioFile>
+															<MediaIDList>
+																<MediaID ID="849413659"/>
+															</MediaIDList>
 														</AudioFileSource>
 													</ChildrenList>
 													<TransitionList>
@@ -1379,9 +1409,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="ui_restartLevelButton" ID="{2CF16821-21DC-4B30-BA4E-8C46E51D526F}" ShortID="208376835">
+								<AudioFileSource Name="ui_restartLevelButton" ID="{2CF16821-21DC-4B30-BA4E-8C46E51D526F}">
 									<Language>SFX</Language>
 									<AudioFile>ui_restartLevelButton.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="208376835"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<TransitionList>
@@ -1435,9 +1468,12 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="ui_backButton" ID="{FB282095-1C3C-4C4B-8DE6-605ECCC49ACC}" ShortID="287391411">
+								<AudioFileSource Name="ui_backButton" ID="{FB282095-1C3C-4C4B-8DE6-605ECCC49ACC}">
 									<Language>SFX</Language>
 									<AudioFile>ui_backButton.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="287391411"/>
+									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<TransitionList>
