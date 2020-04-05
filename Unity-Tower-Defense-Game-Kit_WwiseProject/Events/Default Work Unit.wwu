@@ -19,7 +19,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="game_music_switch" ID="{DC78FF0A-16C5-4140-AE46-E58795640F24}" WorkUnitID="{55E7783B-14ED-4642-9156-B7BC13AE4E93}"/>
+									<ObjectRef Name="top_level_game_music_switch" ID="{DC78FF0A-16C5-4140-AE46-E58795640F24}" WorkUnitID="{55E7783B-14ED-4642-9156-B7BC13AE4E93}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -210,6 +210,20 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="ui_backButton" ID="{86A16341-97AD-4243-A8B7-38C2C39404DA}" WorkUnitID="{55E7783B-14ED-4642-9156-B7BC13AE4E93}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ui_baseHit" ID="{106DAC55-DDC1-411E-9FC0-A9A6B480C7B3}">
+					<ChildrenList>
+						<Action Name="" ID="{C40C0626-CE68-4ACC-8063-D51E60DBC99F}" ShortID="946832463">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ui_baseHit" ID="{8E030CC8-BFA0-4592-94D3-BF86AFB14DD0}" WorkUnitID="{55E7783B-14ED-4642-9156-B7BC13AE4E93}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

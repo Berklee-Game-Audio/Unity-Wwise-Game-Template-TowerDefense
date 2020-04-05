@@ -51,6 +51,14 @@ namespace TowerDefense.UI.HUD
 		protected virtual void OnBaseDamaged(HealthChangeInfo info)
 		{
 			UpdateDisplay();
+			GameObject WwiseGlobal;
+			WwiseGlobal = GameObject.Find("WwiseGlobal");
+			AkSoundEngine.PostEvent("ui_baseHit", WwiseGlobal);
+			LevelManager levelManager = LevelManager.instance;
+			Damageable baseConfig = levelManager.playerHomeBases[0].configuration;
+			float currentHealth = baseConfig.currentHealth * 10.0f;
+			Debug.Log("currentHealth = " + currentHealth);
+			AkSoundEngine.SetRTPCValue("health", currentHealth, WwiseGlobal);
 		}
 
 		/// <summary>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{6FF7C75D-748A-49BB-A5C6-8D887328D53E}" SchemaVersion="97">
+	<SoundcasterSessions>
+		<WorkUnit Name="Default Work Unit" ID="{6FF7C75D-748A-49BB-A5C6-8D887328D53E}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="New Soundcaster Session" ID="{D167745C-E8A7-4984-A452-63C1D3563931}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="game_menu" ID="{1F743B94-0F81-47B3-8597-AE224125EF87}" WorkUnitID="{565D4456-153C-4E4B-882F-E17408A9A089}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="game_start" ID="{8D47A50D-66E9-4B3A-AF85-A548F3059AEE}" WorkUnitID="{565D4456-153C-4E4B-882F-E17408A9A089}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="ui_newWave" ID="{10DBC0BE-FEA7-48EB-83CC-432685664DE6}" WorkUnitID="{565D4456-153C-4E4B-882F-E17408A9A089}"/>
+							<Position X="0" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="game_levelLose" ID="{2C8CC40E-9744-4305-A12F-94397EA818B7}" WorkUnitID="{565D4456-153C-4E4B-882F-E17408A9A089}"/>
+							<Position X="0" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="game_levelWin" ID="{5F8AC8E9-32C9-42B6-AFBB-D682E4559DDB}" WorkUnitID="{565D4456-153C-4E4B-882F-E17408A9A089}"/>
+							<Position X="1" Y="3"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="health" ID="{138AE5BF-B6C3-40BA-AD52-7F9FA5AB978A}"/>
+							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="levelNumber" ID="{88664FE9-0474-4791-A90D-9289532D959F}"/>
+							<Value>2</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="waveNumber" ID="{B39DCA80-FF76-4997-9DE4-72CB92A7930D}"/>
+							<Value>0</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="gameplay" ID="{86CC67F0-E05A-4BD1-9BA6-C2B0747F862F}"/>
+					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="level_5" ID="{1FA1A03A-35CF-47EC-837B-85CF2AF7E6F4}"/>
+						<CurrentSwitchRef Name="intensity_0" ID="{9A5AD582-68AD-4953-9697-4F91B7C659E9}"/>
+					</CurrentSwitchList>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundcasterSessions>
+</WwiseDocument>

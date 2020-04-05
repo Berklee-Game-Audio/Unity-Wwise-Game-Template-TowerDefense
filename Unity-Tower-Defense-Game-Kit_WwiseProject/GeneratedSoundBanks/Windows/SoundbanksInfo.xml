@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="135">
 	<RootPaths>
-		<ProjectRoot>C:\Users\micha\Desktop\GIT\Unity-Wwise-Game-Template-TowerDefense\Unity-Tower-Defense-Game-Kit_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\micha\Desktop\GIT\Unity-Wwise-Game-Template-TowerDefense\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\micha\Desktop\GIT\Unity-Wwise-Game-Template-TowerDefense\Unity-Tower-Defense-Game-Kit_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>/Users/michaelsweet/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/GoogleDrive/_CloudSync/Work/Berklee/GIT/Unity-Wwise-Game-Template-TowerDefense/Unity-Tower-Defense-Game-Kit_WwiseProject/</ProjectRoot>
+		<SourceFilesRoot>/Users/michaelsweet/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/GoogleDrive/_CloudSync/Work/Berklee/GIT/Unity-Wwise-Game-Template-TowerDefense/Unity-Tower-Defense-Game-Kit_WwiseProject/.cache/Windows/</SourceFilesRoot>
+		<SoundBanksRoot>/Users/michaelsweet/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/GoogleDrive/_CloudSync/Work/Berklee/GIT/Unity-Wwise-Game-Template-TowerDefense/Unity-Tower-Defense-Game-Kit_WwiseProject/GeneratedSoundBanks/Windows/</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\micha\Desktop\GIT\Unity-Wwise-Game-Template-TowerDefense\Unity-Tower-Defense-Game-Kit_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>/Users/michaelsweet/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/GoogleDrive/_CloudSync/Work/Berklee/GIT/Unity-Wwise-Game-Template-TowerDefense/Unity-Tower-Defense-Game-Kit_WwiseProject/GeneratedSoundBanks/Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -27,31 +27,31 @@
 					<IncludedMemoryFiles>
 						<File Id="225556179" Language="SFX">
 							<ShortName>game_menu.wav</ShortName>
-							<Path>SFX\game_menu_78160227.wem</Path>
+							<Path>SFX/game_menu_78160227.wem</Path>
 						</File>
 						<File Id="441549464" Language="SFX">
 							<ShortName>game_levelWin.wav</ShortName>
-							<Path>SFX\game_levelWin_78160227.wem</Path>
+							<Path>SFX/game_levelWin_78160227.wem</Path>
 						</File>
 						<File Id="539877189" Language="SFX">
 							<ShortName>game_levelLose.wav</ShortName>
-							<Path>SFX\game_levelLose_78160227.wem</Path>
+							<Path>SFX/game_levelLose_78160227.wem</Path>
 						</File>
 						<File Id="551719863" Language="SFX">
 							<ShortName>music_intensity_00.wav</ShortName>
-							<Path>SFX\music_intensity_00_78160227.wem</Path>
+							<Path>SFX/music_intensity_00_78160227.wem</Path>
 						</File>
 						<File Id="694574826" Language="SFX">
 							<ShortName>music_intensity_01.wav</ShortName>
-							<Path>SFX\music_intensity_01_78160227.wem</Path>
+							<Path>SFX/music_intensity_01_78160227.wem</Path>
 						</File>
 						<File Id="794319706" Language="SFX">
 							<ShortName>music_intensity_02.wav</ShortName>
-							<Path>SFX\music_intensity_02_78160227.wem</Path>
+							<Path>SFX/music_intensity_02_78160227.wem</Path>
 						</File>
 						<File Id="911006166" Language="SFX">
 							<ShortName>music_intensity_03.wav</ShortName>
-							<Path>SFX\music_intensity_03_78160227.wem</Path>
+							<Path>SFX/music_intensity_03_78160227.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 					<SwitchContainers>
@@ -72,29 +72,25 @@
 						</SwitchContainer>
 						<SwitchContainer SwitchValue="{86CC67F0-E05A-4BD1-9BA6-C2B0747F862F}">
 							<Children>
-								<SwitchContainer SwitchValue="{4C8ECBEB-935A-47BD-90FF-9B5A97013D7A}">
-									<Children>
-										<SwitchContainer SwitchValue="{9A5AD582-68AD-4953-9697-4F91B7C659E9}">
-											<Media>
-												<File Id="551719863"/>
-											</Media>
-										</SwitchContainer>
-										<SwitchContainer SwitchValue="{4AD29BB8-4317-44F6-9746-CE81C004BC71}">
-											<Media>
-												<File Id="694574826"/>
-											</Media>
-										</SwitchContainer>
-										<SwitchContainer SwitchValue="{501D0CE8-0D4A-4AEF-B62F-4E3AAA77C7AD}">
-											<Media>
-												<File Id="794319706"/>
-											</Media>
-										</SwitchContainer>
-										<SwitchContainer SwitchValue="{03A7F78D-6269-4119-AFCB-3D6065EA4261}">
-											<Media>
-												<File Id="911006166"/>
-											</Media>
-										</SwitchContainer>
-									</Children>
+								<SwitchContainer SwitchValue="{9A5AD582-68AD-4953-9697-4F91B7C659E9}">
+									<Media>
+										<File Id="551719863"/>
+									</Media>
+								</SwitchContainer>
+								<SwitchContainer SwitchValue="{4AD29BB8-4317-44F6-9746-CE81C004BC71}">
+									<Media>
+										<File Id="694574826"/>
+									</Media>
+								</SwitchContainer>
+								<SwitchContainer SwitchValue="{501D0CE8-0D4A-4AEF-B62F-4E3AAA77C7AD}">
+									<Media>
+										<File Id="794319706"/>
+									</Media>
+								</SwitchContainer>
+								<SwitchContainer SwitchValue="{03A7F78D-6269-4119-AFCB-3D6065EA4261}">
+									<Media>
+										<File Id="911006166"/>
+									</Media>
 								</SwitchContainer>
 							</Children>
 						</SwitchContainer>
@@ -105,7 +101,15 @@
 					<IncludedMemoryFiles>
 						<File Id="287391411" Language="SFX">
 							<ShortName>ui_backButton.wav</ShortName>
-							<Path>SFX\ui_backButton_78160227.wem</Path>
+							<Path>SFX/ui_backButton_78160227.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2660009500" Name="ui_baseHit" ObjectPath="\Events\Default Work Unit\ui_baseHit">
+					<IncludedMemoryFiles>
+						<File Id="628737186" Language="SFX">
+							<ShortName>base_hit.wav</ShortName>
+							<Path>SFX/base_hit_9EDFC787.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -113,7 +117,7 @@
 					<IncludedMemoryFiles>
 						<File Id="640446327" Language="SFX">
 							<ShortName>ui_levelSelectButton.wav</ShortName>
-							<Path>SFX\ui_levelSelectButton_78160227.wem</Path>
+							<Path>SFX/ui_levelSelectButton_78160227.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -121,7 +125,7 @@
 					<IncludedMemoryFiles>
 						<File Id="922593991" Language="SFX">
 							<ShortName>ui_levelSelectButtonPart2.wav</ShortName>
-							<Path>SFX\ui_levelSelectButtonPart2_78160227.wem</Path>
+							<Path>SFX/ui_levelSelectButtonPart2_78160227.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -129,7 +133,7 @@
 					<IncludedMemoryFiles>
 						<File Id="180042438" Language="SFX">
 							<ShortName>ui_newWave.wav</ShortName>
-							<Path>SFX\ui_newWave_78160227.wem</Path>
+							<Path>SFX/ui_newWave_78160227.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -137,7 +141,7 @@
 					<IncludedMemoryFiles>
 						<File Id="208376835" Language="SFX">
 							<ShortName>ui_restartLevelButton.wav</ShortName>
-							<Path>SFX\ui_restartLevelButton_78160227.wem</Path>
+							<Path>SFX/ui_restartLevelButton_78160227.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -146,14 +150,13 @@
 					<IncludedMemoryFiles>
 						<File Id="692081263" Language="SFX">
 							<ShortName>ui_testEvent.wav</ShortName>
-							<Path>SFX\ui_testEvent_78160227.wem</Path>
+							<Path>SFX/ui_testEvent_78160227.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
 			</IncludedEvents>
 			<GameParameters>
 				<GameParameter Id="3188605873" Name="waveNumber" ObjectPath="\Game Parameters\Default Work Unit\waveNumber"/>
-				<GameParameter Id="3941060586" Name="levelNumber" ObjectPath="\Game Parameters\Default Work Unit\levelNumber"/>
 			</GameParameters>
 			<StateGroups>
 				<StateGroup Id="766723505" Name="game_state" ObjectPath="\States\Default Work Unit\game_state">
@@ -173,20 +176,6 @@
 						<Switch Id="3700547915" Name="intensity_2" ObjectPath="\Switches\Default Work Unit\level_intensity_alt\intensity_2"/>
 						<Switch Id="3700547914" Name="intensity_3" ObjectPath="\Switches\Default Work Unit\level_intensity_alt\intensity_3"/>
 						<Switch Id="3700547913" Name="intensity_0" ObjectPath="\Switches\Default Work Unit\level_intensity_alt\intensity_0"/>
-					</Switches>
-				</SwitchGroup>
-				<SwitchGroup Id="3170614304" Name="level_switch_group" ObjectPath="\Switches\Default Work Unit\level_switch_group">
-					<Switches>
-						<Switch Id="1290008369" Name="level_1" ObjectPath="\Switches\Default Work Unit\level_switch_group\level_1"/>
-						<Switch Id="1290008370" Name="level_2" ObjectPath="\Switches\Default Work Unit\level_switch_group\level_2"/>
-						<Switch Id="1290008371" Name="level_3" ObjectPath="\Switches\Default Work Unit\level_switch_group\level_3"/>
-						<Switch Id="1290008372" Name="level_4" ObjectPath="\Switches\Default Work Unit\level_switch_group\level_4"/>
-						<Switch Id="1290008373" Name="level_5" ObjectPath="\Switches\Default Work Unit\level_switch_group\level_5"/>
-						<Switch Id="1290008374" Name="level_6" ObjectPath="\Switches\Default Work Unit\level_switch_group\level_6"/>
-						<Switch Id="1290008375" Name="level_7" ObjectPath="\Switches\Default Work Unit\level_switch_group\level_7"/>
-						<Switch Id="1290008376" Name="level_8" ObjectPath="\Switches\Default Work Unit\level_switch_group\level_8"/>
-						<Switch Id="1290008377" Name="level_9" ObjectPath="\Switches\Default Work Unit\level_switch_group\level_9"/>
-						<Switch Id="1004413459" Name="level_10" ObjectPath="\Switches\Default Work Unit\level_switch_group\level_10"/>
 					</Switches>
 				</SwitchGroup>
 			</SwitchGroups>

@@ -25,6 +25,10 @@
 							<ObjectRef Name="game_levelWin" ID="{5F8AC8E9-32C9-42B6-AFBB-D682E4559DDB}" WorkUnitID="{565D4456-153C-4E4B-882F-E17408A9A089}"/>
 							<Position X="1" Y="3"/>
 						</Module>
+						<Module>
+							<ObjectRef Name="ui_baseHit" ID="{106DAC55-DDC1-411E-9FC0-A9A6B480C7B3}" WorkUnitID="{565D4456-153C-4E4B-882F-E17408A9A089}"/>
+							<Position X="2" Y="3"/>
+						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>

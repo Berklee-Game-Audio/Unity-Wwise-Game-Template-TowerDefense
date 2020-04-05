@@ -5,6 +5,7 @@
 			<ChildrenList>
 				<SoundBank Name="Tower_Defense_Soundbank" ID="{7A826CA3-74EF-4C2B-9FB8-CB366A257945}">
 					<ObjectInclusionList>
+						<ObjectRef Name="ui_baseHit" ID="{106DAC55-DDC1-411E-9FC0-A9A6B480C7B3}" WorkUnitID="{565D4456-153C-4E4B-882F-E17408A9A089}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="game_levelWin" ID="{5F8AC8E9-32C9-42B6-AFBB-D682E4559DDB}" WorkUnitID="{565D4456-153C-4E4B-882F-E17408A9A089}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="ui_levelSelectButton" ID="{0E8F09F0-3052-42DA-8C13-0727FE0D98EF}" WorkUnitID="{565D4456-153C-4E4B-882F-E17408A9A089}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="game_levelLose" ID="{2C8CC40E-9744-4305-A12F-94397EA818B7}" WorkUnitID="{565D4456-153C-4E4B-882F-E17408A9A089}" Origin="Manual" Filter="7"/>

@@ -18,6 +18,7 @@ namespace AK
         static const AkUniqueID GAME_MENU = 636067499U;
         static const AkUniqueID GAME_START = 733168346U;
         static const AkUniqueID UI_BACKBUTTON = 1593593619U;
+        static const AkUniqueID UI_BASEHIT = 2660009500U;
         static const AkUniqueID UI_LEVELSELECTBUTTON = 3680374304U;
         static const AkUniqueID UI_LEVELSELECTBUTTONPART2 = 1013525255U;
         static const AkUniqueID UI_NEWWAVE = 1043510291U;
@@ -37,6 +38,7 @@ namespace AK
                 static const AkUniqueID GAMEPLAY = 89505537U;
                 static const AkUniqueID LOSE = 221232726U;
                 static const AkUniqueID MENU = 2607556080U;
+                static const AkUniqueID NONE = 748895195U;
                 static const AkUniqueID WIN = 979765101U;
             } // namespace STATE
         } // namespace GAME_STATE

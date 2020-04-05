@@ -8,28 +8,18 @@ Event	ID	Name			Wwise Object Path	Notes
 	1043510291	ui_newWave			\Default Work Unit\ui_newWave	
 	1593593619	ui_backButton			\Default Work Unit\ui_backButton	
 	1726823933	ui_startWaveButton			\Default Work Unit\ui_startWaveButton	
+	2660009500	ui_baseHit			\Default Work Unit\ui_baseHit	
 	3058981574	game_levelWin			\Default Work Unit\game_levelWin	
 	3680374304	ui_levelSelectButton			\Default Work Unit\ui_levelSelectButton	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
 	3133676099	level_intensity_alt			\Default Work Unit\level_intensity_alt	
-	3170614304	level_switch_group			\Default Work Unit\level_switch_group	
 
 Switch	ID	Name	Switch Group			Notes
 	3700547912	intensity_1	level_intensity_alt			
 	3700547913	intensity_0	level_intensity_alt			
 	3700547914	intensity_3	level_intensity_alt			
 	3700547915	intensity_2	level_intensity_alt			
-	1004413459	level_10	level_switch_group			
-	1290008369	level_1	level_switch_group			
-	1290008370	level_2	level_switch_group			
-	1290008371	level_3	level_switch_group			
-	1290008372	level_4	level_switch_group			
-	1290008373	level_5	level_switch_group			
-	1290008374	level_6	level_switch_group			
-	1290008375	level_7	level_switch_group			
-	1290008376	level_8	level_switch_group			
-	1290008377	level_9	level_switch_group			
 
 State Group	ID	Name			Wwise Object Path	Notes
 	766723505	game_state			\Default Work Unit\game_state	
@@ -43,20 +33,20 @@ State	ID	Name	State Group			Notes
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	3188605873	waveNumber			\Default Work Unit\waveNumber	
-	3941060586	levelNumber			\Default Work Unit\levelNumber	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	180042438	ui_newWave	C:\Users\micha\Desktop\GIT\Unity-Wwise-Game-Template-TowerDefense\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Windows\SFX\ui_newWave_78160227.wem		\Interactive Music Hierarchy\Default Work Unit\ui_newWave\ui_newWave		13717
-	208376835	ui_restartLevelButton	C:\Users\micha\Desktop\GIT\Unity-Wwise-Game-Template-TowerDefense\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Windows\SFX\ui_restartLevelButton_78160227.wem		\Interactive Music Hierarchy\Default Work Unit\ui_restartLevelButton\ui_restartLevelButton		32958
-	225556179	game_menu	C:\Users\micha\Desktop\GIT\Unity-Wwise-Game-Template-TowerDefense\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Windows\SFX\game_menu_78160227.wem		\Interactive Music Hierarchy\Default Work Unit\game_music_switch\game_menu_playlist\game_menu\game_menu		10746
-	287391411	ui_backButton	C:\Users\micha\Desktop\GIT\Unity-Wwise-Game-Template-TowerDefense\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Windows\SFX\ui_backButton_78160227.wem		\Interactive Music Hierarchy\Default Work Unit\ui_backButton\ui_backButton		22000
-	441549464	game_levelWin	C:\Users\micha\Desktop\GIT\Unity-Wwise-Game-Template-TowerDefense\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Windows\SFX\game_levelWin_78160227.wem		\Interactive Music Hierarchy\Default Work Unit\game_music_switch\game_levelWin\game_levelWin		14097
-	539877189	game_levelLose	C:\Users\micha\Desktop\GIT\Unity-Wwise-Game-Template-TowerDefense\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Windows\SFX\game_levelLose_78160227.wem		\Interactive Music Hierarchy\Default Work Unit\game_music_switch\game_levelLose\game_levelLose		17322
-	551719863	music_intensity_00	C:\Users\micha\Desktop\GIT\Unity-Wwise-Game-Template-TowerDefense\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Windows\SFX\music_intensity_00_78160227.wem		\Interactive Music Hierarchy\Default Work Unit\game_music_switch\game_music_level_switch\game_music_intensity_alternate_version\intensity_00_playlist_setup\music_intensity_00\music_intensity_00		18710
-	640446327	ui_levelSelectButton	C:\Users\micha\Desktop\GIT\Unity-Wwise-Game-Template-TowerDefense\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Windows\SFX\ui_levelSelectButton_78160227.wem		\Interactive Music Hierarchy\Default Work Unit\ui_levelSelectButton\ui_levelSelectButton		19922
-	692081263	ui_testEvent	C:\Users\micha\Desktop\GIT\Unity-Wwise-Game-Template-TowerDefense\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Windows\SFX\ui_testEvent_78160227.wem		\Interactive Music Hierarchy\Default Work Unit\ui_testEvent\ui_testEvent		14465
-	694574826	music_intensity_01	C:\Users\micha\Desktop\GIT\Unity-Wwise-Game-Template-TowerDefense\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Windows\SFX\music_intensity_01_78160227.wem		\Interactive Music Hierarchy\Default Work Unit\game_music_switch\game_music_level_switch\game_music_intensity_alternate_version\intensity_01_playlist_low_intensity\music_intensity_01\music_intensity_01		18203
-	794319706	music_intensity_02	C:\Users\micha\Desktop\GIT\Unity-Wwise-Game-Template-TowerDefense\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Windows\SFX\music_intensity_02_78160227.wem		\Interactive Music Hierarchy\Default Work Unit\game_music_switch\game_music_level_switch\game_music_intensity_alternate_version\intensity_02_playlist_medium_intensity\music_intensity_02\music_intensity_02		18612
-	911006166	music_intensity_03	C:\Users\micha\Desktop\GIT\Unity-Wwise-Game-Template-TowerDefense\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Windows\SFX\music_intensity_03_78160227.wem		\Interactive Music Hierarchy\Default Work Unit\game_music_switch\game_music_level_switch\game_music_intensity_alternate_version\intensity_03_playlist_high_intensity\music_intensity_03\music_intensity_03		18047
-	922593991	ui_levelSelectButtonPart2	C:\Users\micha\Desktop\GIT\Unity-Wwise-Game-Template-TowerDefense\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Windows\SFX\ui_levelSelectButtonPart2_78160227.wem		\Interactive Music Hierarchy\Default Work Unit\ui_levelSelectButtonPart2\ui_levelSelectButtonPart2		35686
+	180042438	ui_newWave	Y:\GoogleDrive\_CloudSync\Work\Berklee\GIT\Unity-Wwise-Game-Template-TowerDefense\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Windows\SFX\ui_newWave_78160227.wem		\Interactive Music Hierarchy\Default Work Unit\ui_newWave\ui_newWave		13717
+	208376835	ui_restartLevelButton	Y:\GoogleDrive\_CloudSync\Work\Berklee\GIT\Unity-Wwise-Game-Template-TowerDefense\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Windows\SFX\ui_restartLevelButton_78160227.wem		\Interactive Music Hierarchy\Default Work Unit\ui_restartLevelButton\ui_restartLevelButton		32958
+	225556179	game_menu	Y:\GoogleDrive\_CloudSync\Work\Berklee\GIT\Unity-Wwise-Game-Template-TowerDefense\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Windows\SFX\game_menu_78160227.wem		\Interactive Music Hierarchy\Default Work Unit\top_level_game_music_switch\game_menu_playlist\game_menu\game_menu		10746
+	287391411	ui_backButton	Y:\GoogleDrive\_CloudSync\Work\Berklee\GIT\Unity-Wwise-Game-Template-TowerDefense\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Windows\SFX\ui_backButton_78160227.wem		\Interactive Music Hierarchy\Default Work Unit\ui_backButton\ui_backButton		22000
+	441549464	game_levelWin	Y:\GoogleDrive\_CloudSync\Work\Berklee\GIT\Unity-Wwise-Game-Template-TowerDefense\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Windows\SFX\game_levelWin_78160227.wem		\Interactive Music Hierarchy\Default Work Unit\top_level_game_music_switch\game_levelWin\game_levelWin		14097
+	539877189	game_levelLose	Y:\GoogleDrive\_CloudSync\Work\Berklee\GIT\Unity-Wwise-Game-Template-TowerDefense\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Windows\SFX\game_levelLose_78160227.wem		\Interactive Music Hierarchy\Default Work Unit\top_level_game_music_switch\game_levelLose\game_levelLose		17322
+	551719863	music_intensity_00	Y:\GoogleDrive\_CloudSync\Work\Berklee\GIT\Unity-Wwise-Game-Template-TowerDefense\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Windows\SFX\music_intensity_00_78160227.wem		\Interactive Music Hierarchy\Default Work Unit\top_level_game_music_switch\gameplay_music_intensity_switch\intensity_00_playlist_setup\music_intensity_00\music_intensity_00		18710
+	628737186	New Music Track	Y:\GoogleDrive\_CloudSync\Work\Berklee\GIT\Unity-Wwise-Game-Template-TowerDefense\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Windows\SFX\base_hit_9EDFC787.wem		\Interactive Music Hierarchy\Default Work Unit\ui_baseHit\New Music Track		15581
+	640446327	ui_levelSelectButton	Y:\GoogleDrive\_CloudSync\Work\Berklee\GIT\Unity-Wwise-Game-Template-TowerDefense\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Windows\SFX\ui_levelSelectButton_78160227.wem		\Interactive Music Hierarchy\Default Work Unit\ui_levelSelectButton\ui_levelSelectButton		19922
+	692081263	ui_testEvent	Y:\GoogleDrive\_CloudSync\Work\Berklee\GIT\Unity-Wwise-Game-Template-TowerDefense\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Windows\SFX\ui_testEvent_78160227.wem		\Interactive Music Hierarchy\Default Work Unit\ui_testEvent\ui_testEvent		14465
+	694574826	music_intensity_01	Y:\GoogleDrive\_CloudSync\Work\Berklee\GIT\Unity-Wwise-Game-Template-TowerDefense\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Windows\SFX\music_intensity_01_78160227.wem		\Interactive Music Hierarchy\Default Work Unit\top_level_game_music_switch\gameplay_music_intensity_switch\intensity_01_playlist_low_intensity\music_intensity_01\music_intensity_01		18203
+	794319706	music_intensity_02	Y:\GoogleDrive\_CloudSync\Work\Berklee\GIT\Unity-Wwise-Game-Template-TowerDefense\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Windows\SFX\music_intensity_02_78160227.wem		\Interactive Music Hierarchy\Default Work Unit\top_level_game_music_switch\gameplay_music_intensity_switch\intensity_02_playlist_medium_intensity\music_intensity_02\music_intensity_02		18612
+	911006166	music_intensity_03	Y:\GoogleDrive\_CloudSync\Work\Berklee\GIT\Unity-Wwise-Game-Template-TowerDefense\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Windows\SFX\music_intensity_03_78160227.wem		\Interactive Music Hierarchy\Default Work Unit\top_level_game_music_switch\gameplay_music_intensity_switch\intensity_03_playlist_high_intensity\music_intensity_03\music_intensity_03		18047
+	922593991	ui_levelSelectButtonPart2	Y:\GoogleDrive\_CloudSync\Work\Berklee\GIT\Unity-Wwise-Game-Template-TowerDefense\Unity-Tower-Defense-Game-Kit_WwiseProject\.cache\Windows\SFX\ui_levelSelectButtonPart2_78160227.wem		\Interactive Music Hierarchy\Default Work Unit\ui_levelSelectButtonPart2\ui_levelSelectButtonPart2		35686
 
