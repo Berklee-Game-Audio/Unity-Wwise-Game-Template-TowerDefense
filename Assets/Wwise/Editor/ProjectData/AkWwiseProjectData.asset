@@ -13,25 +13,34 @@ MonoBehaviour:
   m_Name: AkWwiseProjectData
   m_EditorClassIdentifier: 
   AcousticTextureWwu:
-  - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
-    ParentPath: 
-    guid: 00000000000000000000000000000000
+  - PhysicalPath: Virtual Acoustics/Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: f7b46a3dc5408b48be1e81923d9ba4d1
     GuidInternal: 
-    m_lastTime: -8586178330295495209
+    m_lastTime: -8586155062654775808
     List: []
   AuxBusWwu:
-  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
-    ParentPath: 
-    guid: 00000000000000000000000000000000
+  - PhysicalPath: Master-Mixer Hierarchy/Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: a03f6f36f9dcc54e98247f4936be80da
     GuidInternal: 
-    m_lastTime: -8586178330294716514
-    List: []
+    m_lastTime: -8586155062654775808
+    List:
+    - name: Master Audio Bus
+      guid: d8a41415a61d2a41a17e75ca0c2149f3
+      id: 3803692087
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      Path: Default Work Unit/Master Audio Bus
   BankWwu:
-  - PhysicalPath: SoundBanks\Default Work Unit.wwu
-    ParentPath: 
-    guid: 00000000000000000000000000000000
+  - PhysicalPath: SoundBanks/Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 263f8cbe72b9e944a058fb361623a058
     GuidInternal: 
-    m_lastTime: -8586178330295067403
+    m_lastTime: -8586155062654775808
     List:
     - name: Tower_Defense_Soundbank
       guid: a36c827aef742b4c9fb8cb366a257945
@@ -41,13 +50,13 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: Tower_Defense_Soundbank
         ObjectType: 7
-      Path: Default Work Unit\Tower_Defense_Soundbank
+      Path: Default Work Unit/Tower_Defense_Soundbank
   EventWwu:
-  - PhysicalPath: Events\Default Work Unit.wwu
-    ParentPath: 
-    guid: 00000000000000000000000000000000
+  - PhysicalPath: Events/Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 56445d563c154b4e882fe17408a9a089
     GuidInternal: 
-    m_lastTime: -8586178330295266866
+    m_lastTime: -8586155062654775808
     List:
     - name: game_levelLose
       guid: 0ec48c2c44970543a12f94397ea818b7
@@ -57,7 +66,7 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: game_levelLose
         ObjectType: 3
-      Path: Default Work Unit\game_levelLose
+      Path: Default Work Unit/game_levelLose
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -69,7 +78,7 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: game_levelWin
         ObjectType: 3
-      Path: Default Work Unit\game_levelWin
+      Path: Default Work Unit/game_levelWin
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -81,7 +90,7 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: game_menu
         ObjectType: 3
-      Path: Default Work Unit\game_menu
+      Path: Default Work Unit/game_menu
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -93,7 +102,7 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: game_start
         ObjectType: 3
-      Path: Default Work Unit\game_start
+      Path: Default Work Unit/game_start
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -105,7 +114,19 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: ui_backButton
         ObjectType: 3
-      Path: Default Work Unit\ui_backButton
+      Path: Default Work Unit/ui_backButton
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: ui_baseHit
+      guid: 55ac6d10c1dd1e419fc0a9a6b480c7b3
+      id: 2660009500
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: ui_baseHit
+        ObjectType: 3
+      Path: Default Work Unit/ui_baseHit
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -117,7 +138,7 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: ui_levelSelectButton
         ObjectType: 3
-      Path: Default Work Unit\ui_levelSelectButton
+      Path: Default Work Unit/ui_levelSelectButton
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -129,7 +150,7 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: ui_levelSelectButtonPart2
         ObjectType: 3
-      Path: Default Work Unit\ui_levelSelectButtonPart2
+      Path: Default Work Unit/ui_levelSelectButtonPart2
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -141,7 +162,7 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: ui_newWave
         ObjectType: 3
-      Path: Default Work Unit\ui_newWave
+      Path: Default Work Unit/ui_newWave
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -153,7 +174,7 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: ui_restartLevelButton
         ObjectType: 3
-      Path: Default Work Unit\ui_restartLevelButton
+      Path: Default Work Unit/ui_restartLevelButton
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -165,7 +186,7 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: ui_startWaveButton
         ObjectType: 3
-      Path: Default Work Unit\ui_startWaveButton
+      Path: Default Work Unit/ui_startWaveButton
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -177,16 +198,16 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: ui_testEvent
         ObjectType: 3
-      Path: Default Work Unit\ui_testEvent
+      Path: Default Work Unit/ui_testEvent
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
   RtpcWwu:
-  - PhysicalPath: Game Parameters\Default Work Unit.wwu
-    ParentPath: 
-    guid: 00000000000000000000000000000000
+  - PhysicalPath: Game Parameters/Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 5f6799c7dc7e604eb10715d12af8dcb1
     GuidInternal: 
-    m_lastTime: -8586178330295386550
+    m_lastTime: -8586155062654775808
     List:
     - name: health
       guid: bfe58a13c3b6ba40ad527f9fa5ab978a
@@ -196,7 +217,7 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: health
         ObjectType: 13
-      Path: Default Work Unit\health
+      Path: Default Work Unit/health
     - name: levelNumber
       guid: e94f668874049147a90d9289532d959f
       id: 3941060586
@@ -205,7 +226,7 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: levelNumber
         ObjectType: 13
-      Path: Default Work Unit\levelNumber
+      Path: Default Work Unit/levelNumber
     - name: waveNumber
       guid: 80ca9db376ff97499de472cb92a7930d
       id: 3188605873
@@ -214,13 +235,13 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: waveNumber
         ObjectType: 13
-      Path: Default Work Unit\waveNumber
+      Path: Default Work Unit/waveNumber
   StateWwu:
-  - PhysicalPath: States\Default Work Unit.wwu
-    ParentPath: 
-    guid: 00000000000000000000000000000000
+  - PhysicalPath: States/Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 889a43a065970a4186545a55de25fd77
     GuidInternal: 
-    m_lastTime: -8586178330295007456
+    m_lastTime: -8586155062654775808
     List:
     - name: game_state
       guid: 2a3e55bfdd87f945b3d40f4554aa970d
@@ -230,7 +251,7 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: game_state
         ObjectType: 9
-      Path: Default Work Unit\game_state
+      Path: Default Work Unit/game_state
       values:
       - name: gameplay
         guid: f067cc865ae0d14b9ba6c2b0747f862f
@@ -266,11 +287,11 @@ MonoBehaviour:
       ValueIcons: []
       valuesInternal: []
   SwitchWwu:
-  - PhysicalPath: Switches\Default Work Unit.wwu
-    ParentPath: 
-    guid: 00000000000000000000000000000000
+  - PhysicalPath: Switches/Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: af1599921204ce4d8ef9a1c50bb7be2d
     GuidInternal: 
-    m_lastTime: -8586178330295097323
+    m_lastTime: -8586155062654775808
     List:
     - name: level_intensity_alt
       guid: 75cedccab99e6e45b0736de918beb558
@@ -280,7 +301,7 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: level_intensity_alt
         ObjectType: 11
-      Path: Default Work Unit\level_intensity_alt
+      Path: Default Work Unit/level_intensity_alt
       values:
       - name: intensity_0
         guid: 82d55a9aad68534996974f91b7c659e9
@@ -317,7 +338,7 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: level_switch_group
         ObjectType: 11
-      Path: Default Work Unit\level_switch_group
+      Path: Default Work Unit/level_switch_group
       values:
       - name: level_1
         guid: ebcb8e4c5a93bd4790ff9b5a97013d7a
@@ -383,12 +404,15 @@ MonoBehaviour:
       ValueIcons: []
       valuesInternal: []
   TriggerWwu:
-  - PhysicalPath: Triggers\Default Work Unit.wwu
-    ParentPath: 
-    guid: 00000000000000000000000000000000
+  - PhysicalPath: Triggers/Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 7f603c42ae7f994ead56ba617f98e481
     GuidInternal: 
-    m_lastTime: -8586178330295546115
+    m_lastTime: -8586155062654775808
     List: []
-  ExpandedItems: []
+  ExpandedItems:
+  - /Unity-Tower-Defense-Game-Kit_WwiseProject
+  - /Unity-Tower-Defense-Game-Kit_WwiseProject/SoundBanks
+  - /Unity-Tower-Defense-Game-Kit_WwiseProject/SoundBanks/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
