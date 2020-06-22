@@ -32014,7 +32014,7 @@ PrefabInstance:
         type: 3}
       propertyPath: data.WwiseObjectReference
       value: 
-      objectReference: {fileID: 11400000, guid: de4d6c278b6aa4fd2896e5116a3cf709,
+      objectReference: {fileID: 11400000, guid: 892a4efc6d1b14a52bfba8af7ad3e2c0,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abb1aca7f374d4d518e9857a8a14a963, type: 3}
