@@ -1,4 +1,4 @@
-# Unity-Wwise-Game-Template-Nightmares
+# Unity-Wwise-Game-Template-Tower-Defense
 
 Optimized for Unity Version: 
 2019.4.2f1
