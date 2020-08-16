@@ -28,8 +28,9 @@ public class AkWwiseXMLWatcher
 			XmlWatcher.Changed += RaisePopulateFlag;
 
 			XmlWatcher.NotifyFilter = System.IO.NotifyFilters.LastWrite;
-			XmlWatcher.EnableRaisingEvents = true;
 			XmlWatcher.Path = AkBasePathGetter.GetPlatformBasePath();
+			XmlWatcher.EnableRaisingEvents = true;
+			
 		}
 		catch
 		{
