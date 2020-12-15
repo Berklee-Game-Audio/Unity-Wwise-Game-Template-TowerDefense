@@ -1,4 +1,6 @@
 #if UNITY_EDITOR
+using System.Collections.Generic;
+
 [UnityEditor.InitializeOnLoad]
 public class AkPluginActivator
 {
@@ -107,6 +109,9 @@ public class AkPluginActivator
 			{ PluginID.IgniterLiveSynth, "IgniterLiveSource" }
 		};
 
+	public delegate void FilterOutPlatformDelegate(UnityEditor.BuildTarget target, UnityEditor.PluginImporter pluginImporter, string pluginPlatform);
+	public static FilterOutPlatformDelegate FilterOutPlatformIfNeeded = FilterOutPlatformIfNeeded_Default;
+
 	static AkPluginActivator()
 	{
 		ActivatePluginsForEditor();
@@ -183,60 +188,15 @@ public class AkPluginActivator
 		return INVALID_BUILD_TARGET;
 	}
 
+	public static Dictionary<UnityEditor.BuildTarget, string> BuildTargetToPlatformName = new Dictionary<UnityEditor.BuildTarget, string>();
+
 	// returns the name of the folder that contains plugins for a specific target
 	private static string GetPluginDeploymentPlatformName(UnityEditor.BuildTarget target)
 	{
-		switch (target)
+		if(BuildTargetToPlatformName.ContainsKey(target))
 		{
-			case UnityEditor.BuildTarget.Android:
-				return "Android";
-
-			case UnityEditor.BuildTarget.iOS:
-				return "iOS";
-
-			case UnityEditor.BuildTarget.tvOS:
-				return "tvOS";
-
-#if !UNITY_2019_2_OR_NEWER
-			case UnityEditor.BuildTarget.StandaloneLinux:
-				UnityEngine.Debug.LogError("WwiseUnity: The Linux Wwise Unity integration does not support the 32 bits architecture");
-				return "Linux";
-
-			case UnityEditor.BuildTarget.StandaloneLinuxUniversal:
-				return "Linux";
-#endif
-
-			case UnityEditor.BuildTarget.StandaloneLinux64:
-				return "Linux";
-
-			case UnityEditor.BuildTarget.StandaloneOSX:
-				return "Mac";
-
-			case (UnityEditor.BuildTarget)39: // UnityEditor.BuildTarget.Lumin
-				return "Lumin";
-
-			case UnityEditor.BuildTarget.PS4:
-				return "PS4";
-
-			case UnityEditor.BuildTarget.StandaloneWindows:
-			case UnityEditor.BuildTarget.StandaloneWindows64:
-				return "Windows";
-
-			case UnityEditor.BuildTarget.WSAPlayer:
-				return "WSA";
-
-			case UnityEditor.BuildTarget.XboxOne:
-				return "XboxOne";
-
-			case UnityEditor.BuildTarget.Switch:
-				return "Switch";
-
-#if UNITY_2019_3_OR_NEWER
-			case UnityEditor.BuildTarget.Stadia:
-				return "Stadia";
-#endif
+			return BuildTargetToPlatformName[target];
 		}
-
 		return target.ToString();
 	}
 
@@ -352,7 +312,14 @@ public class AkPluginActivator
 			// Path is Assets/Wwise/Deployment/Plugins/Platform. We need the platform string
 			var pluginPlatform = splitPath[4];
 			if (pluginPlatform != GetPluginDeploymentPlatformName(target))
+			{
+				if (Activate)
+				{
+					FilterOutPlatformIfNeeded(target, pluginImporter, pluginPlatform);
+				}
+
 				continue;
+			}
 
 			var pluginArch = string.Empty;
 			var pluginConfig = string.Empty;
@@ -361,10 +328,13 @@ public class AkPluginActivator
 			{
 				case "iOS":
 				case "tvOS":
+				case "Pellegrino":
 				case "PS4":
 				case "XboxOne":
 				case "Lumin":
 				case "Stadia":
+				case "Chinook":
+				case "GX":
 					pluginConfig = splitPath[5];
 					break;
 
@@ -503,6 +473,11 @@ public class AkPluginActivator
 		}
 	}
 
+	private static void FilterOutPlatformIfNeeded_Default(UnityEditor.BuildTarget target, UnityEditor.PluginImporter pluginImporter, string pluginPlatform)
+	{
+	}
+
+	[UnityEditor.MenuItem("WWISE/ACTIVATE")]
 	public static void ActivatePluginsForEditor()
 	{
 		var importers = UnityEditor.PluginImporter.GetAllImporters();

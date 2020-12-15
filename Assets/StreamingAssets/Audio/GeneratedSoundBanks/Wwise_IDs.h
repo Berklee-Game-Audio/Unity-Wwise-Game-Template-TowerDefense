@@ -18,21 +18,74 @@ namespace AK
         static const AkUniqueID GAME_MENU = 636067499U;
         static const AkUniqueID GAME_START = 733168346U;
         static const AkUniqueID UI_BACKBUTTON = 1593593619U;
+        static const AkUniqueID UI_BASEHIT = 2660009500U;
         static const AkUniqueID UI_LEVELSELECTBUTTON = 3680374304U;
         static const AkUniqueID UI_LEVELSELECTBUTTONPART2 = 1013525255U;
-        static const AkUniqueID UI_OBJECTATTACKSOUND = 1688641372U;
-        static const AkUniqueID UI_OBJECTCHARGESOUND = 2611829248U;
-        static const AkUniqueID UI_OBJECTDEATH = 2799761671U;
-        static const AkUniqueID UI_OBJECTFIREPROJECTILE = 3377525770U;
-        static const AkUniqueID UI_OBJECTSELLBUTTON = 1843602067U;
-        static const AkUniqueID UI_OPTIONSSELECTBUTTON = 848228196U;
-        static const AkUniqueID UI_QUITSELECTBUTTON = 2671938355U;
+        static const AkUniqueID UI_NEWWAVE = 1043510291U;
+        static const AkUniqueID UI_RESTARTLEVELBUTTON = 700883983U;
         static const AkUniqueID UI_STARTWAVEBUTTON = 1726823933U;
+        static const AkUniqueID UI_TESTEVENT = 170582342U;
     } // namespace EVENTS
+
+    namespace STATES
+    {
+        namespace GAME_STATE
+        {
+            static const AkUniqueID GROUP = 766723505U;
+
+            namespace STATE
+            {
+                static const AkUniqueID GAMEPLAY = 89505537U;
+                static const AkUniqueID LOSE = 221232726U;
+                static const AkUniqueID MENU = 2607556080U;
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID WIN = 979765101U;
+            } // namespace STATE
+        } // namespace GAME_STATE
+
+    } // namespace STATES
+
+    namespace SWITCHES
+    {
+        namespace LEVEL_INTENSITY_ALT
+        {
+            static const AkUniqueID GROUP = 3133676099U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID INTENSITY_0 = 3700547913U;
+                static const AkUniqueID INTENSITY_1 = 3700547912U;
+                static const AkUniqueID INTENSITY_2 = 3700547915U;
+                static const AkUniqueID INTENSITY_3 = 3700547914U;
+            } // namespace SWITCH
+        } // namespace LEVEL_INTENSITY_ALT
+
+        namespace LEVEL_SWITCH_GROUP
+        {
+            static const AkUniqueID GROUP = 3170614304U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID LEVEL_1 = 1290008369U;
+                static const AkUniqueID LEVEL_2 = 1290008370U;
+                static const AkUniqueID LEVEL_3 = 1290008371U;
+                static const AkUniqueID LEVEL_4 = 1290008372U;
+                static const AkUniqueID LEVEL_5 = 1290008373U;
+                static const AkUniqueID LEVEL_6 = 1290008374U;
+                static const AkUniqueID LEVEL_7 = 1290008375U;
+                static const AkUniqueID LEVEL_8 = 1290008376U;
+                static const AkUniqueID LEVEL_9 = 1290008377U;
+                static const AkUniqueID LEVEL_10 = 1004413459U;
+            } // namespace SWITCH
+        } // namespace LEVEL_SWITCH_GROUP
+
+    } // namespace SWITCHES
 
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID HEALTH = 3677180323U;
+        static const AkUniqueID LEVELNUMBER = 3941060586U;
+        static const AkUniqueID WAVENUMBER = 3188605873U;
     } // namespace GAME_PARAMETERS
 
     namespace BANKS

@@ -8,7 +8,7 @@
   <ShowMissingRigidBodyWarning>true</ShowMissingRigidBodyWarning>
   <ShowSpatialAudioWarningMsg>true</ShowSpatialAudioWarningMsg>
   <SoundbankPath>Audio/GeneratedSoundBanks</SoundbankPath>
-  <WwiseInstallationPathMac>/Applications/Audiokinetic/Wwise 2019.2.4.7329/Wwise.app</WwiseInstallationPathMac>
+  <WwiseInstallationPathMac>/Applications/Audiokinetic/Wwise 2019.2.8.7432/Wwise.app</WwiseInstallationPathMac>
   <WwiseInstallationPathWindows>C:\Program Files (x86)\Audiokinetic\Wwise 2019.2.0.7216</WwiseInstallationPathWindows>
   <WwiseProjectPath>../../Unity-Wwise-Game-Template-TowerDefense/Unity-Tower-Defense-Game-Kit_WwiseProject/Unity-Tower-Defense-Game-Kit_WwiseProject.wproj</WwiseProjectPath>
 </WwiseSettings>

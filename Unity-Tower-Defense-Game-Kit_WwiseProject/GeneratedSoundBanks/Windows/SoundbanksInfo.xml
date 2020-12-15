@@ -11,12 +11,12 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX">
+		<SoundBank Id="1355168291" Language="SFX" Hash="303442304">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="2295945583" Language="SFX">
+		<SoundBank Id="2295945583" Language="SFX" Hash="2795481181">
 			<ObjectPath>\SoundBanks\Default Work Unit\Tower_Defense_Soundbank</ObjectPath>
 			<ShortName>Tower_Defense_Soundbank</ShortName>
 			<Path>Tower_Defense_Soundbank.bnk</Path>

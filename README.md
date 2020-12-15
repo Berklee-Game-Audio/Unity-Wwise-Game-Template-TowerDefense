@@ -1,10 +1,10 @@
 # Unity-Wwise-Game-Template-Tower-Defense
 
 Optimized for Unity Version: 
-2020.1.3f1
+2020.2.0f1
 
 Optimized for Wwise Version: 
-2019.2.4.7329
+2019.2.8.7432
 
 READ BELOW FOR MAC OS CATALINA USERS ONLY:
 Make sure you've applied the updates for the latest version 10.15.6 with the supplementary
