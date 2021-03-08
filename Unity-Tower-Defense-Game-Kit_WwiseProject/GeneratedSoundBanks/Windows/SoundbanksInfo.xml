@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="2295945583" Language="SFX" Hash="2795481181">
+		<SoundBank Id="2295945583" Language="SFX" Hash="375558045">
 			<ObjectPath>\SoundBanks\Default Work Unit\Tower_Defense_Soundbank</ObjectPath>
 			<ShortName>Tower_Defense_Soundbank</ShortName>
 			<Path>Tower_Defense_Soundbank.bnk</Path>

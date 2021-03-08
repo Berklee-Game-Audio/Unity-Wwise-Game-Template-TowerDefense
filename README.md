@@ -1,12 +1,12 @@
 # Unity-Wwise-Game-Template-Tower-Defense
 
 Optimized for Unity Version: 
-2020.2.0f1
+2020.2.1f1
 
 Optimized for Wwise Version: 
-2019.2.8.7432
+2019.2.9.7459
 
-READ BELOW FOR MAC OS CATALINA USERS ONLY:
+READ BELOW FOR MAC OS CATALINA and BIG SUR USERS ONLY:
 Make sure you've applied the updates for the latest version 10.15.6 with the supplementary
 update.  In addition Catalina has security settings which may not allow Unity to properly 
 load Wwise soundbanks. To bypass the security precautions that the Mac OS has put in place 

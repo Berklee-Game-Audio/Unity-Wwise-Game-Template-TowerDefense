@@ -102,6 +102,7 @@ public class AkPluginActivator
 			{ PluginID.iZTrashDynamics, "iZTrashDynamicsFX" },
 			{ PluginID.iZTrashFilters, "iZTrashFiltersFX" },
 			{ PluginID.iZTrashMultibandDistortion, "iZTrashMultibandDistortionFX" },
+			{ PluginID.MasteringSuite, "MasteringSuiteFX" },
 			{ PluginID.McDSPFutzBox, "McDSPFutzBoxFX" },
 			{ PluginID.McDSPLimiter, "McDSPLimiterFX" },
 			{ PluginID.ResonanceAudio, "ResonanceAudioFX" },
@@ -991,7 +992,7 @@ void *_pluginName_##_fp = (void*)&_pluginName_##Registration;
 
 	private enum PluginID
 	{
-		// Build-in plugins
+		// Built-in plugins
 		AkCompressor = 0x006C0003, //Wwise Compressor
 		AkDelay = 0x006A0003, //Delay
 		AkExpander = 0x006D0003, //Wwise Expander
@@ -1048,6 +1049,7 @@ void *_pluginName_##_fp = (void*)&_pluginName_##Registration;
 		iZTrashDynamics = 0x51033,
 		iZTrashFilters = 0x61033,
 		iZTrashMultibandDistortion = 0x91033,
+		MasteringSuite = 0xBA0003,
 		McDSPFutzBox = 0x6E1003,
 		McDSPLimiter = 0x671003,
 		ResonanceAudio = 0x641103,
