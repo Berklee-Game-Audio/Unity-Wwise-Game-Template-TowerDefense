@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="135">
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
 		<ProjectRoot>/Users/michaelsweet/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/GoogleDrive/_CloudSync/Work/Berklee/GIT/Unity-Wwise-Game-Template-TowerDefense/Unity-Tower-Defense-Game-Kit_WwiseProject/</ProjectRoot>
 		<SourceFilesRoot>/Users/michaelsweet/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/GoogleDrive/_CloudSync/Work/Berklee/GIT/Unity-Wwise-Game-Template-TowerDefense/Unity-Tower-Defense-Game-Kit_WwiseProject/.cache/Windows/</SourceFilesRoot>
@@ -11,12 +11,12 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="303442304">
+		<SoundBank Id="1355168291" Language="SFX" Hash="201768106">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="2295945583" Language="SFX" Hash="375558045">
+		<SoundBank Id="2295945583" Language="SFX" Hash="601876221">
 			<ObjectPath>\SoundBanks\Default Work Unit\Tower_Defense_Soundbank</ObjectPath>
 			<ShortName>Tower_Defense_Soundbank</ShortName>
 			<Path>Tower_Defense_Soundbank.bnk</Path>
@@ -33,10 +33,6 @@
 				</Event>
 				<Event Id="636067499" Name="game_menu" ObjectPath="\Events\Default Work Unit\game_menu" DurationType="Infinite">
 					<IncludedMemoryFiles>
-						<File Id="225556179" Language="SFX">
-							<ShortName>game_menu.wav</ShortName>
-							<Path>SFX/game_menu_78160227.wem</Path>
-						</File>
 						<File Id="441549464" Language="SFX">
 							<ShortName>game_levelWin.wav</ShortName>
 							<Path>SFX/game_levelWin_78160227.wem</Path>
@@ -61,6 +57,10 @@
 							<ShortName>music_intensity_03.wav</ShortName>
 							<Path>SFX/music_intensity_03_78160227.wem</Path>
 						</File>
+						<File Id="1015237312" Language="SFX">
+							<ShortName>D01_CB_Demo_2C-01.wav</ShortName>
+							<Path>SFX/D01_CB_Demo_2C-01_9EDFC787.wem</Path>
+						</File>
 					</IncludedMemoryFiles>
 					<SwitchContainers>
 						<SwitchContainer SwitchValue="{71ED24E5-3481-4EDD-89FC-B773CEF49B0D}">
@@ -75,7 +75,7 @@
 						</SwitchContainer>
 						<SwitchContainer SwitchValue="{10FFC38B-10CF-4B9F-8AFB-3316AFB03B0B}">
 							<Media>
-								<File Id="225556179"/>
+								<File Id="1015237312"/>
 							</Media>
 						</SwitchContainer>
 						<SwitchContainer SwitchValue="{86CC67F0-E05A-4BD1-9BA6-C2B0747F862F}">

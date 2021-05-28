@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{BE8C3F26-B972-44E9-A058-FB361623A058}" SchemaVersion="97">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{BE8C3F26-B972-44E9-A058-FB361623A058}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Tower_Defense_Soundbank" ID="{7A826CA3-74EF-4C2B-9FB8-CB366A257945}">
+					<ObjectInclusionList>
+						<ObjectRef Name="ui_baseHit" ID="{106DAC55-DDC1-411E-9FC0-A9A6B480C7B3}" WorkUnitID="{565D4456-153C-4E4B-882F-E17408A9A089}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="game_levelWin" ID="{5F8AC8E9-32C9-42B6-AFBB-D682E4559DDB}" WorkUnitID="{565D4456-153C-4E4B-882F-E17408A9A089}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="ui_levelSelectButton" ID="{0E8F09F0-3052-42DA-8C13-0727FE0D98EF}" WorkUnitID="{565D4456-153C-4E4B-882F-E17408A9A089}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="game_levelLose" ID="{2C8CC40E-9744-4305-A12F-94397EA818B7}" WorkUnitID="{565D4456-153C-4E4B-882F-E17408A9A089}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="ui_restartLevelButton" ID="{7E991D5D-9399-44D9-AD68-160BAC3EFB5A}" WorkUnitID="{565D4456-153C-4E4B-882F-E17408A9A089}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="ui_startWaveButton" ID="{DF7BB5AB-C5C8-44EA-B34F-79EABB0AD296}" WorkUnitID="{565D4456-153C-4E4B-882F-E17408A9A089}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="game_menu" ID="{1F743B94-0F81-47B3-8597-AE224125EF87}" WorkUnitID="{565D4456-153C-4E4B-882F-E17408A9A089}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="ui_newWave" ID="{10DBC0BE-FEA7-48EB-83CC-432685664DE6}" WorkUnitID="{565D4456-153C-4E4B-882F-E17408A9A089}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="ui_levelSelectButtonPart2" ID="{B9220A16-24FC-4952-A9BD-68835BEB8707}" WorkUnitID="{565D4456-153C-4E4B-882F-E17408A9A089}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="game_start" ID="{8D47A50D-66E9-4B3A-AF85-A548F3059AEE}" WorkUnitID="{565D4456-153C-4E4B-882F-E17408A9A089}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="ui_testEvent" ID="{86F97F9E-8F84-4CB8-93B7-ED3B98FEEB50}" WorkUnitID="{565D4456-153C-4E4B-882F-E17408A9A089}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="ui_backButton" ID="{26B7AB3C-EA69-4F4B-9525-4EBFF098485F}" WorkUnitID="{565D4456-153C-4E4B-882F-E17408A9A089}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>
