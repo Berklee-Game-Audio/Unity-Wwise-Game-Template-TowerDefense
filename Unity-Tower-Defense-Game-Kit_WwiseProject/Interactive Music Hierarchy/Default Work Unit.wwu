@@ -520,13 +520,6 @@
 					</ObjectLists>
 				</MusicSegment>
 				<MusicSwitchContainer Name="top_level_game_music_switch" ID="{DC78FF0A-16C5-4140-AE46-E58795640F24}" ShortID="1020364708">
-					<PropertyList>
-						<Property Name="Volume" Type="Real64">
-							<ValueList>
-								<Value>1</Value>
-							</ValueList>
-						</Property>
-					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{18C168E6-9BC6-4066-AFDD-070F4D9B74B4}"/>

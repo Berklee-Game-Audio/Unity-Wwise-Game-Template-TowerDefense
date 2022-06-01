@@ -16,17 +16,17 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="2295945583" Language="SFX" Hash="601876221">
+		<SoundBank Id="2295945583" Language="SFX" Hash="662419519">
 			<ObjectPath>\SoundBanks\Default Work Unit\Tower_Defense_Soundbank</ObjectPath>
 			<ShortName>Tower_Defense_Soundbank</ShortName>
 			<Path>Tower_Defense_Soundbank.bnk</Path>
 			<IncludedEvents>
-				<Event Id="184505919" Name="game_levelLose" ObjectPath="\Events\Default Work Unit\game_levelLose" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000">
+				<Event Id="184505919" Name="game_levelLose" ObjectPath="\Events\Default Work Unit\game_levelLose" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0.">
 					<ActionSetState>
 						<ActionSetStateEntry Id="221232726" Name="lose" ObjectPath="\States\Default Work Unit\game_state\lose"/>
 					</ActionSetState>
 				</Event>
-				<Event Id="3058981574" Name="game_levelWin" ObjectPath="\Events\Default Work Unit\game_levelWin" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000">
+				<Event Id="3058981574" Name="game_levelWin" ObjectPath="\Events\Default Work Unit\game_levelWin" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0.">
 					<ActionSetState>
 						<ActionSetStateEntry Id="979765101" Name="win" ObjectPath="\States\Default Work Unit\game_state\win"/>
 					</ActionSetState>
@@ -107,7 +107,7 @@
 						<ActionSetStateEntry Id="2607556080" Name="menu" ObjectPath="\States\Default Work Unit\game_state\menu"/>
 					</ActionSetState>
 				</Event>
-				<Event Id="733168346" Name="game_start" ObjectPath="\Events\Default Work Unit\game_start" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000">
+				<Event Id="733168346" Name="game_start" ObjectPath="\Events\Default Work Unit\game_start" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0.">
 					<ActionSetState>
 						<ActionSetStateEntry Id="89505537" Name="gameplay" ObjectPath="\States\Default Work Unit\game_state\gameplay"/>
 					</ActionSetState>
@@ -160,7 +160,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1726823933" Name="ui_startWaveButton" ObjectPath="\Events\Default Work Unit\ui_startWaveButton" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1726823933" Name="ui_startWaveButton" ObjectPath="\Events\Default Work Unit\ui_startWaveButton" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="170582342" Name="ui_testEvent" ObjectPath="\Events\Default Work Unit\ui_testEvent" DurationType="OneShot" DurationMin="1.285167" DurationMax="1.285167">
 					<IncludedMemoryFiles>
 						<File Id="692081263" Language="SFX">
