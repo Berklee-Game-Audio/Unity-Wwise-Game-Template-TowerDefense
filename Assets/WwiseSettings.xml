@@ -11,7 +11,7 @@
   <ShowSpatialAudioWarningMsg>true</ShowSpatialAudioWarningMsg>
   <WwiseInstallationPathMac>/Applications/Audiokinetic/Wwise 2021.1.8.7831/Wwise.app</WwiseInstallationPathMac>
   <WwiseInstallationPathWindows>C:\Program Files (x86)\Audiokinetic\Wwise 2019.2.0.7216</WwiseInstallationPathWindows>
-  <WwiseProjectPath>../../Unity-Wwise-Game-Template-TowerDefense/Unity-Tower-Defense-Game-Kit_WwiseProject/Unity-Tower-Defense-Game-Kit_WwiseProject.wproj</WwiseProjectPath>
+  <WwiseProjectPath>../Unity-Tower-Defense-Game-Kit_WwiseProject/Unity-Tower-Defense-Game-Kit_WwiseProject.wproj</WwiseProjectPath>
   <UseWaapi>true</UseWaapi>
   <WaapiPort>8080</WaapiPort>
   <WaapiIP>127.0.0.1</WaapiIP>
