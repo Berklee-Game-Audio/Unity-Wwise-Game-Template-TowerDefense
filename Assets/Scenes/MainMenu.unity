@@ -16630,7 +16630,6 @@ MonoBehaviour:
   callbackManagerBufferSize: 0
   spatialAudioPoolSize: 0
   maxSoundPropagationDepth: 0
-  diffractionFlags: 11
   engineLogging: 0
 --- !u!4 &634296115
 Transform:

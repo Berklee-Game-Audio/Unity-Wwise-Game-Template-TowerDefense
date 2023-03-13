@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="135">
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
 		<ProjectRoot>/Users/michaelsweet/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/GoogleDrive/_CloudSync/Work/Berklee/GIT/Unity-Wwise-Game-Template-TowerDefense/Unity-Tower-Defense-Game-Kit_WwiseProject/</ProjectRoot>
 		<SourceFilesRoot>/Users/michaelsweet/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/y:/GoogleDrive/_CloudSync/Work/Berklee/GIT/Unity-Wwise-Game-Template-TowerDefense/Unity-Tower-Defense-Game-Kit_WwiseProject/.cache/Mac/</SourceFilesRoot>
@@ -11,22 +11,22 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX">
+		<SoundBank Id="1355168291" Language="SFX" Hash="2321258016">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="2295945583" Language="SFX">
+		<SoundBank Id="2295945583" Language="SFX" Hash="1193648773">
 			<ObjectPath>\SoundBanks\Default Work Unit\Tower_Defense_Soundbank</ObjectPath>
 			<ShortName>Tower_Defense_Soundbank</ShortName>
 			<Path>Tower_Defense_Soundbank.bnk</Path>
 			<IncludedEvents>
-				<Event Id="184505919" Name="game_levelLose" ObjectPath="\Events\Default Work Unit\game_levelLose" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000">
+				<Event Id="184505919" Name="game_levelLose" ObjectPath="\Events\Default Work Unit\game_levelLose" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0.">
 					<ActionSetState>
 						<ActionSetStateEntry Id="221232726" Name="lose" ObjectPath="\States\Default Work Unit\game_state\lose"/>
 					</ActionSetState>
 				</Event>
-				<Event Id="3058981574" Name="game_levelWin" ObjectPath="\Events\Default Work Unit\game_levelWin" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000">
+				<Event Id="3058981574" Name="game_levelWin" ObjectPath="\Events\Default Work Unit\game_levelWin" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0.">
 					<ActionSetState>
 						<ActionSetStateEntry Id="979765101" Name="win" ObjectPath="\States\Default Work Unit\game_state\win"/>
 					</ActionSetState>
@@ -107,7 +107,7 @@
 						<ActionSetStateEntry Id="2607556080" Name="menu" ObjectPath="\States\Default Work Unit\game_state\menu"/>
 					</ActionSetState>
 				</Event>
-				<Event Id="733168346" Name="game_start" ObjectPath="\Events\Default Work Unit\game_start" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000">
+				<Event Id="733168346" Name="game_start" ObjectPath="\Events\Default Work Unit\game_start" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0.">
 					<ActionSetState>
 						<ActionSetStateEntry Id="89505537" Name="gameplay" ObjectPath="\States\Default Work Unit\game_state\gameplay"/>
 					</ActionSetState>
@@ -160,7 +160,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1726823933" Name="ui_startWaveButton" ObjectPath="\Events\Default Work Unit\ui_startWaveButton" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1726823933" Name="ui_startWaveButton" ObjectPath="\Events\Default Work Unit\ui_startWaveButton" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="170582342" Name="ui_testEvent" ObjectPath="\Events\Default Work Unit\ui_testEvent" DurationType="OneShot" DurationMin="1.285167" DurationMax="1.285167">
 					<IncludedMemoryFiles>
 						<File Id="692081263" Language="SFX">
@@ -174,35 +174,35 @@
 				<GameParameter Id="3188605873" Name="waveNumber" ObjectPath="\Game Parameters\Default Work Unit\waveNumber"/>
 			</GameParameters>
 			<StateGroups>
-				<StateGroup Id="89505537" Name="gameplay" ObjectPath="\States\Default Work Unit\game_state\gameplay">
+				<StateGroup Id="89505537" Name="gameplay" ObjectPath="\States\Default Work Unit\game_state\gameplay" GUID="{86CC67F0-E05A-4BD1-9BA6-C2B0747F862F}">
 					<States/>
 				</StateGroup>
-				<StateGroup Id="221232726" Name="lose" ObjectPath="\States\Default Work Unit\game_state\lose">
+				<StateGroup Id="221232726" Name="lose" ObjectPath="\States\Default Work Unit\game_state\lose" GUID="{71ED24E5-3481-4EDD-89FC-B773CEF49B0D}">
 					<States/>
 				</StateGroup>
-				<StateGroup Id="766723505" Name="game_state" ObjectPath="\States\Default Work Unit\game_state">
+				<StateGroup Id="766723505" Name="game_state" ObjectPath="\States\Default Work Unit\game_state" GUID="{BF553E2A-87DD-45F9-B3D4-0F4554AA970D}">
 					<States>
-						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\game_state\None"/>
-						<State Id="2607556080" Name="menu" ObjectPath="\States\Default Work Unit\game_state\menu"/>
-						<State Id="89505537" Name="gameplay" ObjectPath="\States\Default Work Unit\game_state\gameplay"/>
-						<State Id="979765101" Name="win" ObjectPath="\States\Default Work Unit\game_state\win"/>
-						<State Id="221232726" Name="lose" ObjectPath="\States\Default Work Unit\game_state\lose"/>
+						<State Id="748895195" Name="None" ObjectPath="\States\Default Work Unit\game_state\None" GUID="{70B7E4E9-AA29-4BF7-A26F-50BBF0AFA567}"/>
+						<State Id="2607556080" Name="menu" ObjectPath="\States\Default Work Unit\game_state\menu" GUID="{10FFC38B-10CF-4B9F-8AFB-3316AFB03B0B}"/>
+						<State Id="89505537" Name="gameplay" ObjectPath="\States\Default Work Unit\game_state\gameplay" GUID="{86CC67F0-E05A-4BD1-9BA6-C2B0747F862F}"/>
+						<State Id="979765101" Name="win" ObjectPath="\States\Default Work Unit\game_state\win" GUID="{9F8DB615-3765-419F-9F2D-E1FE6FEEB3DA}"/>
+						<State Id="221232726" Name="lose" ObjectPath="\States\Default Work Unit\game_state\lose" GUID="{71ED24E5-3481-4EDD-89FC-B773CEF49B0D}"/>
 					</States>
 				</StateGroup>
-				<StateGroup Id="979765101" Name="win" ObjectPath="\States\Default Work Unit\game_state\win">
+				<StateGroup Id="979765101" Name="win" ObjectPath="\States\Default Work Unit\game_state\win" GUID="{9F8DB615-3765-419F-9F2D-E1FE6FEEB3DA}">
 					<States/>
 				</StateGroup>
-				<StateGroup Id="2607556080" Name="menu" ObjectPath="\States\Default Work Unit\game_state\menu">
+				<StateGroup Id="2607556080" Name="menu" ObjectPath="\States\Default Work Unit\game_state\menu" GUID="{10FFC38B-10CF-4B9F-8AFB-3316AFB03B0B}">
 					<States/>
 				</StateGroup>
 			</StateGroups>
 			<SwitchGroups>
-				<SwitchGroup Id="3133676099" Name="level_intensity_alt" ObjectPath="\Switches\Default Work Unit\level_intensity_alt">
+				<SwitchGroup Id="3133676099" Name="level_intensity_alt" ObjectPath="\Switches\Default Work Unit\level_intensity_alt" GUID="{CADCCE75-9EB9-456E-B073-6DE918BEB558}">
 					<Switches>
-						<Switch Id="3700547912" Name="intensity_1" ObjectPath="\Switches\Default Work Unit\level_intensity_alt\intensity_1"/>
-						<Switch Id="3700547915" Name="intensity_2" ObjectPath="\Switches\Default Work Unit\level_intensity_alt\intensity_2"/>
-						<Switch Id="3700547914" Name="intensity_3" ObjectPath="\Switches\Default Work Unit\level_intensity_alt\intensity_3"/>
-						<Switch Id="3700547913" Name="intensity_0" ObjectPath="\Switches\Default Work Unit\level_intensity_alt\intensity_0"/>
+						<Switch Id="3700547912" Name="intensity_1" ObjectPath="\Switches\Default Work Unit\level_intensity_alt\intensity_1" GUID="{4AD29BB8-4317-44F6-9746-CE81C004BC71}"/>
+						<Switch Id="3700547915" Name="intensity_2" ObjectPath="\Switches\Default Work Unit\level_intensity_alt\intensity_2" GUID="{501D0CE8-0D4A-4AEF-B62F-4E3AAA77C7AD}"/>
+						<Switch Id="3700547914" Name="intensity_3" ObjectPath="\Switches\Default Work Unit\level_intensity_alt\intensity_3" GUID="{03A7F78D-6269-4119-AFCB-3D6065EA4261}"/>
+						<Switch Id="3700547913" Name="intensity_0" ObjectPath="\Switches\Default Work Unit\level_intensity_alt\intensity_0" GUID="{9A5AD582-68AD-4953-9697-4F91B7C659E9}"/>
 					</Switches>
 				</SwitchGroup>
 			</SwitchGroups>
