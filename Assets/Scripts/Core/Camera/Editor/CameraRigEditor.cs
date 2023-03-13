@@ -39,13 +39,13 @@ namespace Core.Camera.Editor
 			// Draw handles to resize map rect
 			float size = HandleUtility.GetHandleSize(m_CameraRig.transform.position) * 0.125f;
 			Vector3 snap = Vector3.one * 0.5f;
-			Vector3 bottom = Handles.FreeMoveHandle(bottomPosition, Quaternion.LookRotation(Vector3.up), size, snap,
+			var fmh_42_60_638142486055264510 = Quaternion.LookRotation(Vector3.up); Vector3 bottom = Handles.FreeMoveHandle(bottomPosition, size, snap,
 			                                        Handles.RectangleHandleCap);
-			Vector3 top = Handles.FreeMoveHandle(topPosition, Quaternion.LookRotation(Vector3.up), size, snap,
+			var fmh_44_54_638142486055307890 = Quaternion.LookRotation(Vector3.up); Vector3 top = Handles.FreeMoveHandle(topPosition, size, snap,
 			                                     Handles.RectangleHandleCap);
-			Vector3 left = Handles.FreeMoveHandle(leftPosition, Quaternion.LookRotation(Vector3.up), size, snap,
+			var fmh_46_56_638142486055311710 = Quaternion.LookRotation(Vector3.up); Vector3 left = Handles.FreeMoveHandle(leftPosition, size, snap,
 			                                      Handles.RectangleHandleCap);
-			Vector3 right = Handles.FreeMoveHandle(rightPosition, Quaternion.LookRotation(Vector3.up), size, snap,
+			var fmh_48_58_638142486055315060 = Quaternion.LookRotation(Vector3.up); Vector3 right = Handles.FreeMoveHandle(rightPosition, size, snap,
 			                                       Handles.RectangleHandleCap);
 			
 			ReprojectOntoFloor(ref bottom, floor);
