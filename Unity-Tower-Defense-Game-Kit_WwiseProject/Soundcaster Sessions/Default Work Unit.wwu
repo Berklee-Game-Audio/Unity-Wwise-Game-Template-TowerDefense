@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{6FF7C75D-748A-49BB-A5C6-8D887328D53E}" SchemaVersion="103">
+<WwiseDocument Type="WorkUnit" ID="{6FF7C75D-748A-49BB-A5C6-8D887328D53E}" SchemaVersion="110">
 	<SoundcasterSessions>
 		<WorkUnit Name="Default Work Unit" ID="{6FF7C75D-748A-49BB-A5C6-8D887328D53E}" PersistMode="Standalone">
 			<ChildrenList>
@@ -49,7 +49,7 @@
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="level_5" ID="{1FA1A03A-35CF-47EC-837B-85CF2AF7E6F4}"/>
-						<CurrentSwitchRef Name="intensity_0" ID="{9A5AD582-68AD-4953-9697-4F91B7C659E9}"/>
+						<CurrentSwitchRef Name="intensity_3" ID="{03A7F78D-6269-4119-AFCB-3D6065EA4261}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>

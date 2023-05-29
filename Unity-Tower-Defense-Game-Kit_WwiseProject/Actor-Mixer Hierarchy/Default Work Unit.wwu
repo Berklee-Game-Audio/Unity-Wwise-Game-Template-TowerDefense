@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{4F6B0843-653E-44E7-9473-C0E91D4486F2}" SchemaVersion="103">
+<WwiseDocument Type="WorkUnit" ID="{4F6B0843-653E-44E7-9473-C0E91D4486F2}" SchemaVersion="110">
 	<AudioObjects>
 		<WorkUnit Name="Default Work Unit" ID="{4F6B0843-653E-44E7-9473-C0E91D4486F2}" PersistMode="Standalone">
 			<ChildrenList>
@@ -31,7 +31,6 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
-							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="Destruction 1" ID="{ED295383-C9E4-46A9-B22A-05D379A73BE4}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -54,7 +53,6 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
-							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="Destruction 2" ID="{3AF56B2D-7142-4B13-A2A9-269E803CFF1B}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -77,7 +75,6 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
-							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="Destruction 3" ID="{FAA8B73F-C5D2-4A65-BD50-84E4EB5676C9}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -100,7 +97,6 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
-							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="Destruction 4" ID="{EF787C9E-5CC0-4332-901F-ECDF7EC6FD88}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -123,13 +119,11 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
-							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="Destruction 5" ID="{A317A14F-84E2-462A-B974-8C73E2002FD2}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
-					<ObjectLists/>
 				</RandomSequenceContainer>
 				<Sound Name="LaserFire" ID="{4934ADD7-0E98-4CF8-A785-418DDDFE4BD0}" ShortID="957933919">
 					<ReferenceList>
@@ -149,7 +143,6 @@
 							</MediaIDList>
 						</AudioFileSource>
 					</ChildrenList>
-					<ObjectLists/>
 					<ActiveSourceList>
 						<ActiveSource Name="LaserFire" ID="{4EF27F0B-1E4B-4204-BCFD-71B4EF8422BD}" Platform="Linked"/>
 					</ActiveSourceList>
@@ -182,7 +175,6 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
-							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="MG 1" ID="{87029F76-758B-4240-8EC3-0986F93E890B}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -205,7 +197,6 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
-							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="MG 2" ID="{D28E2E14-7230-4653-9CB4-27AC1FC95D13}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -228,7 +219,6 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
-							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="MG 3" ID="{97101A25-103A-46FD-B61A-FC4015B60F71}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -251,7 +241,6 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
-							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="MG 4" ID="{55A573A7-EDED-4CA4-947C-42CFE5CE8E4E}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -274,7 +263,6 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
-							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="MG 5" ID="{35716E6E-3891-4BA4-B5A3-3028465069AD}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -297,7 +285,6 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
-							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="MG 6" ID="{8B32720C-BCD4-4DC6-BC25-3C65EC086655}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -320,7 +307,6 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
-							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="MG 7" ID="{78EE01E0-BA95-40DD-9B64-7DEA04A7DB4C}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -343,7 +329,6 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
-							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="MG 8" ID="{741F95D2-1EAF-4ED1-9B08-066ECA7BA6CD}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -366,7 +351,6 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
-							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="MG 9" ID="{C2269F68-539E-4416-B672-3CA87AC9089A}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -389,7 +373,6 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
-							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="MG 10" ID="{AB634D38-15A3-481F-8D0A-6B9E74AE5AD4}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -412,7 +395,6 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
-							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="MG 11" ID="{D25B20F6-0A6B-409E-A476-04D857447B22}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -435,7 +417,6 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
-							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="MG 12" ID="{F5D49963-A176-484D-BBB2-0D6D783D98AD}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -458,7 +439,6 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
-							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="MG 13" ID="{0B566245-4EE5-4680-91F4-B70BB487FBF3}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -481,13 +461,11 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
-							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="MG 14" ID="{96126FD9-FAAA-43CC-A14A-E997204471FF}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
-					<ObjectLists/>
 				</RandomSequenceContainer>
 				<RandomSequenceContainer Name="enemiesExploding" ID="{7FA070CE-B120-4998-833E-A836356AE2EF}" ShortID="772096687">
 					<ReferenceList>
@@ -517,7 +495,6 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
-							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="Enemies Exploding 1" ID="{90A50763-4AD6-4B08-BDEF-C95E24BC01E4}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -540,7 +517,6 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
-							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="Enemies Exploding 2" ID="{F743331E-DCB9-44DB-B8DD-B95C02D7F7D6}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -563,7 +539,6 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
-							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="Enemies Exploding 3" ID="{C0051FAB-4F9E-47EE-A871-8339C35C70DD}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -586,7 +561,6 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
-							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="Enemies Exploding 4" ID="{EDB2C58B-780E-4363-AD9C-09159A8F702C}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -609,13 +583,11 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
-							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="Enemies Exploding 5" ID="{D5643C2B-CB5D-4BAE-B624-7FAFE54DD181}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
-					<ObjectLists/>
 				</RandomSequenceContainer>
 				<RandomSequenceContainer Name="weaponPlacement" ID="{DF675C6F-5B3F-44B4-A0DA-9C94A9A8D957}" ShortID="626566736">
 					<ReferenceList>
@@ -645,7 +617,6 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
-							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="Weapon Placement 1" ID="{5504A2A3-E516-4EDC-9669-D125DFB65CC5}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -668,13 +639,11 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
-							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="Weapon Placement 2" ID="{8996C645-B0EA-4113-AD17-B30B6795F824}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
-					<ObjectLists/>
 				</RandomSequenceContainer>
 				<Sound Name="Rocket Tower Shoot" ID="{E82983D3-B79F-46B5-B190-8F0A9DF326DC}" ShortID="61163075">
 					<ReferenceList>
@@ -694,7 +663,6 @@
 							</MediaIDList>
 						</AudioFileSource>
 					</ChildrenList>
-					<ObjectLists/>
 					<ActiveSourceList>
 						<ActiveSource Name="Rocket Tower Shoot" ID="{440B0B4B-3F61-4FFD-8050-0007E83B3517}" Platform="Linked"/>
 					</ActiveSourceList>
@@ -727,7 +695,6 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
-							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="Super Tower Shot 1" ID="{29D44252-8B37-42C1-9D01-F75BE3C74EF3}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -750,7 +717,6 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
-							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="Super Tower Shot 2" ID="{01226227-119B-448D-8813-22897ABB2212}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -773,7 +739,6 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
-							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="Super Tower Shot 3" ID="{CD36B9A8-5C92-41E3-B233-1EFFCAD99CDE}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -796,7 +761,6 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
-							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="Super Tower Shot 4" ID="{076387BE-9206-48FD-8CB7-DFCBB38BB96D}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -819,7 +783,6 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
-							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="Super Tower Shot 5" ID="{9814C74D-7A84-4DC7-B8FB-C6D92272FF7D}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -842,7 +805,6 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
-							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="Super Tower Shot 6" ID="{EFD258A5-5866-459A-A281-C8888C671B7C}" Platform="Linked"/>
 							</ActiveSourceList>
@@ -865,13 +827,11 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
-							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="Super Tower Shot 7" ID="{673F08F3-49B0-4CA5-A6D5-2E064C52B887}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
-					<ObjectLists/>
 				</RandomSequenceContainer>
 				<Sound Name="base_attack" ID="{41AC1528-7E4E-44DE-AE59-4EC95FC5625A}" ShortID="488090669">
 					<ReferenceList>
@@ -891,7 +851,6 @@
 							</MediaIDList>
 						</AudioFileSource>
 					</ChildrenList>
-					<ObjectLists/>
 					<ActiveSourceList>
 						<ActiveSource Name="base_attack" ID="{EAE4DBD7-31A5-496A-B342-BF7D3084B0AA}" Platform="Linked"/>
 					</ActiveSourceList>
@@ -914,7 +873,6 @@
 							</MediaIDList>
 						</AudioFileSource>
 					</ChildrenList>
-					<ObjectLists/>
 					<ActiveSourceList>
 						<ActiveSource Name="zone_enter" ID="{A94A6ED2-563E-4C0A-9E35-E9248BD8C893}" Platform="Linked"/>
 					</ActiveSourceList>
@@ -937,7 +895,6 @@
 							</MediaIDList>
 						</AudioFileSource>
 					</ChildrenList>
-					<ObjectLists/>
 					<ActiveSourceList>
 						<ActiveSource Name="Enemy Fire" ID="{55B22CEB-BF4C-419F-A6CD-883128015D3C}" Platform="Linked"/>
 					</ActiveSourceList>
@@ -960,7 +917,6 @@
 							</MediaIDList>
 						</AudioFileSource>
 					</ChildrenList>
-					<ObjectLists/>
 					<ActiveSourceList>
 						<ActiveSource Name="Macross Placement" ID="{3E7B54CC-9FD3-4068-948D-8567D6C4BC3F}" Platform="Linked"/>
 					</ActiveSourceList>
@@ -983,7 +939,6 @@
 							</MediaIDList>
 						</AudioFileSource>
 					</ChildrenList>
-					<ObjectLists/>
 					<ActiveSourceList>
 						<ActiveSource Name="TD Currency" ID="{AB33A30C-350D-42C1-B8EF-4C7C7D37CBE8}" Platform="Linked"/>
 					</ActiveSourceList>
@@ -1006,7 +961,6 @@
 							</MediaIDList>
 						</AudioFileSource>
 					</ChildrenList>
-					<ObjectLists/>
 					<ActiveSourceList>
 						<ActiveSource Name="TD Defeat " ID="{9B48002F-6D0A-46C0-A1CF-ACEE946F342A}" Platform="Linked"/>
 					</ActiveSourceList>
@@ -1029,7 +983,6 @@
 							</MediaIDList>
 						</AudioFileSource>
 					</ChildrenList>
-					<ObjectLists/>
 					<ActiveSourceList>
 						<ActiveSource Name="TD EMP Idle" ID="{55A5096C-8EC9-44E4-8C9B-2C3381B22274}" Platform="Linked"/>
 					</ActiveSourceList>
@@ -1052,7 +1005,6 @@
 							</MediaIDList>
 						</AudioFileSource>
 					</ChildrenList>
-					<ObjectLists/>
 					<ActiveSourceList>
 						<ActiveSource Name="TD Tower Sell" ID="{B632D039-C12B-4264-A531-FDDBD0663CA4}" Platform="Linked"/>
 					</ActiveSourceList>
@@ -1075,7 +1027,6 @@
 							</MediaIDList>
 						</AudioFileSource>
 					</ChildrenList>
-					<ObjectLists/>
 					<ActiveSourceList>
 						<ActiveSource Name="TD Tower Upgrade" ID="{DB1B863C-FBBA-4187-8105-78CD46E78733}" Platform="Linked"/>
 					</ActiveSourceList>
@@ -1098,7 +1049,6 @@
 							</MediaIDList>
 						</AudioFileSource>
 					</ChildrenList>
-					<ObjectLists/>
 					<ActiveSourceList>
 						<ActiveSource Name="TD Victory" ID="{13A5AA1E-1E8A-4A50-BFDE-57CF53525EDF}" Platform="Linked"/>
 					</ActiveSourceList>

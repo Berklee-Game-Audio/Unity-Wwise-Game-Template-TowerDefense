@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics/Default Work Unit
     guid: f7b46a3dc5408b48be1e81923d9ba4d1
     GuidInternal: 
-    m_lastTime: -8585793903445567192
+    m_lastTime: -8585162352982178507
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy/Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy/Default Work Unit
     guid: a03f6f36f9dcc54e98247f4936be80da
     GuidInternal: 
-    m_lastTime: -8585793903445424762
+    m_lastTime: -8585162352982666407
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks/Default Work Unit
     guid: 263f8cbe72b9e944a058fb361623a058
     GuidInternal: 
-    m_lastTime: -8585793903445837377
+    m_lastTime: -8585162352982565064
     List:
     - name: Tower_Defense_Soundbank
       guid: a36c827aef742b4c9fb8cb366a257945
@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events/Default Work Unit
     guid: 56445d563c154b4e882fe17408a9a089
     GuidInternal: 
-    m_lastTime: -8585305763824959071
+    m_lastTime: -8585162352982635781
     List:
     - name: game_levelLose
       guid: 0ec48c2c44970543a12f94397ea818b7
@@ -111,8 +111,8 @@ MonoBehaviour:
         guid: 0ec48c2c44970543a12f94397ea818b7
       Path: Events/Default Work Unit/game_levelLose
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: game_levelWin
       guid: e9c88a5fc932b642afbbd682e4559ddb
       id: 3058981574
@@ -128,8 +128,8 @@ MonoBehaviour:
         guid: e9c88a5fc932b642afbbd682e4559ddb
       Path: Events/Default Work Unit/game_levelWin
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: game_menu
       guid: 943b741f810fb3478597ae224125ef87
       id: 636067499
@@ -162,8 +162,8 @@ MonoBehaviour:
         guid: 0da5478de9663a4baf85a548f3059aee
       Path: Events/Default Work Unit/game_start
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: ui_backButton
       guid: 3cabb72669ea4b4f95254ebff098485f
       id: 1593593619
@@ -179,8 +179,8 @@ MonoBehaviour:
         guid: 3cabb72669ea4b4f95254ebff098485f
       Path: Events/Default Work Unit/ui_backButton
       maxAttenuation: 0
-      maxDuration: 1.770042
-      minDuration: 1.770042
+      maxDuration: -1
+      minDuration: -1
     - name: ui_baseHit
       guid: 55ac6d10c1dd1e419fc0a9a6b480c7b3
       id: 2660009500
@@ -196,8 +196,8 @@ MonoBehaviour:
         guid: 55ac6d10c1dd1e419fc0a9a6b480c7b3
       Path: Events/Default Work Unit/ui_baseHit
       maxAttenuation: 0
-      maxDuration: 1.297688
-      minDuration: 1.297688
+      maxDuration: -1
+      minDuration: -1
     - name: ui_levelSelectButton
       guid: f0098f0e5230da428c130727fe0d98ef
       id: 3680374304
@@ -213,8 +213,8 @@ MonoBehaviour:
         guid: f0098f0e5230da428c130727fe0d98ef
       Path: Events/Default Work Unit/ui_levelSelectButton
       maxAttenuation: 0
-      maxDuration: 1.735458
-      minDuration: 1.735458
+      maxDuration: -1
+      minDuration: -1
     - name: ui_levelSelectButtonPart2
       guid: 160a22b9fc245249a9bd68835beb8707
       id: 1013525255
@@ -230,8 +230,8 @@ MonoBehaviour:
         guid: 160a22b9fc245249a9bd68835beb8707
       Path: Events/Default Work Unit/ui_levelSelectButtonPart2
       maxAttenuation: 0
-      maxDuration: 2.787812
-      minDuration: 2.787812
+      maxDuration: -1
+      minDuration: -1
     - name: ui_newWave
       guid: bec0db10a7feeb4883cc432685664de6
       id: 1043510291
@@ -247,8 +247,8 @@ MonoBehaviour:
         guid: bec0db10a7feeb4883cc432685664de6
       Path: Events/Default Work Unit/ui_newWave
       maxAttenuation: 0
-      maxDuration: 1.273958
-      minDuration: 1.273958
+      maxDuration: -1
+      minDuration: -1
     - name: ui_restartLevelButton
       guid: 5d1d997e9993d944ad68160bac3efb5a
       id: 700883983
@@ -264,8 +264,8 @@ MonoBehaviour:
         guid: 5d1d997e9993d944ad68160bac3efb5a
       Path: Events/Default Work Unit/ui_restartLevelButton
       maxAttenuation: 0
-      maxDuration: 3.201375
-      minDuration: 3.201375
+      maxDuration: -1
+      minDuration: -1
     - name: ui_startWaveButton
       guid: abb57bdfc8c5ea44b34f79eabb0ad296
       id: 1726823933
@@ -281,8 +281,8 @@ MonoBehaviour:
         guid: abb57bdfc8c5ea44b34f79eabb0ad296
       Path: Events/Default Work Unit/ui_startWaveButton
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: ui_testEvent
       guid: 9e7ff986848fb84c93b7ed3b98feeb50
       id: 170582342
@@ -298,8 +298,8 @@ MonoBehaviour:
         guid: 9e7ff986848fb84c93b7ed3b98feeb50
       Path: Events/Default Work Unit/ui_testEvent
       maxAttenuation: 0
-      maxDuration: 1.285167
-      minDuration: 1.285167
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters/Default Work Unit.wwu
     PathAndIcons:
@@ -312,7 +312,7 @@ MonoBehaviour:
     ParentPath: Game Parameters/Default Work Unit
     guid: 5f6799c7dc7e604eb10715d12af8dcb1
     GuidInternal: 
-    m_lastTime: -8585793903445795354
+    m_lastTime: -8585162352982539731
     List:
     - name: health
       guid: bfe58a13c3b6ba40ad527f9fa5ab978a
@@ -368,7 +368,7 @@ MonoBehaviour:
     ParentPath: States/Default Work Unit
     guid: 889a43a065970a4186545a55de25fd77
     GuidInternal: 
-    m_lastTime: -8585793903445913463
+    m_lastTime: -8585162352982587999
     List:
     - name: game_state
       guid: 2a3e55bfdd87f945b3d40f4554aa970d
@@ -480,7 +480,7 @@ MonoBehaviour:
     ParentPath: Switches/Default Work Unit
     guid: af1599921204ce4d8ef9a1c50bb7be2d
     GuidInternal: 
-    m_lastTime: -8585305763824923009
+    m_lastTime: -8585162352982611575
     List:
     - name: level_intensity_alt
       guid: 75cedccab99e6e45b0736de918beb558
@@ -754,11 +754,11 @@ MonoBehaviour:
     ParentPath: Triggers/Default Work Unit
     guid: 7f603c42ae7f994ead56ba617f98e481
     GuidInternal: 
-    m_lastTime: -8585793903445817329
+    m_lastTime: -8585162352982151111
     List: []
   ExpandedFileSystemItemIds: 
   ExpandedWaapiItemIds: 
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
-  currentDataSource: 1
+  currentDataSource: 0
   CurrentPluginConfig: 
