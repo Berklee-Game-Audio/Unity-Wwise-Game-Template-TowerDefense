@@ -58,7 +58,7 @@ namespace TowerDefense.UI.HUD
 			Damageable baseConfig = levelManager.playerHomeBases[0].configuration;
 			float currentHealth = baseConfig.currentHealth * 10.0f;
 			Debug.Log("currentHealth = " + currentHealth);
-			AkSoundEngine.SetRTPCValue("health", currentHealth, WwiseGlobal);
+			AkSoundEngine.SetRTPCValue("health", currentHealth);
 		}
 
 		/// <summary>
