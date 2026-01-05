@@ -59,7 +59,7 @@ namespace Core.Utilities
 				{
 					continue;
 				}
-				output += rigidbody.velocity;
+				output += rigidbody.linearVelocity;
 			}
 			return output / components.Length;
 		}
@@ -118,7 +118,7 @@ namespace Core.Utilities
 				{
 					continue;
 				}
-				output += rigidbody.velocity;
+				output += rigidbody.linearVelocity;
 			}
 			return output / components.Count;
 		}

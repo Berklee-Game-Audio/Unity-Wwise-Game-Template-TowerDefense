@@ -12,9 +12,10 @@ Licensees holding valid licenses to the AUDIOKINETIC Wwise Technology may use
 this file in accordance with the end user license agreement provided with the
 software or, alternatively, in accordance with the terms contained
 in a written agreement between you and Audiokinetic Inc.
-Copyright (c) 2023 Audiokinetic Inc.
+Copyright (c) 2025 Audiokinetic Inc.
 *******************************************************************************/
 using System.Collections.Generic;
+using AK.Wwise.Unity.Logging;
 
 /// @brief Represents Wwise objects as Unity assets.
 public abstract class WwiseObjectReference : UnityEngine.ScriptableObject
@@ -283,7 +284,7 @@ public abstract class WwiseObjectReference : UnityEngine.ScriptableObject
 		System.Collections.Generic.Dictionary<System.Guid, WwiseObjectData> map = null;
 		if (!WwiseObjectDataMap.TryGetValue(wwiseObjectType, out map) || map == null)
 		{
-			UnityEngine.Debug.LogWarning("WwiseUnity: Cannot find WwiseObjectReferences of type <WwiseObjectType." + wwiseObjectType + ">.");
+			WwiseLogger.Warning("Cannot find WwiseObjectReferences of type <WwiseObjectType." + wwiseObjectType + ">.");
 			return null;
 		}
 
@@ -296,14 +297,14 @@ public abstract class WwiseObjectReference : UnityEngine.ScriptableObject
 		}
 		catch
 		{
-			UnityEngine.Debug.LogWarning("WwiseUnity: Invalid guid for WwiseObjectReference of type <WwiseObjectType." + wwiseObjectType + ">.");
+			WwiseLogger.Warning("Invalid guid for WwiseObjectReference of type <WwiseObjectType." + wwiseObjectType + ">.");
 			return null;
 		}
 
 		var formattedId = (uint)id;
 		if (guid != System.Guid.Empty && !map.TryGetValue(guid, out data))
 		{
-			UnityEngine.Debug.LogWarning("WwiseUnity: Cannot find guid <" + guid.ToString() + "> for WwiseObjectReference of type <WwiseObjectType." + wwiseObjectType + "> in Wwise Project.");
+			WwiseLogger.Warning("Cannot find guid <" + guid.ToString() + "> for WwiseObjectReference of type <WwiseObjectType." + wwiseObjectType + "> in Wwise Project.");
 
 			foreach (var pair in map)
 			{
@@ -311,7 +312,7 @@ public abstract class WwiseObjectReference : UnityEngine.ScriptableObject
 				{
 					guid = pair.Key;
 					data = pair.Value;
-					UnityEngine.Debug.LogWarning("WwiseUnity: Found guid <" + guid.ToString() + "> for <" + pair.Value.objectName + ">.");
+					WwiseLogger.Warning("Found guid <" + guid.ToString() + "> for <" + pair.Value.objectName + ">.");
 					break;
 				}
 			}
@@ -325,7 +326,7 @@ public abstract class WwiseObjectReference : UnityEngine.ScriptableObject
 		var objectReference = FindOrCreateWwiseObject(wwiseObjectType, data.objectName, guid);
 		if (objectReference && objectReference.Id != formattedId)
 		{
-			UnityEngine.Debug.LogWarning("WwiseUnity: ID mismatch for WwiseObjectReference of type <WwiseObjectType." + wwiseObjectType + ">. Expected <" + formattedId + ">. Found <" + objectReference.Id + ">.");
+			WwiseLogger.Warning("ID mismatch for WwiseObjectReference of type <WwiseObjectType." + wwiseObjectType + ">. Expected <" + formattedId + ">. Found <" + objectReference.Id + ">.");
 		}
 
 		return objectReference;
@@ -389,14 +390,14 @@ public abstract class WwiseGroupValueObjectReference : WwiseObjectReference
 		var groupValueObjectReference = objectReference as WwiseGroupValueObjectReference;
 		if (!groupValueObjectReference)
 		{
-			UnityEngine.Debug.LogWarning("WwiseUnity: Not setting WwiseObjectReference since it is not a WwiseGroupValueObjectReference.");
+			WwiseLogger.Warning("Not setting WwiseObjectReference since it is not a WwiseGroupValueObjectReference.");
 			return null;
 		}
 
 		var groupObjectReference = GetWwiseObjectForMigration(groupValueObjectReference.GroupWwiseObjectType, groupGuid, groupId);
 		if (!groupObjectReference)
 		{
-			UnityEngine.Debug.LogWarning("WwiseUnity: Not setting WwiseObjectReference since its GroupObjectReference cannot be determined.");
+			WwiseLogger.Warning("Not setting WwiseObjectReference since its GroupObjectReference cannot be determined.");
 			return null;
 		}
 

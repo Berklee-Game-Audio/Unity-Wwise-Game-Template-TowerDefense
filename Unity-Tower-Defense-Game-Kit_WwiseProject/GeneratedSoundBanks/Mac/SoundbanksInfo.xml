@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="145">
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="16" SoundBankVersion="150">
 	<RootPaths>
-		<ProjectRoot>../../</ProjectRoot>
-		<SourceFilesRoot>../../.cache/Mac/</SourceFilesRoot>
+		<ProjectRoot>../..</ProjectRoot>
+		<SourceFilesRoot>../../.cache/Mac</SourceFilesRoot>
 		<SoundBanksRoot>.</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
 		<ExternalSourcesOutputRoot>.</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{3E201F61-DBB0-0C82-B898-ADFDC45D551D}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{DA0A5BAD-1359-EAA2-629D-983B0621FEC9}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -64,65 +64,65 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="2295945583" Type="User" Language="SFX" Hash="{BE6491AE-0A74-FAC9-48A2-424BB19DBB94}">
+		<SoundBank Id="2295945583" Type="User" Language="SFX" Hash="{D904FF16-9E0F-91C1-9772-205B8AB79F93}">
 			<ShortName>Tower_Defense_Soundbank</ShortName>
 			<Path>Tower_Defense_Soundbank.bnk</Path>
 			<Media>
 				<File Id="180042438" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>ui_newWave.wav</ShortName>
-					<CachePath>SFX/ui_newWave_78160227.wem</CachePath>
+					<CachePath>SFX/ui_newWave_69DE5D70.wem</CachePath>
 				</File>
 				<File Id="208376835" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>ui_restartLevelButton.wav</ShortName>
-					<CachePath>SFX/ui_restartLevelButton_78160227.wem</CachePath>
+					<CachePath>SFX/ui_restartLevelButton_69DE5D70.wem</CachePath>
 				</File>
 				<File Id="287391411" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>ui_backButton.wav</ShortName>
-					<CachePath>SFX/ui_backButton_78160227.wem</CachePath>
+					<CachePath>SFX/ui_backButton_69DE5D70.wem</CachePath>
 				</File>
 				<File Id="441549464" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>game_levelWin.wav</ShortName>
-					<CachePath>SFX/game_levelWin_78160227.wem</CachePath>
+					<CachePath>SFX/game_levelWin_69DE5D70.wem</CachePath>
 				</File>
 				<File Id="539877189" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>game_levelLose.wav</ShortName>
-					<CachePath>SFX/game_levelLose_78160227.wem</CachePath>
+					<CachePath>SFX/game_levelLose_69DE5D70.wem</CachePath>
 				</File>
 				<File Id="551719863" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>music_intensity_00.wav</ShortName>
-					<CachePath>SFX/music_intensity_00_78160227.wem</CachePath>
+					<CachePath>SFX/music_intensity_00_69DE5D70.wem</CachePath>
 				</File>
 				<File Id="628737186" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>base_hit.wav</ShortName>
-					<CachePath>SFX/base_hit_9EDFC787.wem</CachePath>
+					<CachePath>SFX/base_hit_56CEF360.wem</CachePath>
 				</File>
 				<File Id="640446327" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>ui_levelSelectButton.wav</ShortName>
-					<CachePath>SFX/ui_levelSelectButton_78160227.wem</CachePath>
+					<CachePath>SFX/ui_levelSelectButton_69DE5D70.wem</CachePath>
 				</File>
 				<File Id="692081263" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>ui_testEvent.wav</ShortName>
-					<CachePath>SFX/ui_testEvent_78160227.wem</CachePath>
+					<CachePath>SFX/ui_testEvent_69DE5D70.wem</CachePath>
 				</File>
 				<File Id="694574826" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>music_intensity_01.wav</ShortName>
-					<CachePath>SFX/music_intensity_01_78160227.wem</CachePath>
+					<CachePath>SFX/music_intensity_01_69DE5D70.wem</CachePath>
 				</File>
 				<File Id="794319706" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>music_intensity_02.wav</ShortName>
-					<CachePath>SFX/music_intensity_02_78160227.wem</CachePath>
+					<CachePath>SFX/music_intensity_02_69DE5D70.wem</CachePath>
 				</File>
 				<File Id="911006166" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>music_intensity_03.wav</ShortName>
-					<CachePath>SFX/music_intensity_03_78160227.wem</CachePath>
+					<CachePath>SFX/music_intensity_03_69DE5D70.wem</CachePath>
 				</File>
 				<File Id="922593991" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>ui_levelSelectButtonPart2.wav</ShortName>
-					<CachePath>SFX/ui_levelSelectButtonPart2_78160227.wem</CachePath>
+					<CachePath>SFX/ui_levelSelectButtonPart2_69DE5D70.wem</CachePath>
 				</File>
 				<File Id="1015237312" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>D01_CB_Demo_2C-01.wav</ShortName>
-					<CachePath>SFX/D01_CB_Demo_2C-01_9EDFC787.wem</CachePath>
+					<CachePath>SFX/D01_CB_Demo_2C-01_56CEF360.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
@@ -259,5 +259,5 @@
 			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{58EFC344-08F6-A4C8-C8D9-321CF6F669B1}</FileHash>
+	<FileHash>{5C282176-1B11-0FC7-BA11-0B2234D0B2F8}</FileHash>
 </SoundBanksInfo>

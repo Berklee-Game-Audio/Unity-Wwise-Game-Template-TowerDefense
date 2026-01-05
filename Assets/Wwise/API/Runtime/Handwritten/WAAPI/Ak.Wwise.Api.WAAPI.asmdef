@@ -1,16 +1,23 @@
 {
     "name": "Ak.Wwise.Api.WAAPI",
+    "rootNamespace": "",
     "references": [
         "AK.Wwise.Unity.API.WwiseTypes",
-        "AK.Wwise.Unity.API"
+        "AK.Wwise.Unity.API",
+        "AK.Wwise.Unity.Logging"
     ],
     "includePlatforms": [],
-    "excludePlatforms": [],
+    "excludePlatforms": [
+        "Lumin",
+        "Stadia"
+    ],
     "allowUnsafeCode": false,
     "overrideReferences": false,
     "precompiledReferences": [],
     "autoReferenced": true,
-    "defineConstraints": [ "!UNITY_SERVER" ],
+    "defineConstraints": [
+        "!UNITY_SERVER"
+    ],
     "versionDefines": [],
     "noEngineReferences": false
 }

@@ -1,3 +1,5 @@
+using UnityEngine;
+
 #if UNITY_EDITOR
 /*******************************************************************************
 The content of this file includes portions of the proprietary AUDIOKINETIC Wwise
@@ -13,11 +15,11 @@ Licensees holding valid licenses to the AUDIOKINETIC Wwise Technology may use
 this file in accordance with the end user license agreement provided with the
 software or, alternatively, in accordance with the terms contained
 in a written agreement between you and Audiokinetic Inc.
-Copyright (c) 2023 Audiokinetic Inc.
+Copyright (c) 2025 Audiokinetic Inc.
 *******************************************************************************/
 
 [UnityEditor.CanEditMultipleObjects]
-[UnityEditor.CustomEditor(typeof(AkAmbient))]
+[UnityEditor.CustomEditor(typeof(AkAmbient), true)]
 public class AkAmbientInspector : AkEventInspector
 {
     public enum AttenuationSphereOptions
@@ -178,7 +180,11 @@ public class AkAmbientInspector : AkEventInspector
         if (in_multiPosType != m_AkAmbient.multiPositionTypeLabel)
         {
             //Get all AkAmbients in the scene
+#if UNITY_6000_0_OR_NEWER
+            var akAmbients = FindObjectsByType<AkAmbient>(FindObjectsSortMode.None);
+#else
             var akAmbients = FindObjectsOfType<AkAmbient>();
+#endif
 
             //Find the first AkAmbient that is in multiPosition_Mode and that has the same event as the current AkAmbient
             for (var i = 0; i < akAmbients.Length; i++)
@@ -206,7 +212,11 @@ public class AkAmbientInspector : AkEventInspector
         else if (!HasSameTriggers(triggerList) || UnityEngine.Event.current.type == UnityEngine.EventType.ValidateCommand &&
                  UnityEngine.Event.current.commandName == "UndoRedoPerformed")
         {
+#if UNITY_6000_0_OR_NEWER
+            var akAmbients = FindObjectsByType<AkAmbient>(FindObjectsSortMode.None);
+#else
             var akAmbients = FindObjectsOfType<AkAmbient>();
+#endif
             SetMultiPosTrigger(akAmbients);
         }
     }
@@ -240,7 +250,7 @@ public class AkAmbientInspector : AkEventInspector
         if (currentAttSphereOp == AttenuationSphereOptions.Current_Event_Only)
         {
             // Get the max attenuation for the event (if available)
-            var radius = AkWwiseProjectInfo.GetData().GetEventMaxAttenuation(m_AkAmbient.data.Id);
+            var radius = AkWwiseProjectInfo.GetData().GetEventMaxAttenuation(m_AkAmbient.data.Id) * m_AkAmbient.gameObject.GetComponent<AkGameObj>().ScalingFactor;
 
             if (m_AkAmbient.multiPositionTypeLabel == MultiPositionTypeLabel.Simple_Mode)
             {
@@ -257,39 +267,46 @@ public class AkAmbientInspector : AkEventInspector
             }
             else
             {
-                var akAmbiants = FindObjectsOfType<AkAmbient>();
-
-                for (var i = 0; i < akAmbiants.Length; i++)
+#if UNITY_6000_0_OR_NEWER
+                var akAmbients = FindObjectsByType<AkAmbient>(FindObjectsSortMode.None);
+#else
+                var akAmbients = FindObjectsOfType<AkAmbient>();
+#endif
+                for (var i = 0; i < akAmbients.Length; i++)
                 {
-                    if (akAmbiants[i].multiPositionTypeLabel == MultiPositionTypeLabel.MultiPosition_Mode &&
-                        akAmbiants[i].data.Id == m_AkAmbient.data.Id)
+                    if (akAmbients[i].multiPositionTypeLabel == MultiPositionTypeLabel.MultiPosition_Mode &&
+                        akAmbients[i].data.Id == m_AkAmbient.data.Id)
                     {
-                        DrawSphere(akAmbiants[i].gameObject.transform.position, radius, akAmbiants[i].attenuationSphereColor);
+                        DrawSphere(akAmbients[i].gameObject.transform.position, radius, akAmbients[i].attenuationSphereColor);
                     }
                 }
             }
         }
         else
         {
-            var akAmbiants = FindObjectsOfType<AkAmbient>();
+#if UNITY_6000_0_OR_NEWER
+            var akAmbients = FindObjectsByType<AkAmbient>(FindObjectsSortMode.None);
+#else
+            var akAmbients = FindObjectsOfType<AkAmbient>();
+#endif
 
-            for (var i = 0; i < akAmbiants.Length; i++)
+            for (var i = 0; i < akAmbients.Length; i++)
             {
                 // Get the max attenuation for the event (if available)
-                var radius = AkWwiseProjectInfo.GetData().GetEventMaxAttenuation(akAmbiants[i].data.Id);
+                var radius = AkWwiseProjectInfo.GetData().GetEventMaxAttenuation(akAmbients[i].data.Id);
 
-                if (akAmbiants[i].multiPositionTypeLabel == MultiPositionTypeLabel.Large_Mode)
+                if (akAmbients[i].multiPositionTypeLabel == MultiPositionTypeLabel.Large_Mode)
                 {
                     var positionComponents = m_AkAmbient.GetComponentsInChildren<AkAmbientLargeModePositioner>();
 
                     for (int j = 0; j < positionComponents.Length; j++)
                     {
-                        DrawSphere(positionComponents[j].transform.position, radius, akAmbiants[i].attenuationSphereColor);
+                        DrawSphere(positionComponents[j].transform.position, radius, akAmbients[i].attenuationSphereColor);
                     }
                 }
                 else
                 {
-                    DrawSphere(akAmbiants[i].gameObject.transform.position, radius, akAmbiants[i].attenuationSphereColor);
+                    DrawSphere(akAmbients[i].gameObject.transform.position, radius, akAmbients[i].attenuationSphereColor);
                 }
             }
         }

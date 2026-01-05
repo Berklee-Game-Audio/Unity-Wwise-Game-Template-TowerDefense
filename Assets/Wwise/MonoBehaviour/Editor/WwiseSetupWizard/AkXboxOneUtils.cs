@@ -12,9 +12,9 @@ Licensees holding valid licenses to the AUDIOKINETIC Wwise Technology may use
 this file in accordance with the end user license agreement provided with the
 software or, alternatively, in accordance with the terms contained
 in a written agreement between you and Audiokinetic Inc.
-Copyright (c) 2023 Audiokinetic Inc.
+Copyright (c) 2025 Audiokinetic Inc.
 *******************************************************************************/
-
+#if !UNITY_2021_1_OR_NEWER
 public static class AkXboxOneUtils
 {
 	private static readonly int[] Usages = { 0, 1, 4, 7 };
@@ -53,3 +53,4 @@ public static class AkXboxOneUtils
 		}
 	}
 }
+#endif

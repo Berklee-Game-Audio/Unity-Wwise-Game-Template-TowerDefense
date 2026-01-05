@@ -1,4 +1,4 @@
-#if ! (UNITY_DASHBOARD_WIDGET || UNITY_WEBPLAYER || UNITY_WII || UNITY_WIIU || UNITY_NACL || UNITY_FLASH || UNITY_BLACKBERRY) // Disable under unsupported platforms.
+#if !(UNITY_QNX) // Disable under unsupported platforms.
 /*******************************************************************************
 The content of this file includes portions of the proprietary AUDIOKINETIC Wwise
 Technology released in source code form as part of the game integration package.
@@ -13,8 +13,10 @@ Licensees holding valid licenses to the AUDIOKINETIC Wwise Technology may use
 this file in accordance with the end user license agreement provided with the
 software or, alternatively, in accordance with the terms contained
 in a written agreement between you and Audiokinetic Inc.
-Copyright (c) 2023 Audiokinetic Inc.
+Copyright (c) 2025 Audiokinetic Inc.
 *******************************************************************************/
+
+using AK.Wwise.Unity.Logging;
 
 /// @brief This class is an example of how to load banks in Wwise, if the bank data was preloaded in memory.  
 /// This would be useful for situations where you use the WWW class
@@ -126,7 +128,7 @@ public class AkMemBankLoader : UnityEngine.MonoBehaviour
 		uint BankType;
         var result = AkSoundEngine.LoadBankMemoryView(ms_pInMemoryBankPtr, uInMemoryBankSize, out ms_bankID, out BankType);
 		if (result != AKRESULT.AK_Success)
-			UnityEngine.Debug.LogError("WwiseUnity: AkMemBankLoader: bank loading failed with result " + result);
+			WwiseLogger.Error("AkMemBankLoader: bank loading failed with result " + result);
 	}
 
 	private void DoLoadBank(string in_bankPath)
@@ -145,4 +147,4 @@ public class AkMemBankLoader : UnityEngine.MonoBehaviour
 		}
 	}
 }
-#endif // #if ! (UNITY_DASHBOARD_WIDGET || UNITY_WEBPLAYER || UNITY_WII || UNITY_WIIU || UNITY_NACL || UNITY_FLASH || UNITY_BLACKBERRY) // Disable under unsupported platforms.
+#endif // #if !(UNITY_QNX) // Disable under unsupported platforms.

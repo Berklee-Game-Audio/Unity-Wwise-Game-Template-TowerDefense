@@ -13,7 +13,7 @@ Licensees holding valid licenses to the AUDIOKINETIC Wwise Technology may use
 this file in accordance with the end user license agreement provided with the
 software or, alternatively, in accordance with the terms contained
 in a written agreement between you and Audiokinetic Inc.
-Copyright (c) 2023 Audiokinetic Inc.
+Copyright (c) 2025 Audiokinetic Inc.
 *******************************************************************************/
 
 using System.Linq;
@@ -178,6 +178,11 @@ public class AkWwiseTreeViewItem : TreeViewItem, System.IEquatable<AkWwiseTreeVi
 	public bool WwiseTypeInChildren(WwiseObjectType t)
 	{
 		if (this.objectType == t) return true;
+
+		if (!hasChildren)
+		{
+			return false;
+		}
 
 		foreach (var child in children)
 		{

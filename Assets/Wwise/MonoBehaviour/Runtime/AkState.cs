@@ -1,4 +1,4 @@
-#if ! (UNITY_DASHBOARD_WIDGET || UNITY_WEBPLAYER || UNITY_WII || UNITY_WIIU || UNITY_NACL || UNITY_FLASH || UNITY_BLACKBERRY) // Disable under unsupported platforms.
+#if !(UNITY_QNX) // Disable under unsupported platforms.
 /*******************************************************************************
 The content of this file includes portions of the proprietary AUDIOKINETIC Wwise
 Technology released in source code form as part of the game integration package.
@@ -13,10 +13,11 @@ Licensees holding valid licenses to the AUDIOKINETIC Wwise Technology may use
 this file in accordance with the end user license agreement provided with the
 software or, alternatively, in accordance with the terms contained
 in a written agreement between you and Audiokinetic Inc.
-Copyright (c) 2023 Audiokinetic Inc.
+Copyright (c) 2025 Audiokinetic Inc.
 *******************************************************************************/
 
 [UnityEngine.AddComponentMenu("Wwise/AkState")]
+[UnityEngine.ExecuteInEditMode]
 [UnityEngine.DefaultExecutionOrder(-20)]
 /// @brief This will call \c AkSoundEngine.SetState() whenever the selected Unity event is triggered. For example this component could be set on a Unity collider to trigger when an object enters it.
 /// \sa 
@@ -28,6 +29,20 @@ public class AkState : AkDragDropTriggerHandler
 {
 	public AK.Wwise.State data = new AK.Wwise.State();
 	protected override AK.Wwise.BaseType WwiseType { get { return data; } }
+	
+	protected override void Awake()
+	{
+		base.Awake();
+#if UNITY_EDITOR
+		var reference = AkWwiseTypes.DragAndDropObjectReference;
+		if (reference)
+		{
+			UnityEngine.GUIUtility.hotControl = 0;
+			data.ObjectReference = reference;
+			AkWwiseTypes.DragAndDropObjectReference = null;
+		}
+#endif
+	}
 
 	public override void HandleEvent(UnityEngine.GameObject in_gameObject)
 	{
@@ -102,4 +117,4 @@ public class AkState : AkDragDropTriggerHandler
 
 	#endregion
 }
-#endif // #if ! (UNITY_DASHBOARD_WIDGET || UNITY_WEBPLAYER || UNITY_WII || UNITY_WIIU || UNITY_NACL || UNITY_FLASH || UNITY_BLACKBERRY) // Disable under unsupported platforms.
+#endif // #if !(UNITY_QNX) // Disable under unsupported platforms.

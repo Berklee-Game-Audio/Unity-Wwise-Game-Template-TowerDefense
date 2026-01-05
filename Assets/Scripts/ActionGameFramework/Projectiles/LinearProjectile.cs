@@ -78,7 +78,7 @@ namespace ActionGameFramework.Projectiles
 
 			if (Math.Abs(acceleration) >= float.Epsilon)
 			{
-				m_Rigidbody.velocity += transform.forward * acceleration * Time.deltaTime;
+				m_Rigidbody.linearVelocity += transform.forward * acceleration * Time.deltaTime;
 			}
 		}
 
@@ -88,7 +88,7 @@ namespace ActionGameFramework.Projectiles
 
 			transform.rotation = Quaternion.LookRotation(firingVector);
 
-			m_Rigidbody.velocity = firingVector;
+			m_Rigidbody.linearVelocity = firingVector;
 
 			if (fired != null)
 			{

@@ -13,12 +13,14 @@ Licensees holding valid licenses to the AUDIOKINETIC Wwise Technology may use
 this file in accordance with the end user license agreement provided with the
 software or, alternatively, in accordance with the terms contained
 in a written agreement between you and Audiokinetic Inc.
-Copyright (c) 2023 Audiokinetic Inc.
+Copyright (c) 2025 Audiokinetic Inc.
 *******************************************************************************/
 
 using System.Linq;
 using System.Collections.Generic;
 using UnityEditor.IMGUI.Controls;
+using AK.Wwise.Unity.Logging;
+
 public class AkWwiseTreeView : TreeView
 {
 
@@ -46,6 +48,7 @@ public class AkWwiseTreeView : TreeView
 			{ typeof(AkEnvironment), WwiseObjectType.AuxBus },
 			{ typeof(AkState), WwiseObjectType.State },
 			{ typeof(AkSurfaceReflector), WwiseObjectType.AcousticTexture },
+			{ typeof(AkWwiseTrigger), WwiseObjectType.Trigger },
 			{ typeof(AkSwitch), WwiseObjectType.Switch },
 		};
 
@@ -236,20 +239,13 @@ public class AkWwiseTreeView : TreeView
 
 		foreach (AkWwiseTreeViewItem child in parent.children)
 		{
-			var item = new AkWwiseTreeViewItem(child);
-			item.parent = parent;
-			item.children = child.children;
-			newRows.Add(item);
+			newRows.Add(child);
 
 			if (child.children.Count > 0)
 			{
 				if (TestExpanded(child))
 				{
 					AddChildrenRecursive(child, newRows);
-				}
-				else
-				{
-					item.children = AkWwiseTreeDataSource.CreateCollapsedChild();
 				}
 			}
 		}
@@ -646,7 +642,7 @@ public class AkWwiseTreeView : TreeView
 
 		if (path == string.Empty)
 		{
-			UnityEngine.Debug.Log($"No references to {item.displayName} in scene.");
+			WwiseLogger.Log($"No references to {item.displayName} in scene.");
 			return;
 		}
 
@@ -704,19 +700,19 @@ public class AkWwiseTreeView : TreeView
 		var wwiseItem = (AkWwiseTreeViewItem)item;
 		if (item == null)
 		{
-			if (log) UnityEngine.Debug.LogWarning("Tree item no longer exists");
+			if (log) WwiseLogger.Warning("Tree item no longer exists");
 			return false;
 		}
 
 		if ((wwiseItem.objectType == WwiseObjectType.PhysicalFolder) || (wwiseItem.objectType == WwiseObjectType.WorkUnit))
 		{
-			if (log) UnityEngine.Debug.LogWarning("You can't change the name of a PhysicalFolder/WorkUnit");
+			if (log) WwiseLogger.Warning("You can't change the name of a PhysicalFolder/WorkUnit");
 			return false;
 		}
 
 		if (item.parent == null)
 		{
-			if (log) UnityEngine.Debug.LogWarning("A root tree item can not be renamed");
+			if (log) WwiseLogger.Warning("A root tree item can not be renamed");
 			return false;
 		}
 
@@ -741,7 +737,7 @@ public class AkWwiseTreeView : TreeView
 		if ((wwiseItem.objectType == WwiseObjectType.PhysicalFolder) || (wwiseItem.objectType == WwiseObjectType.WorkUnit)
 			|| wwiseItem.WwiseTypeInChildren(WwiseObjectType.WorkUnit))
 		{
-			if (log) UnityEngine.Debug.LogWarning("You can't delete a PhysicalFolder/WorkUnit from within Unity");
+			if (log) WwiseLogger.Warning("You can't delete a PhysicalFolder/WorkUnit from within Unity");
 			return false;
 		}
 
@@ -765,19 +761,19 @@ public class AkWwiseTreeView : TreeView
 	{
 		if (item == null)
 		{
-			UnityEngine.Debug.LogWarning("Tree item no longer exists");
+			WwiseLogger.Warning("Tree item no longer exists");
 			return false;
 		}
 
 		if (newName.Trim() == System.String.Empty)
 		{
-			UnityEngine.Debug.LogWarning("Names cannot be left blank");
+			WwiseLogger.Warning("Names cannot be left blank");
 			return false;
 		}
 
 		if (newName.Trim().Length >= MAX_NAME_LENGTH)
 		{
-			UnityEngine.Debug.LogWarning($"Names must be less than {MAX_NAME_LENGTH} characters long.");
+			WwiseLogger.Warning($"Names must be less than {MAX_NAME_LENGTH} characters long.");
 			return false;
 		}
 
@@ -789,14 +785,14 @@ public class AkWwiseTreeView : TreeView
 
 		if (newName.Contains('/') || newName.Contains('\\'))
 		{
-			UnityEngine.Debug.LogWarning("Item names cannot contain / or \\.");
+			WwiseLogger.Warning("Item names cannot contain / or \\.");
 			return false;
 		}
 
 		// Validate that an item with this name doesn't exist already
 		if (item.parent.children.Find((i) => i.displayName == newName) != null)
 		{
-			UnityEngine.Debug.LogWarning("An item with this name already exists at this level");
+			WwiseLogger.Warning("An item with this name already exists at this level");
 			return false;
 		}
 
@@ -899,6 +895,7 @@ public class AkWwisePickerIcons
 	private UnityEngine.Texture2D m_textureWwiseSwitchIcon;
 	private UnityEngine.Texture2D m_textureWwiseSwitchGroupIcon;
 	private UnityEngine.Texture2D m_textureWwiseWorkUnitIcon;
+	private UnityEngine.Texture2D m_textureWwiseTriggerIcon;
 
 	protected UnityEngine.Texture2D GetTexture(string texturePath)
 	{
@@ -908,7 +905,7 @@ public class AkWwisePickerIcons
 		}
 		catch (System.Exception ex)
 		{
-			UnityEngine.Debug.LogError(string.Format("WwiseUnity: Failed to find local texture: {0}", ex));
+			WwiseLogger.Error(string.Format("Failed to find local texture: {0}", ex));
 			return null;
 		}
 	}
@@ -931,6 +928,7 @@ public class AkWwisePickerIcons
 		m_textureWwiseSwitchIcon = GetTexture(tempWwisePath + "switch_nor.png");
 		m_textureWwiseSwitchGroupIcon = GetTexture(tempWwisePath + "switchgroup_nor.png");
 		m_textureWwiseWorkUnitIcon = GetTexture(tempWwisePath + "workunit_nor.png");
+		m_textureWwiseTriggerIcon = GetTexture(tempWwisePath + "trigger_nor.png");
 	}
 
 	public UnityEngine.Texture2D GetIcon(WwiseObjectType type)
@@ -965,6 +963,8 @@ public class AkWwisePickerIcons
 				return m_textureWwiseSwitchGroupIcon;
 			case WwiseObjectType.WorkUnit:
 				return m_textureWwiseWorkUnitIcon;
+			case WwiseObjectType.Trigger:
+				return m_textureWwiseTriggerIcon;
 			default:
 				return m_textureWwisePhysicalFolderIcon;
 		}

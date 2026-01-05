@@ -90,9 +90,9 @@ namespace ActionGameFramework.Projectiles
 						m_WobbleVector = Vector3.zero;
 					}
 					m_WobbleVector = Vector3.Lerp(m_WobbleVector, m_TargetWobbleVector, m_WobbleChangeTime);
-					m_Rigidbody.velocity = Quaternion.Euler(m_WobbleVector) * m_Rigidbody.velocity;
+					m_Rigidbody.linearVelocity = Quaternion.Euler(m_WobbleVector) * m_Rigidbody.linearVelocity;
 
-					m_Rigidbody.rotation = Quaternion.LookRotation(m_Rigidbody.velocity);
+					m_Rigidbody.rotation = Quaternion.LookRotation(m_Rigidbody.linearVelocity);
 					break;
 				// turn the projectile to face the homing target
 				case State.Turning:
@@ -100,7 +100,7 @@ namespace ActionGameFramework.Projectiles
 					Quaternion aimDirection = Quaternion.LookRotation(GetHeading());
 
 					m_Rigidbody.rotation = Quaternion.Lerp(m_Rigidbody.rotation, aimDirection, m_CurrentTurnTime / turningTime);
-					m_Rigidbody.velocity = transform.forward * m_Rigidbody.velocity.magnitude;
+					m_Rigidbody.linearVelocity = transform.forward * m_Rigidbody.linearVelocity.magnitude;
 
 					if (m_CurrentTurnTime >= turningTime)
 					{

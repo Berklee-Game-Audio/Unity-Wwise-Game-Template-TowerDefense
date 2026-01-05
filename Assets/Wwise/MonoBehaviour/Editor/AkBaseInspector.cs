@@ -13,7 +13,7 @@ Licensees holding valid licenses to the AUDIOKINETIC Wwise Technology may use
 this file in accordance with the end user license agreement provided with the
 software or, alternatively, in accordance with the terms contained
 in a written agreement between you and Audiokinetic Inc.
-Copyright (c) 2023 Audiokinetic Inc.
+Copyright (c) 2025 Audiokinetic Inc.
 *******************************************************************************/
 
 public abstract class AkBaseInspector : UnityEditor.Editor
@@ -33,10 +33,10 @@ public abstract class AkBaseInspector : UnityEditor.Editor
 		using (new UnityEngine.GUILayout.HorizontalScope("box"))
 			UnityEditor.EditorGUILayout.PropertyField(serializedObject.FindProperty("data"), new UnityEngine.GUIContent("Name: "));
 
-		serializedObject.ApplyModifiedProperties();
-
-		if (UnityEngine.GUI.changed)
+		if (serializedObject.ApplyModifiedProperties() && UnityEngine.GUI.changed)
+		{
 			UnityEditor.EditorUtility.SetDirty(serializedObject.targetObject);
+		}
 	}
 }
 #endif

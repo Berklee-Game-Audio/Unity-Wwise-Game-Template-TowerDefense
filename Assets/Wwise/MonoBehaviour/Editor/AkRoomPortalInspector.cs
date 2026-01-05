@@ -13,11 +13,11 @@ Licensees holding valid licenses to the AUDIOKINETIC Wwise Technology may use
 this file in accordance with the end user license agreement provided with the
 software or, alternatively, in accordance with the terms contained
 in a written agreement between you and Audiokinetic Inc.
-Copyright (c) 2023 Audiokinetic Inc.
+Copyright (c) 2025 Audiokinetic Inc.
 *******************************************************************************/
 
 [UnityEditor.CanEditMultipleObjects]
-[UnityEditor.CustomEditor(typeof(AkRoomPortal))]
+[UnityEditor.CustomEditor(typeof(AkRoomPortal), true)]
 public class AkRoomPortalInspector : UnityEditor.Editor
 {
 	private UnityEditor.SerializedProperty initialState;
@@ -89,7 +89,7 @@ public class AkRoomPortalInspector : UnityEditor.Editor
 				UnityEngine.GUILayout.Space(UnityEditor.EditorGUIUtility.standardVerticalSpacing);
 
 				UnityEditor.EditorGUILayout.HelpBox(
-					"Front and back rooms are identical. The AkRoomPortal will not be sent to Spatial Audio.",
+					"Portal placement is invalid. It will not be set in the Spatial Audio engine. The front and back Rooms of the Portal cannot be the same or have a ReverbZone-parent relationship.",
 					UnityEditor.MessageType.Warning);
 			}
 		}

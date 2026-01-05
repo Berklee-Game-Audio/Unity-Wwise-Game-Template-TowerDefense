@@ -1,17 +1,24 @@
 {
     "name": "AK.Wwise.Unity.API.WwiseTypes",
+    "rootNamespace": "",
     "references": [
         "AK.Wwise.Unity.API",
         "Unity.Addressables",
-        "AK.Wwise.Unity.Addressables"
+        "AK.Wwise.Unity.Addressables",
+        "AK.Wwise.Unity.Logging"
     ],
     "includePlatforms": [],
-    "excludePlatforms": [],
+    "excludePlatforms": [
+        "Lumin",
+        "Stadia"
+    ],
     "allowUnsafeCode": false,
     "overrideReferences": false,
     "precompiledReferences": [],
     "autoReferenced": true,
-    "defineConstraints": [ "!UNITY_SERVER" ],
+    "defineConstraints": [
+        "!UNITY_SERVER"
+    ],
     "versionDefines": [
         {
             "name": "com.unity.addressables",

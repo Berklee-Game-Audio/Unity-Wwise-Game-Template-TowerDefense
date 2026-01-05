@@ -150,14 +150,14 @@ namespace ActionGameFramework.Projectiles
 				}
 			}
 			
-			transform.rotation = Quaternion.LookRotation(m_Rigidbody.velocity);
+			transform.rotation = Quaternion.LookRotation(m_Rigidbody.linearVelocity);
 		}
 
 		protected virtual void Fire(Vector3 firingVector)
 		{
 			transform.rotation = Quaternion.LookRotation(firingVector);
 
-			m_Rigidbody.velocity = firingVector;
+			m_Rigidbody.linearVelocity = firingVector;
 
 			m_Fired = true;
 			

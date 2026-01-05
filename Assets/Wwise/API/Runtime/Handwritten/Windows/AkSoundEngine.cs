@@ -12,12 +12,12 @@ Licensees holding valid licenses to the AUDIOKINETIC Wwise Technology may use
 this file in accordance with the end user license agreement provided with the
 software or, alternatively, in accordance with the terms contained
 in a written agreement between you and Audiokinetic Inc.
-Copyright (c) 2023 Audiokinetic Inc.
+Copyright (c) 2025 Audiokinetic Inc.
 *******************************************************************************/
 
 ﻿public partial class AkSoundEngine
 {
-#if UNITY_EDITOR_WIN || (UNITY_STANDALONE_WIN && !UNITY_EDITOR) || UNITY_WSA
+#if UNITY_EDITOR_WIN || (UNITY_STANDALONE_WIN && !UNITY_EDITOR)
 	/// <summary>
 	///     Converts "AkOSChar*" C-strings to C# strings.
 	/// </summary>
@@ -26,6 +26,11 @@ Copyright (c) 2023 Audiokinetic Inc.
 	public static string StringFromIntPtrOSString(System.IntPtr ptr)
 	{
 		return StringFromIntPtrWString(ptr);
+	}
+
+	public static bool PlatformSupportsDecodeBank()
+	{
+		return true;
 	}
 #endif
 }

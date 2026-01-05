@@ -13,10 +13,10 @@ Licensees holding valid licenses to the AUDIOKINETIC Wwise Technology may use
 this file in accordance with the end user license agreement provided with the
 software or, alternatively, in accordance with the terms contained
 in a written agreement between you and Audiokinetic Inc.
-Copyright (c) 2023 Audiokinetic Inc.
+Copyright (c) 2025 Audiokinetic Inc.
 *******************************************************************************/
 
-[UnityEditor.CustomEditor(typeof(AkSurfaceReflector))]
+[UnityEditor.CustomEditor(typeof(AkSurfaceReflector), true)]
 [UnityEditor.CanEditMultipleObjects]
 public class AkSurfaceReflectorInspector : UnityEditor.Editor
 {
@@ -43,13 +43,7 @@ public class AkSurfaceReflectorInspector : UnityEditor.Editor
 
 	public override void OnInspectorGUI()
 	{
-		bool GeometryNeedsUpdate = false;
-		bool GeometryInstanceNeedsUpdate = false;
-
 		serializedObject.Update();
-
-		// Start a code block to check for GUI changes
-		UnityEditor.EditorGUI.BeginChangeCheck();
 
 		UnityEditor.EditorGUILayout.PropertyField(Mesh);
 
@@ -65,32 +59,10 @@ public class AkSurfaceReflectorInspector : UnityEditor.Editor
 			UnityEditor.EditorGUILayout.PropertyField(EnableDiffractionOnBoundaryEdges);
 		}
 
-		if (UnityEditor.EditorGUI.EndChangeCheck())
-		{
-			GeometryNeedsUpdate = true;
-		}
-
-		//Start a code block to check for GUI changes
-		UnityEditor.EditorGUI.BeginChangeCheck();
-
 		UnityEditor.EditorGUILayout.PropertyField(AssociatedRoom);
-
-		if (UnityEditor.EditorGUI.EndChangeCheck())
-		{
-			GeometryInstanceNeedsUpdate = true;
-		}
+		CheckAssociatedRoom(m_AkSurfaceReflector);
 
 		serializedObject.ApplyModifiedProperties();
-
-		if (GeometryNeedsUpdate)
-		{
-			m_AkSurfaceReflector.SetGeometry();
-		}
-
-		if (GeometryInstanceNeedsUpdate)
-		{
-			m_AkSurfaceReflector.UpdateAssociatedRoom();
-		}
 	}
 
 	public static void CheckArraySize(AkSurfaceReflector surfaceReflector, int length, string name)
@@ -112,6 +84,23 @@ public class AkSurfaceReflectorInspector : UnityEditor.Editor
 		{
 			UnityEditor.EditorGUILayout.HelpBox(
 				"There are more " + name + " than the Mesh has submeshes. Additional ones will be ignored.",
+				UnityEditor.MessageType.Warning);
+		}
+	}
+
+	public static void CheckAssociatedRoom(AkSurfaceReflector surfaceReflector)
+	{
+		if (surfaceReflector == null || surfaceReflector.AssociatedRoom == null)
+		{
+			return;
+		}
+
+		UnityEngine.GUILayout.Space(UnityEditor.EditorGUIUtility.standardVerticalSpacing);
+
+		using (new UnityEditor.EditorGUILayout.VerticalScope("box"))
+		{
+			UnityEditor.EditorGUILayout.HelpBox(
+				"The Associated Room property is deprecated and will be removed in a future version. We recommend not using it by leaving it set to None.",
 				UnityEditor.MessageType.Warning);
 		}
 	}

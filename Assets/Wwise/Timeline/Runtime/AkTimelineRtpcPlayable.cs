@@ -1,4 +1,4 @@
-#if !(UNITY_DASHBOARD_WIDGET || UNITY_WEBPLAYER || UNITY_WII || UNITY_WIIU || UNITY_NACL || UNITY_FLASH || UNITY_BLACKBERRY) // Disable under unsupported platforms.
+#if !(UNITY_QNX) // Disable under unsupported platforms.
 #if !UNITY_2019_1_OR_NEWER
 #define AK_ENABLE_TIMELINE
 #endif
@@ -18,7 +18,7 @@ Licensees holding valid licenses to the AUDIOKINETIC Wwise Technology may use
 this file in accordance with the end user license agreement provided with the
 software or, alternatively, in accordance with the terms contained
 in a written agreement between you and Audiokinetic Inc.
-Copyright (c) 2023 Audiokinetic Inc.
+Copyright (c) 2025 Audiokinetic Inc.
 *******************************************************************************/
 
 [System.Serializable]
@@ -80,7 +80,7 @@ public class AkTimelineRtpcPlayable : UnityEngine.Playables.PlayableAsset, Unity
 	}
 
 #if UNITY_EDITOR
-	[UnityEditor.CustomEditor(typeof(AkTimelineRtpcPlayable))]
+	[UnityEditor.CustomEditor(typeof(AkTimelineRtpcPlayable), true)]
 	public class Editor : UnityEditor.Editor
 	{
 		private AkTimelineRtpcPlayable playable;
@@ -124,4 +124,4 @@ public class AkTimelineRtpcPlayable : UnityEngine.Playables.PlayableAsset, Unity
 #endif //#if UNITY_EDITOR
 }
 #endif // AK_ENABLE_TIMELINE
-#endif // #if ! (UNITY_DASHBOARD_WIDGET || UNITY_WEBPLAYER || UNITY_WII || UNITY_WIIU || UNITY_NACL || UNITY_FLASH || UNITY_BLACKBERRY) // Disable under unsupported platforms.
+#endif // #if !(UNITY_QNX) // Disable under unsupported platforms.

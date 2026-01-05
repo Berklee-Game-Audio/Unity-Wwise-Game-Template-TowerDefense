@@ -13,7 +13,7 @@ Licensees holding valid licenses to the AUDIOKINETIC Wwise Technology may use
 this file in accordance with the end user license agreement provided with the
 software or, alternatively, in accordance with the terms contained
 in a written agreement between you and Audiokinetic Inc.
-Copyright (c) 2023 Audiokinetic Inc.
+Copyright (c) 2025 Audiokinetic Inc.
 *******************************************************************************/
 
 /// @brief Contains C# functions exposed from the Wwise C++ API.
@@ -27,10 +27,6 @@ Copyright (c) 2023 Audiokinetic Inc.
 /// - AK::SpatialAudio
 public partial class AkSoundEngine
 {
-#if UNITY_EDITOR
-	public static bool EditorIsSoundEngineLoaded { get; set; }
-#endif
-
 	#region String Marshalling
 
 	/// <summary>
@@ -125,10 +121,24 @@ public partial class AkSoundEngine
 	/// <returns></returns>
 	public static AKRESULT UnregisterGameObj(UnityEngine.GameObject gameObject)
 	{
+		if(gameObject == null)
+		{
+			return AKRESULT.AK_Success;
+		}
 		var id = GetAkGameObjectID(gameObject);
 		var res = (AKRESULT) AkSoundEnginePINVOKE.CSharp_UnregisterGameObjInternal(id);
 		PostUnregisterGameObjUserHook(res, gameObject, id);
 		return res;
+	}
+
+	/// <summary>
+	///     Unregisters all Game Objects.
+	/// </summary>
+	/// <returns></returns>
+	public static void UnregisterAllGameObjects()
+	{
+		AkSoundEngine.UnregisterAllGameObj();
+		ClearRegisteredGameObjects();
 	}
 	#endregion
 
@@ -201,6 +211,12 @@ public partial class AkSoundEngine
 	/// <param name="id">The ulong returned from GameObjectHash that represents this GameObject in Wwise.</param>
 	static partial void PostUnregisterGameObjUserHook(AKRESULT result, UnityEngine.GameObject gameObject, ulong id);
 
+	/// <summary>
+	///     Unregisters all Game Objects.
+	/// </summary>
+	/// <returns></returns>
+	static partial void ClearRegisteredGameObjects();
+
 	#endregion
 
 	#region Deprecation Strings
@@ -210,6 +226,8 @@ public partial class AkSoundEngine
 	public const string Deprecation_2019_2_2 = "This functionality is deprecated as of Wwise v2019.2.2 and will be removed in a future release.";
 	public const string Deprecation_2021_1_0 = "This functionality is deprecated as of Wwise v2021.1.0 and will be removed in a future release.";
 	public const string Deprecation_2022_1_0 = "This functionality is deprecated as of Wwise v2022.1.0 and will be removed in a future release.";
+	public const string Deprecation_2023_1_0 = "This functionality is deprecated as of Wwise v2023.1.0 and will be removed in a future release.";
+	public const string Deprecation_2023_1_17 = "This functionality is deprecated as of Wwise v2023.1.17 and will be removed in a future release.";
 	#endregion
 
 	#region GameObject wrappers
@@ -222,7 +240,14 @@ public partial class AkSoundEngine
 		in_pCookie = AkCallbackManager.EventCallbackPackage.Create(in_pfnCallback, in_pCookie, ref in_uFlags);
 		{
 			uint ret = AkSoundEnginePINVOKE.CSharp_DynamicSequenceOpen__SWIG_0(in_gameObjectID_id, in_uFlags, in_uFlags != 0 ? (global::System.IntPtr)1 : global::System.IntPtr.Zero, in_pCookie != null ? (global::System.IntPtr)in_pCookie.GetHashCode() : global::System.IntPtr.Zero, (int)in_eDynamicSequenceType);
-			AkCallbackManager.SetLastAddedPlayingID(ret);
+			if (ret != AK_INVALID_PLAYING_ID)
+			{
+				AkCallbackManager.SetLastAddedPlayingID(ret);
+			}
+			else
+			{
+				AkCallbackManager.RemoveEventCallback((AkCallbackManager.EventCallbackPackage)in_pCookie);
+			}
 			return ret;
 		}
 	}
@@ -236,7 +261,14 @@ public partial class AkSoundEngine
 		in_pCookie = AkCallbackManager.EventCallbackPackage.Create(in_pfnCallback, in_pCookie, ref in_uFlags);
 		{
 			uint ret = AkSoundEnginePINVOKE.CSharp_DynamicSequenceOpen__SWIG_1(in_gameObjectID_id, in_uFlags, in_uFlags != 0 ? (global::System.IntPtr)1 : global::System.IntPtr.Zero, in_pCookie != null ? (global::System.IntPtr)in_pCookie.GetHashCode() : global::System.IntPtr.Zero);
-			AkCallbackManager.SetLastAddedPlayingID(ret);
+			if (ret != AK_INVALID_PLAYING_ID)
+			{
+				AkCallbackManager.SetLastAddedPlayingID(ret);
+			}
+			else
+			{
+				AkCallbackManager.RemoveEventCallback((AkCallbackManager.EventCallbackPackage)in_pCookie);
+			}
 			return ret;
 		}
 	}
@@ -249,7 +281,10 @@ public partial class AkSoundEngine
 
 		{
 			uint ret = AkSoundEnginePINVOKE.CSharp_DynamicSequenceOpen__SWIG_2(in_gameObjectID_id);
-			AkCallbackManager.SetLastAddedPlayingID(ret);
+			if (ret != AK_INVALID_PLAYING_ID)
+			{
+				AkCallbackManager.SetLastAddedPlayingID(ret);
+			}
 			return ret;
 		}
 	}
@@ -263,7 +298,14 @@ public partial class AkSoundEngine
 		in_pCookie = AkCallbackManager.EventCallbackPackage.Create(in_pfnCallback, in_pCookie, ref in_uFlags);
 		{
 			uint ret = AkSoundEnginePINVOKE.CSharp_PostEvent__SWIG_0(in_eventID, in_gameObjectID_id, in_uFlags, in_uFlags != 0 ? (global::System.IntPtr)1 : global::System.IntPtr.Zero, in_pCookie != null ? (global::System.IntPtr)in_pCookie.GetHashCode() : global::System.IntPtr.Zero, in_cExternals, in_pExternalSources.GetBuffer(), in_PlayingID);
-			AkCallbackManager.SetLastAddedPlayingID(ret);
+			if (ret != AK_INVALID_PLAYING_ID)
+			{
+				AkCallbackManager.SetLastAddedPlayingID(ret);
+			}
+			else
+			{
+				AkCallbackManager.RemoveEventCallback((AkCallbackManager.EventCallbackPackage)in_pCookie);
+			}
 			return ret;
 		}
 	}
@@ -277,7 +319,14 @@ public partial class AkSoundEngine
 		in_pCookie = AkCallbackManager.EventCallbackPackage.Create(in_pfnCallback, in_pCookie, ref in_uFlags);
 		{
 			uint ret = AkSoundEnginePINVOKE.CSharp_PostEvent__SWIG_1(in_eventID, in_gameObjectID_id, in_uFlags, in_uFlags != 0 ? (global::System.IntPtr)1 : global::System.IntPtr.Zero, in_pCookie != null ? (global::System.IntPtr)in_pCookie.GetHashCode() : global::System.IntPtr.Zero, in_cExternals, in_pExternalSources.GetBuffer());
-			AkCallbackManager.SetLastAddedPlayingID(ret);
+			if (ret != AK_INVALID_PLAYING_ID)
+			{
+				AkCallbackManager.SetLastAddedPlayingID(ret);
+			}
+			else
+			{
+				AkCallbackManager.RemoveEventCallback((AkCallbackManager.EventCallbackPackage)in_pCookie);
+			}
 			return ret;
 		}
 	}
@@ -291,7 +340,14 @@ public partial class AkSoundEngine
 		in_pCookie = AkCallbackManager.EventCallbackPackage.Create(in_pfnCallback, in_pCookie, ref in_uFlags);
 		{
 			uint ret = AkSoundEnginePINVOKE.CSharp_PostEvent__SWIG_2(in_eventID, in_gameObjectID_id, in_uFlags, in_uFlags != 0 ? (global::System.IntPtr)1 : global::System.IntPtr.Zero, in_pCookie != null ? (global::System.IntPtr)in_pCookie.GetHashCode() : global::System.IntPtr.Zero);
-			AkCallbackManager.SetLastAddedPlayingID(ret);
+			if (ret != AK_INVALID_PLAYING_ID)
+			{
+				AkCallbackManager.SetLastAddedPlayingID(ret);
+			}
+			else
+			{
+				AkCallbackManager.RemoveEventCallback((AkCallbackManager.EventCallbackPackage)in_pCookie);
+			}
 			return ret;
 		}
 	}
@@ -304,7 +360,10 @@ public partial class AkSoundEngine
 
 		{
 			uint ret = AkSoundEnginePINVOKE.CSharp_PostEvent__SWIG_3(in_eventID, in_gameObjectID_id);
-			AkCallbackManager.SetLastAddedPlayingID(ret);
+			if (ret != AK_INVALID_PLAYING_ID)
+			{
+				AkCallbackManager.SetLastAddedPlayingID(ret);
+			}
 			return ret;
 		}
 	}
@@ -318,7 +377,14 @@ public partial class AkSoundEngine
 		in_pCookie = AkCallbackManager.EventCallbackPackage.Create(in_pfnCallback, in_pCookie, ref in_uFlags);
 		{
 			uint ret = AkSoundEnginePINVOKE.CSharp_PostEvent__SWIG_4(in_pszEventName, in_gameObjectID_id, in_uFlags, in_uFlags != 0 ? (global::System.IntPtr)1 : global::System.IntPtr.Zero, in_pCookie != null ? (global::System.IntPtr)in_pCookie.GetHashCode() : global::System.IntPtr.Zero, in_cExternals, in_pExternalSources.GetBuffer(), in_PlayingID);
-			AkCallbackManager.SetLastAddedPlayingID(ret);
+			if (ret != AK_INVALID_PLAYING_ID)
+			{
+				AkCallbackManager.SetLastAddedPlayingID(ret);
+			}
+			else
+			{
+				AkCallbackManager.RemoveEventCallback((AkCallbackManager.EventCallbackPackage)in_pCookie);
+			}
 			return ret;
 		}
 	}
@@ -332,7 +398,14 @@ public partial class AkSoundEngine
 		in_pCookie = AkCallbackManager.EventCallbackPackage.Create(in_pfnCallback, in_pCookie, ref in_uFlags);
 		{
 			uint ret = AkSoundEnginePINVOKE.CSharp_PostEvent__SWIG_5(in_pszEventName, in_gameObjectID_id, in_uFlags, in_uFlags != 0 ? (global::System.IntPtr)1 : global::System.IntPtr.Zero, in_pCookie != null ? (global::System.IntPtr)in_pCookie.GetHashCode() : global::System.IntPtr.Zero, in_cExternals, in_pExternalSources.GetBuffer());
-			AkCallbackManager.SetLastAddedPlayingID(ret);
+			if (ret == AK_INVALID_PLAYING_ID)
+			{
+				AkCallbackManager.RemoveEventCallback((AkCallbackManager.EventCallbackPackage)in_pCookie);
+			}
+			else
+			{
+				AkCallbackManager.SetLastAddedPlayingID(ret);
+			}
 			return ret;
 		}
 	}
@@ -346,7 +419,14 @@ public partial class AkSoundEngine
 		in_pCookie = AkCallbackManager.EventCallbackPackage.Create(in_pfnCallback, in_pCookie, ref in_uFlags);
 		{
 			uint ret = AkSoundEnginePINVOKE.CSharp_PostEvent__SWIG_6(in_pszEventName, in_gameObjectID_id, in_uFlags, in_uFlags != 0 ? (global::System.IntPtr)1 : global::System.IntPtr.Zero, in_pCookie != null ? (global::System.IntPtr)in_pCookie.GetHashCode() : global::System.IntPtr.Zero);
-			AkCallbackManager.SetLastAddedPlayingID(ret);
+			if (ret == AK_INVALID_PLAYING_ID)
+			{
+				AkCallbackManager.RemoveEventCallback((AkCallbackManager.EventCallbackPackage)in_pCookie);
+			}
+			else
+			{
+				AkCallbackManager.SetLastAddedPlayingID(ret);
+			}
 			return ret;
 		}
 	}
@@ -359,7 +439,10 @@ public partial class AkSoundEngine
 
 		{
 			uint ret = AkSoundEnginePINVOKE.CSharp_PostEvent__SWIG_7(in_pszEventName, in_gameObjectID_id);
-			AkCallbackManager.SetLastAddedPlayingID(ret);
+			if (ret != AK_INVALID_PLAYING_ID)
+			{
+				AkCallbackManager.SetLastAddedPlayingID(ret);
+			}
 			return ret;
 		}
 	}
@@ -462,6 +545,55 @@ public partial class AkSoundEngine
 
 		{ return (AKRESULT)AkSoundEnginePINVOKE.CSharp_StopMIDIOnEvent__SWIG_0(in_eventID, in_gameObjectID_id, in_playingID); }
 	}
+	
+	public static AKRESULT SeekOnEvent(uint in_eventID, UnityEngine.GameObject in_gameObjectID, float in_fPercent, bool in_bSeekToNearestMarker, uint in_PlayingID)
+	{
+
+		var in_gameObjectID_id = AkSoundEngine.GetAkGameObjectID(in_gameObjectID);
+		AkSoundEngine.PreGameObjectAPICall(in_gameObjectID, in_gameObjectID_id);
+
+		return SeekOnEvent(in_eventID, in_gameObjectID_id, in_fPercent, in_bSeekToNearestMarker, in_PlayingID);
+	}
+
+	public static AKRESULT SeekOnEvent(uint in_eventID, UnityEngine.GameObject in_gameObjectID, float in_fPercent, bool in_bSeekToNearestMarker)
+	{
+		var in_gameObjectID_id = AkSoundEngine.GetAkGameObjectID(in_gameObjectID);
+		AkSoundEngine.PreGameObjectAPICall(in_gameObjectID, in_gameObjectID_id);
+
+		return SeekOnEvent(in_eventID, in_gameObjectID_id, in_fPercent, in_bSeekToNearestMarker);
+	}
+
+	public static AKRESULT SeekOnEvent(uint in_eventID, UnityEngine.GameObject in_gameObjectID, float in_fPercent)
+	{
+		var in_gameObjectID_id = AkSoundEngine.GetAkGameObjectID(in_gameObjectID);
+		AkSoundEngine.PreGameObjectAPICall(in_gameObjectID, in_gameObjectID_id);
+
+		return SeekOnEvent(in_eventID, in_gameObjectID_id, in_fPercent);
+	}
+
+	public static AKRESULT SeekOnEvent(string in_pszEventName, UnityEngine.GameObject in_gameObjectID, float in_fPercent, bool in_bSeekToNearestMarker, uint in_PlayingID)
+	{
+		var in_gameObjectID_id = AkSoundEngine.GetAkGameObjectID(in_gameObjectID);
+		AkSoundEngine.PreGameObjectAPICall(in_gameObjectID, in_gameObjectID_id);
+
+		return SeekOnEvent(in_pszEventName, in_gameObjectID_id, in_fPercent, in_bSeekToNearestMarker, in_PlayingID);
+	}
+
+	public static AKRESULT SeekOnEvent(string in_pszEventName, UnityEngine.GameObject in_gameObjectID, float in_fPercent, bool in_bSeekToNearestMarker)
+	{
+		var in_gameObjectID_id = AkSoundEngine.GetAkGameObjectID(in_gameObjectID);
+		AkSoundEngine.PreGameObjectAPICall(in_gameObjectID, in_gameObjectID_id);
+
+		return SeekOnEvent(in_pszEventName, in_gameObjectID_id, in_fPercent, in_bSeekToNearestMarker);
+	}
+
+	public static AKRESULT SeekOnEvent(string in_pszEventName, UnityEngine.GameObject in_gameObjectID, float in_fPercent)
+	{
+		var in_gameObjectID_id = AkSoundEngine.GetAkGameObjectID(in_gameObjectID);
+		AkSoundEngine.PreGameObjectAPICall(in_gameObjectID, in_gameObjectID_id);
+
+        return SeekOnEvent(in_pszEventName, in_gameObjectID_id, in_fPercent);
+	}
 
 	public static AKRESULT SeekOnEvent(uint in_eventID, UnityEngine.GameObject in_gameObjectID, int in_iPosition, bool in_bSeekToNearestMarker, uint in_PlayingID)
 	{
@@ -469,7 +601,7 @@ public partial class AkSoundEngine
 		var in_gameObjectID_id = AkSoundEngine.GetAkGameObjectID(in_gameObjectID);
 		AkSoundEngine.PreGameObjectAPICall(in_gameObjectID, in_gameObjectID_id);
 
-		{ return (AKRESULT)AkSoundEnginePINVOKE.CSharp_SeekOnEvent__SWIG_0(in_eventID, in_gameObjectID_id, in_iPosition, in_bSeekToNearestMarker, in_PlayingID); }
+		{ return SeekOnEvent(in_eventID, in_gameObjectID_id, in_iPosition, in_bSeekToNearestMarker, in_PlayingID); }
 	}
 
 	public static AKRESULT SeekOnEvent(uint in_eventID, UnityEngine.GameObject in_gameObjectID, int in_iPosition, bool in_bSeekToNearestMarker)
@@ -478,7 +610,7 @@ public partial class AkSoundEngine
 		var in_gameObjectID_id = AkSoundEngine.GetAkGameObjectID(in_gameObjectID);
 		AkSoundEngine.PreGameObjectAPICall(in_gameObjectID, in_gameObjectID_id);
 
-		{ return (AKRESULT)AkSoundEnginePINVOKE.CSharp_SeekOnEvent__SWIG_1(in_eventID, in_gameObjectID_id, in_iPosition, in_bSeekToNearestMarker); }
+		{ return SeekOnEvent(in_eventID, in_gameObjectID_id, in_iPosition, in_bSeekToNearestMarker); }
 	}
 
 	public static AKRESULT SeekOnEvent(uint in_eventID, UnityEngine.GameObject in_gameObjectID, int in_iPosition)
@@ -487,7 +619,7 @@ public partial class AkSoundEngine
 		var in_gameObjectID_id = AkSoundEngine.GetAkGameObjectID(in_gameObjectID);
 		AkSoundEngine.PreGameObjectAPICall(in_gameObjectID, in_gameObjectID_id);
 
-		{ return (AKRESULT)AkSoundEnginePINVOKE.CSharp_SeekOnEvent__SWIG_2(in_eventID, in_gameObjectID_id, in_iPosition); }
+		{ return SeekOnEvent(in_eventID, in_gameObjectID_id, in_iPosition); }
 	}
 
 	public static AKRESULT SeekOnEvent(string in_pszEventName, UnityEngine.GameObject in_gameObjectID, int in_iPosition, bool in_bSeekToNearestMarker, uint in_PlayingID)
@@ -496,7 +628,7 @@ public partial class AkSoundEngine
 		var in_gameObjectID_id = AkSoundEngine.GetAkGameObjectID(in_gameObjectID);
 		AkSoundEngine.PreGameObjectAPICall(in_gameObjectID, in_gameObjectID_id);
 
-		{ return (AKRESULT)AkSoundEnginePINVOKE.CSharp_SeekOnEvent__SWIG_3(in_pszEventName, in_gameObjectID_id, in_iPosition, in_bSeekToNearestMarker, in_PlayingID); }
+		{ return SeekOnEvent(in_pszEventName, in_gameObjectID_id, in_iPosition, in_bSeekToNearestMarker, in_PlayingID); }
 	}
 
 	public static AKRESULT SeekOnEvent(string in_pszEventName, UnityEngine.GameObject in_gameObjectID, int in_iPosition, bool in_bSeekToNearestMarker)
@@ -505,7 +637,7 @@ public partial class AkSoundEngine
 		var in_gameObjectID_id = AkSoundEngine.GetAkGameObjectID(in_gameObjectID);
 		AkSoundEngine.PreGameObjectAPICall(in_gameObjectID, in_gameObjectID_id);
 
-		{ return (AKRESULT)AkSoundEnginePINVOKE.CSharp_SeekOnEvent__SWIG_4(in_pszEventName, in_gameObjectID_id, in_iPosition, in_bSeekToNearestMarker); }
+		{ return SeekOnEvent(in_pszEventName, in_gameObjectID_id, in_iPosition, in_bSeekToNearestMarker); }
 	}
 
 	public static AKRESULT SeekOnEvent(string in_pszEventName, UnityEngine.GameObject in_gameObjectID, int in_iPosition)
@@ -514,80 +646,7 @@ public partial class AkSoundEngine
 		var in_gameObjectID_id = AkSoundEngine.GetAkGameObjectID(in_gameObjectID);
 		AkSoundEngine.PreGameObjectAPICall(in_gameObjectID, in_gameObjectID_id);
 
-		{ return (AKRESULT)AkSoundEnginePINVOKE.CSharp_SeekOnEvent__SWIG_5(in_pszEventName, in_gameObjectID_id, in_iPosition); }
-	}
-
-	public static AKRESULT SeekOnEvent(uint in_eventID, UnityEngine.GameObject in_gameObjectID, float in_fPercent, bool in_bSeekToNearestMarker, uint in_PlayingID)
-	{
-
-		var in_gameObjectID_id = AkSoundEngine.GetAkGameObjectID(in_gameObjectID);
-		AkSoundEngine.PreGameObjectAPICall(in_gameObjectID, in_gameObjectID_id);
-
-#if (UNITY_SWITCH || UNITY_ANDROID || UNITY_STANDALONE_LINUX || UNITY_WEBGL) && !UNITY_EDITOR
-		return (AKRESULT)AkSoundEnginePINVOKE.CSharp_SeekOnEvent__SWIG_6(in_eventID, in_gameObjectID_id, in_fPercent, in_bSeekToNearestMarker, in_PlayingID);
-#else
-		{ return (AKRESULT)AkSoundEnginePINVOKE.CSharp_SeekOnEvent__SWIG_9(in_eventID, in_gameObjectID_id, in_fPercent, in_bSeekToNearestMarker, in_PlayingID); }
-#endif
-	}
-
-	public static AKRESULT SeekOnEvent(uint in_eventID, UnityEngine.GameObject in_gameObjectID, float in_fPercent, bool in_bSeekToNearestMarker)
-	{
-		var in_gameObjectID_id = AkSoundEngine.GetAkGameObjectID(in_gameObjectID);
-		AkSoundEngine.PreGameObjectAPICall(in_gameObjectID, in_gameObjectID_id);
-
-#if (UNITY_SWITCH || UNITY_ANDROID || UNITY_STANDALONE_LINUX || UNITY_WEBGL) && !UNITY_EDITOR
-		return (AKRESULT)AkSoundEnginePINVOKE.CSharp_SeekOnEvent__SWIG_7(in_eventID, in_gameObjectID_id, in_fPercent, in_bSeekToNearestMarker);
-#else
-		{ return (AKRESULT)AkSoundEnginePINVOKE.CSharp_SeekOnEvent__SWIG_10(in_eventID, in_gameObjectID_id, in_fPercent, in_bSeekToNearestMarker); }
-#endif
-	}
-
-	public static AKRESULT SeekOnEvent(uint in_eventID, UnityEngine.GameObject in_gameObjectID, float in_fPercent)
-	{
-		var in_gameObjectID_id = AkSoundEngine.GetAkGameObjectID(in_gameObjectID);
-		AkSoundEngine.PreGameObjectAPICall(in_gameObjectID, in_gameObjectID_id);
-
-#if (UNITY_SWITCH || UNITY_ANDROID || UNITY_STANDALONE_LINUX || UNITY_WEBGL) && !UNITY_EDITOR
-		return (AKRESULT)AkSoundEnginePINVOKE.CSharp_SeekOnEvent__SWIG_8(in_eventID, in_gameObjectID_id, in_fPercent);
-#else
-		{ return (AKRESULT)AkSoundEnginePINVOKE.CSharp_SeekOnEvent__SWIG_11(in_eventID, in_gameObjectID_id, in_fPercent); }
-#endif
-	}
-
-	public static AKRESULT SeekOnEvent(string in_pszEventName, UnityEngine.GameObject in_gameObjectID, float in_fPercent, bool in_bSeekToNearestMarker, uint in_PlayingID)
-	{
-		var in_gameObjectID_id = AkSoundEngine.GetAkGameObjectID(in_gameObjectID);
-		AkSoundEngine.PreGameObjectAPICall(in_gameObjectID, in_gameObjectID_id);
-
-#if (UNITY_SWITCH || UNITY_ANDROID || UNITY_STANDALONE_LINUX || UNITY_WEBGL) && !UNITY_EDITOR
-		return (AKRESULT)AkSoundEnginePINVOKE.CSharp_SeekOnEvent__SWIG_9(in_pszEventName, in_gameObjectID_id, in_fPercent, in_bSeekToNearestMarker, in_PlayingID);
-#else
-		{ return (AKRESULT)AkSoundEnginePINVOKE.CSharp_SeekOnEvent__SWIG_12(in_pszEventName, in_gameObjectID_id, in_fPercent, in_bSeekToNearestMarker, in_PlayingID); }
-#endif
-	}
-
-	public static AKRESULT SeekOnEvent(string in_pszEventName, UnityEngine.GameObject in_gameObjectID, float in_fPercent, bool in_bSeekToNearestMarker)
-	{
-		var in_gameObjectID_id = AkSoundEngine.GetAkGameObjectID(in_gameObjectID);
-		AkSoundEngine.PreGameObjectAPICall(in_gameObjectID, in_gameObjectID_id);
-
-#if (UNITY_SWITCH || UNITY_ANDROID || UNITY_STANDALONE_LINUX || UNITY_WEBGL) && !UNITY_EDITOR
-		return (AKRESULT)AkSoundEnginePINVOKE.CSharp_SeekOnEvent__SWIG_10(in_pszEventName, in_gameObjectID_id, in_fPercent, in_bSeekToNearestMarker);
-#else
-		{ return (AKRESULT)AkSoundEnginePINVOKE.CSharp_SeekOnEvent__SWIG_13(in_pszEventName, in_gameObjectID_id, in_fPercent, in_bSeekToNearestMarker); }
-#endif
-	}
-
-	public static AKRESULT SeekOnEvent(string in_pszEventName, UnityEngine.GameObject in_gameObjectID, float in_fPercent)
-	{
-		var in_gameObjectID_id = AkSoundEngine.GetAkGameObjectID(in_gameObjectID);
-		AkSoundEngine.PreGameObjectAPICall(in_gameObjectID, in_gameObjectID_id);
-
-#if (UNITY_SWITCH || UNITY_ANDROID || UNITY_STANDALONE_LINUX || UNITY_WEBGL) && !UNITY_EDITOR
-		return (AKRESULT)AkSoundEnginePINVOKE.CSharp_SeekOnEvent__SWIG_11(in_pszEventName, in_gameObjectID_id, in_fPercent);
-#else
-		{ return (AKRESULT)AkSoundEnginePINVOKE.CSharp_SeekOnEvent__SWIG_14(in_pszEventName, in_gameObjectID_id, in_fPercent); }
-#endif
+		{ return SeekOnEvent(in_pszEventName, in_gameObjectID_id, in_iPosition); }
 	}
 
 	public static void CancelEventCallbackGameObject(UnityEngine.GameObject in_gameObjectID)

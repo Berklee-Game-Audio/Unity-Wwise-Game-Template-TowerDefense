@@ -1,4 +1,4 @@
-#if ! (UNITY_DASHBOARD_WIDGET || UNITY_WEBPLAYER || UNITY_WII || UNITY_WIIU || UNITY_NACL || UNITY_FLASH || UNITY_BLACKBERRY) // Disable under unsupported platforms.
+#if !(UNITY_QNX) // Disable under unsupported platforms.
 /*******************************************************************************
 The content of this file includes portions of the proprietary AUDIOKINETIC Wwise
 Technology released in source code form as part of the game integration package.
@@ -13,7 +13,7 @@ Licensees holding valid licenses to the AUDIOKINETIC Wwise Technology may use
 this file in accordance with the end user license agreement provided with the
 software or, alternatively, in accordance with the terms contained
 in a written agreement between you and Audiokinetic Inc.
-Copyright (c) 2023 Audiokinetic Inc.
+Copyright (c) 2025 Audiokinetic Inc.
 *******************************************************************************/
 
 [UnityEngine.AddComponentMenu("Wwise/AkBank")]
@@ -30,6 +30,8 @@ public class AkBank : AkTriggerHandler
 	/// Decode this SoundBank upon load
 	public bool decodeBank = false;
 
+	public bool overrideLoadSetting = false;
+
 	/// Check this to load the SoundBank in the background. Be careful, if Events are triggered and the SoundBank hasn't finished loading, you'll have "Event not found" errors.
 	public bool loadAsynchronous = false;
 
@@ -43,14 +45,19 @@ public class AkBank : AkTriggerHandler
 	protected override void Awake()
 	{
 #if UNITY_EDITOR
+		AkSoundEngineInitialization.Instance.initializationDelegate += HandleEvent;
+
 		if (UnityEditor.BuildPipeline.isBuildingPlayer || AkUtilities.IsMigrating)
+		{
 			return;
+		}
 
 		var reference = AkWwiseTypes.DragAndDropObjectReference;
 		if (reference)
 		{
 			UnityEngine.GUIUtility.hotControl = 0;
 			data.ObjectReference = reference;
+			AkWwiseTypes.DragAndDropObjectReference = null;
 		}
 #endif
 
@@ -59,27 +66,60 @@ public class AkBank : AkTriggerHandler
 		RegisterTriggers(unloadTriggerList, UnloadBank);
 	}
 
+
+#if UNITY_EDITOR
+	public override void OnEnable()
+	{
+		if (UnityEditor.BuildPipeline.isBuildingPlayer)
+        {
+			return;
+        }
+		base.OnEnable();
+	}
+#endif
 	protected override void Start()
 	{
 #if UNITY_EDITOR
 		if (UnityEditor.BuildPipeline.isBuildingPlayer || AkUtilities.IsMigrating)
+		{
 			return;
+		}
+		if (!UnityEditor.EditorApplication.isPlaying)
+		{
+			HandleEvent();
+		}
 #endif
 
 		base.Start();
 
 		//Call the UnloadBank function if registered to the Start Trigger
 		if (unloadTriggerList.Contains(START_TRIGGER_ID))
+		{
 			UnloadBank(null);
+		}
 	}
 
 	/// Loads the SoundBank
 	public override void HandleEvent(UnityEngine.GameObject in_gameObject)
 	{
-		if (!loadAsynchronous)
-			data.Load(decodeBank, saveDecodedBank);
-		else
+		bool asyncResult = loadAsynchronous;
+		if(!overrideLoadSetting)
+		{
+			asyncResult = AkWwiseInitializationSettings.ActivePlatformSettings.LoadBanksAsynchronously;
+		}
+		if (asyncResult)
+		{
 			data.LoadAsync();
+		}
+		else
+		{
+			data.Load(decodeBank, saveDecodedBank);
+		}
+	}
+
+	private void HandleEvent()
+	{
+		HandleEvent(gameObject);
 	}
 
 	/// Unloads a SoundBank
@@ -91,8 +131,12 @@ public class AkBank : AkTriggerHandler
 	protected override void OnDestroy()
 	{
 #if UNITY_EDITOR
+		AkSoundEngineInitialization.Instance.initializationDelegate -= HandleEvent;
+
 		if (UnityEditor.BuildPipeline.isBuildingPlayer || AkUtilities.IsMigrating)
+		{
 			return;
+		}
 #endif
 
 		base.OnDestroy();
@@ -142,4 +186,4 @@ public class AkBank : AkTriggerHandler
 #endif
 	#endregion
 }
-#endif // #if ! (UNITY_DASHBOARD_WIDGET || UNITY_WEBPLAYER || UNITY_WII || UNITY_WIIU || UNITY_NACL || UNITY_FLASH || UNITY_BLACKBERRY) // Disable under unsupported platforms.
+#endif // #if !(UNITY_QNX) // Disable under unsupported platforms.

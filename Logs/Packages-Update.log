@@ -160,3 +160,27 @@ The following packages were updated:
   com.unity.purchasing from version 4.5.1 to 4.7.0
   com.unity.test-framework from version 1.1.31 to 1.1.33
   com.unity.timeline from version 1.6.4 to 1.7.4
+
+=== Sun Jan  4 18:15:09 2026
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were added:
+  com.unity.modules.adaptiveperformance@1.0.0
+  com.unity.modules.vectorgraphics@1.0.0
+  com.unity.modules.accessibility@1.0.0
+  com.unity.multiplayer.center@1.0.1
+The following packages were updated:
+  com.unity.ai.navigation from version 1.1.1 to 2.0.9
+  com.unity.analytics from version 3.8.1 to 3.8.2
+  com.unity.collab-proxy from version 2.0.1 to 2.10.2
+  com.unity.ide.rider from version 3.0.18 to 3.0.38
+  com.unity.ide.visualstudio from version 2.0.17 to 2.0.25
+  com.unity.purchasing from version 4.7.0 to 4.14.0
+  com.unity.test-framework from version 1.1.33 to 1.6.0
+  com.unity.timeline from version 1.7.4 to 1.8.9
+  com.unity.ugui from version 1.0.0 to 2.0.0
+  com.unity.xr.legacyinputhelpers from version 2.1.10 to 2.1.13
+The following packages were removed:
+  com.unity.textmeshpro@3.0.6

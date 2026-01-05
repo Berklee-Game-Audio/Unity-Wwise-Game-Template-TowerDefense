@@ -1,3 +1,5 @@
+using AK.Wwise.Unity.Logging;
+
 #if UNITY_EDITOR
 /*******************************************************************************
 The content of this file includes portions of the proprietary AUDIOKINETIC Wwise
@@ -13,11 +15,11 @@ Licensees holding valid licenses to the AUDIOKINETIC Wwise Technology may use
 this file in accordance with the end user license agreement provided with the
 software or, alternatively, in accordance with the terms contained
 in a written agreement between you and Audiokinetic Inc.
-Copyright (c) 2023 Audiokinetic Inc.
+Copyright (c) 2025 Audiokinetic Inc.
 *******************************************************************************/
 
 [UnityEditor.CanEditMultipleObjects]
-[UnityEditor.CustomEditor(typeof(AkEvent))]
+[UnityEditor.CustomEditor(typeof(AkEvent), true)]
 public class AkEventInspector : AkBaseInspector
 {
 	private readonly AkUnityEventHandlerInspector m_UnityEventHandlerInspector = new AkUnityEventHandlerInspector();
@@ -27,6 +29,7 @@ public class AkEventInspector : AkBaseInspector
 	private UnityEditor.SerializedProperty enableActionOnEvent;
 	private UnityEditor.SerializedProperty transitionDuration;
 	private UnityEditor.SerializedProperty useCallbacks;
+	private UnityEditor.SerializedProperty stopSoundOnDestroy;
 
 	public void OnEnable()
 	{
@@ -38,6 +41,7 @@ public class AkEventInspector : AkBaseInspector
 		transitionDuration = serializedObject.FindProperty("transitionDuration");
 		useCallbacks = serializedObject.FindProperty("useCallbacks");
 		callbackData = serializedObject.FindProperty("Callbacks");
+		stopSoundOnDestroy = serializedObject.FindProperty("stopSoundOnDestroy");
 
 		AkEditorEventPlayer.RefreshGUI += Repaint;
 	}
@@ -136,36 +140,28 @@ public class AkEventInspector : AkBaseInspector
 		}
 	}
 
+	private void DisplayStopSoundOnDestroy()
+	{
+		using (new UnityEditor.EditorGUILayout.VerticalScope("box"))
+		{
+			UnityEditor.EditorGUILayout.PropertyField(stopSoundOnDestroy, new UnityEngine.GUIContent("Stop Sound On Destroy: "));
+		}
+	}
+
 	public override void OnChildInspectorGUI()
 	{
 		m_UnityEventHandlerInspector.OnGUI();
 
 		DisplayActionOnEvent();
 		DisplayCallbackInformation();
+		DisplayStopSoundOnDestroy();
 
 		UnityEngine.GUILayout.Space(UnityEditor.EditorGUIUtility.standardVerticalSpacing);
 		using (new UnityEditor.EditorGUILayout.VerticalScope("box"))
 		{
 			if (targets.Length == 1)
 			{
-				var akEvent = (AkEvent) target;
-				var eventPlaying = AkEditorEventPlayer.IsEventPlaying(akEvent);
-				if (eventPlaying)
-				{
-					if (UnityEngine.GUILayout.Button("Stop"))
-					{
-						UnityEngine.GUIUtility.hotControl = 0;
-						AkEditorEventPlayer.StopEvent(akEvent);
-					}
-				}
-				else
-				{
-					if (UnityEngine.GUILayout.Button("Play"))
-					{
-						UnityEngine.GUIUtility.hotControl = 0;
-						AkEditorEventPlayer.PlayEvent(akEvent);
-					}
-				}
+				PlayOrStopEvent();
 			}
 			else
 			{
@@ -227,6 +223,38 @@ public class AkEventInspector : AkBaseInspector
 		}
 	}
 
+	public void PlayEvent()
+	{
+		AkEditorEventPlayer.PlayEvent((AkEvent)target);
+	}
+
+	public void StopEvent()
+	{
+		AkEditorEventPlayer.StopEvent((AkEvent)target);
+	}
+
+	private void PlayOrStopEvent()
+	{
+		var akEvent = (AkEvent)target;
+		var eventPlaying = AkEditorEventPlayer.IsEventPlaying(akEvent);
+		if (eventPlaying)
+		{
+			if (UnityEngine.GUILayout.Button("Stop"))
+			{
+				UnityEngine.GUIUtility.hotControl = 0;
+				StopEvent();
+			}
+		}
+		else
+		{
+			if (UnityEngine.GUILayout.Button("Play"))
+			{
+				UnityEngine.GUIUtility.hotControl = 0;
+				PlayEvent();
+			}
+		}
+	}
+
 	private static class AkEditorEventPlayer
 	{
 		private static readonly System.Collections.Generic.List<AkEvent> akEvents = new System.Collections.Generic.List<AkEvent>();
@@ -251,12 +279,12 @@ public class AkEventInspector : AkBaseInspector
 		{
 			if (!AkSoundEngine.IsInitialized())
 			{
-				UnityEngine.Debug.LogWarning("Sound Engine is not initialized. No sound will be heard.");
+				WwiseLogger.Warning("Sound Engine is not initialized. No sound will be heard.");
 				return;
 			}
-			if (!AkSoundEngineController.Instance.EditorListenerIsInitialized())
+			if (!AkSoundEngineController.Instance.EditorListenerIsInitialized() && !UnityEditor.EditorApplication.isPlaying)
 			{
-				UnityEngine.Debug.LogWarning("Editor Listener isn't initialized. No sound will be heard.");
+				WwiseLogger.Warning("Editor Listener isn't initialized. No sound will be heard.");
 				return;
 			}
 			if (akEvents.Contains(akEvent))

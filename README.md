@@ -1,10 +1,10 @@
 # Unity-Wwise-Game-Template-Tower-Defense
 
 Optimized for Unity Version: 
-2022.2.13f1
+6.3 LTS (6000.3.2f1)
 
 Optimized for Wwise Version: 
-2022.1.4.8202
+2023.1.18.8899
 
 Video Tutorials:
 https://www.youtube.com/watch?v=NVyCF5SY63o

@@ -12,7 +12,7 @@ Licensees holding valid licenses to the AUDIOKINETIC Wwise Technology may use
 this file in accordance with the end user license agreement provided with the
 software or, alternatively, in accordance with the terms contained
 in a written agreement between you and Audiokinetic Inc.
-Copyright (c) 2023 Audiokinetic Inc.
+Copyright (c) 2025 Audiokinetic Inc.
 *******************************************************************************/
 
 namespace AK.Wwise.Editor
@@ -93,10 +93,11 @@ namespace AK.Wwise.Editor
 		{
 			return serializedProperty.objectReferenceValue as WwiseObjectReference;
 		}
-
+		
 		protected virtual void SetSerializedObject(UnityEditor.SerializedProperty serializedProperty, WwiseObjectReference wwiseObjectReference)
 		{
 			serializedProperty.objectReferenceValue = wwiseObjectReference;
+			AkWwiseTypes.DragAndDropObjectReference = null;
 		}
 
 		private void HandleDragAndDrop(UnityEditor.SerializedProperty wwiseObjectReference, UnityEngine.Rect dropArea)
@@ -123,7 +124,6 @@ namespace AK.Wwise.Editor
 					SetSerializedObject(wwiseObjectReference, reference);
 				}
 
-				UnityEditor.DragAndDrop.PrepareStartDrag();
 				UnityEngine.GUIUtility.hotControl = 0;
 			}
 

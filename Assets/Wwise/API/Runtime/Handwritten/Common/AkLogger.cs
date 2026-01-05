@@ -1,4 +1,6 @@
-#if ! (UNITY_DASHBOARD_WIDGET || UNITY_WEBPLAYER || UNITY_WII || UNITY_WIIU || UNITY_NACL || UNITY_FLASH || UNITY_BLACKBERRY) // Disable under unsupported platforms.
+using AK.Wwise.Unity.Logging;
+
+#if !(UNITY_QNX) // Disable under unsupported platforms.
 /*******************************************************************************
 The content of this file includes portions of the proprietary AUDIOKINETIC Wwise
 Technology released in source code form as part of the game integration package.
@@ -13,7 +15,7 @@ Licensees holding valid licenses to the AUDIOKINETIC Wwise Technology may use
 this file in accordance with the end user license agreement provided with the
 software or, alternatively, in accordance with the terms contained
 in a written agreement between you and Audiokinetic Inc.
-Copyright (c) 2023 Audiokinetic Inc.
+Copyright (c) 2025 Audiokinetic Inc.
 *******************************************************************************/
 
 
@@ -57,22 +59,22 @@ public class AkLogger
 	[AOT.MonoPInvokeCallback(typeof(ErrorLoggerInteropDelegate))]
 	public static void WwiseInternalLogError(string message)
 	{
-		UnityEngine.Debug.LogErrorFormat("Wwise: {0}", message);
+		WwiseLogger.Error(message);
 	}
 
 	public static void Message(string message)
 	{
-		UnityEngine.Debug.LogFormat("WwiseUnity: {0}", message);
+		WwiseLogger.LogFormat(message);
 	}
 
 	public static void Warning(string message)
 	{
-		UnityEngine.Debug.LogWarningFormat("WwiseUnity: {0}", message);
+		WwiseLogger.Warning(message);
 	}
 
 	public static void Error(string message)
 	{
-		UnityEngine.Debug.LogErrorFormat("WwiseUnity: {0}", message);
+		WwiseLogger.Error(message);
 	}
 }
-#endif // #if ! (UNITY_DASHBOARD_WIDGET || UNITY_WEBPLAYER || UNITY_WII || UNITY_WIIU || UNITY_NACL || UNITY_FLASH || UNITY_BLACKBERRY) // Disable under unsupported platforms.
+#endif // #if !(UNITY_QNX) // Disable under unsupported platforms.

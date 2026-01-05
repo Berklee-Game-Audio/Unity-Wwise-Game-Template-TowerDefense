@@ -13,23 +13,28 @@ Licensees holding valid licenses to the AUDIOKINETIC Wwise Technology may use
 this file in accordance with the end user license agreement provided with the
 software or, alternatively, in accordance with the terms contained
 in a written agreement between you and Audiokinetic Inc.
-Copyright (c) 2023 Audiokinetic Inc.
+Copyright (c) 2025 Audiokinetic Inc.
 *******************************************************************************/
 
+using AK.Wwise.Unity.Logging;
+
 [UnityEditor.InitializeOnLoad]
-public class AkWwiseXMLBuilder
+public class AkWwiseXMLBuilder : UnityEditor.AssetPostprocessor
 {
 	private static readonly System.DateTime s_LastParsed = System.DateTime.MinValue;
 
-	static AkWwiseXMLBuilder()
+	static void OnPostprocessAllAssets(string[] importedAssets, string[] deletedAssets, string[] movedAssets, string[] movedFromAssetPaths, bool didDomainReload)
 	{
 		if (UnityEditor.AssetDatabase.IsAssetImportWorkerProcess())
 		{
 			return;
 		}
 
-		AkWwiseSoundbanksInfoXMLFileWatcher.Instance.PopulateXML += Populate;
-		UnityEditor.EditorApplication.playModeStateChanged += PlayModeChanged;
+		AkWwiseSoundbanksInfoXMLFileWatcher.Instance.PopulateXML = Populate;
+		if (didDomainReload)
+		{
+			UnityEditor.EditorApplication.playModeStateChanged += PlayModeChanged;
+		}
 	}
 
 	private static void PlayModeChanged(UnityEditor.PlayModeStateChange mode)
@@ -63,14 +68,14 @@ public class AkWwiseXMLBuilder
 
 				if (!System.IO.Directory.Exists(FullSoundbankPath))
 				{
-					UnityEngine.Debug.Log("WwiseUnity: Could not open SoundbanksInfo.xml, generated SoundBanks path does not exist: " + FullSoundbankPath);
+					WwiseLogger.Log("Could not open SoundbanksInfo.xml, generated SoundBanks path does not exist: " + FullSoundbankPath);
 					return false;
 				}
 
 				var foundFiles = System.IO.Directory.GetFiles(FullSoundbankPath, "SoundbanksInfo.xml", System.IO.SearchOption.AllDirectories);
 				if (foundFiles.Length == 0)
 				{
-					UnityEngine.Debug.Log("WwiseUnity: Could not find SoundbanksInfo.xml in directory: " + FullSoundbankPath);
+					WwiseLogger.Log("Could not find SoundbanksInfo.xml in directory: " + FullSoundbankPath);
 					return false;
 				}
 				filename = foundFiles[0];
@@ -79,7 +84,7 @@ public class AkWwiseXMLBuilder
 			var time = System.IO.File.GetLastWriteTime(filename);
 			if (time <= s_LastParsed)
 			{
-				UnityEngine.Debug.Log("WwiseUnity: Skipping parsing of SoundbanksInfo.xml because it has not changed.");
+				WwiseLogger.Log("Skipping parsing of SoundbanksInfo.xml because it has not changed.");
 				return false;
 			}
 
@@ -101,7 +106,7 @@ public class AkWwiseXMLBuilder
 		}
 		catch (System.Exception e)
 		{
-			UnityEngine.Debug.Log("WwiseUnity: Exception occured while parsing SoundbanksInfo.xml: " + e.ToString());
+			WwiseLogger.Log("Exception occured while parsing SoundbanksInfo.xml: " + e.ToString());
 			return false;
 		}
 	}
@@ -109,7 +114,7 @@ public class AkWwiseXMLBuilder
 	private static bool SerialiseSoundBank(System.Xml.XmlNode node)
 	{
 		var bChanged = false;
-		var includedEvents = node.SelectNodes("IncludedEvents");
+		var includedEvents = node.SelectNodes("Events");
 		for (var i = 0; i < includedEvents.Count; i++)
 		{
 			var events = includedEvents[i].SelectNodes("Event");
@@ -140,7 +145,7 @@ public class AkWwiseXMLBuilder
 			}
 			else
 			{
-				UnityEngine.Debug.Log("WwiseUnity: Could not parse float number " + s);
+				WwiseLogger.Log("Could not parse float number " + s);
 				return 0.0f;
 			}
 		}

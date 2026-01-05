@@ -1,77 +1,13 @@
 {
-    "originalSdkFolder": "/Applications/Audiokinetic/Wwise 2022.1.4.8202/SDK",
+    "originalSdkFolder": "/Applications/Audiokinetic/Wwise2023.1.18.8899/SDK",
     "currentVersion": {
         "nickname": "",
-        "build": 2751,
+        "build": 3800,
         "major": 1,
-        "minor": 4,
-        "year": 2022
+        "minor": 18,
+        "year": 2023
     },
     "installedBundleGroups": [
-        {
-            "id": "Packages",
-            "valueId": "Unity"
-        },
-        {
-            "id": "Packages",
-            "valueId": "Extensions"
-        },
-        {
-            "id": "DeploymentPlatforms",
-            "valueId": "Mac"
-        },
-        {
-            "id": "DeploymentPlatforms",
-            "valueId": "Windows"
-        },
-        {
-            "id": "Packages",
-            "valueId": "Unity"
-        },
-        {
-            "id": "Packages",
-            "valueId": "Extensions"
-        },
-        {
-            "id": "DeploymentPlatforms",
-            "valueId": "Mac"
-        },
-        {
-            "id": "DeploymentPlatforms",
-            "valueId": "Windows"
-        },
-        {
-            "id": "Packages",
-            "valueId": "Unity"
-        },
-        {
-            "id": "Packages",
-            "valueId": "Extensions"
-        },
-        {
-            "id": "DeploymentPlatforms",
-            "valueId": "Mac"
-        },
-        {
-            "id": "DeploymentPlatforms",
-            "valueId": "Windows"
-        },
-        {
-            "id": "Packages",
-            "valueId": "Unity"
-        },
-        {
-            "id": "Packages",
-            "valueId": "Extensions"
-        },
-        {
-            "id": "DeploymentPlatforms",
-            "valueId": "Mac"
-        },
-        {
-            "id": "DeploymentPlatforms",
-            "valueId": "Windows"
-        },
         {
             "id": "Packages",
             "valueId": "Unity"

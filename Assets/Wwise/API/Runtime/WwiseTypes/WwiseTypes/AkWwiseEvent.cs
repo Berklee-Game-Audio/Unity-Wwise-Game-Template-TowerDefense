@@ -12,14 +12,15 @@ Licensees holding valid licenses to the AUDIOKINETIC Wwise Technology may use
 this file in accordance with the end user license agreement provided with the
 software or, alternatively, in accordance with the terms contained
 in a written agreement between you and Audiokinetic Inc.
-Copyright (c) 2023 Audiokinetic Inc.
+Copyright (c) 2025 Audiokinetic Inc.
 *******************************************************************************/
 
-#if !(UNITY_DASHBOARD_WIDGET || UNITY_WEBPLAYER || UNITY_WII || UNITY_WIIU || UNITY_NACL || UNITY_FLASH || UNITY_BLACKBERRY) // Disable under unsupported platforms.
+#if !(UNITY_QNX) // Disable under unsupported platforms.
 
 #if AK_WWISE_ADDRESSABLES && UNITY_ADDRESSABLES
 using AK.Wwise.Unity.WwiseAddressables;
 #endif
+using AK.Wwise.Unity.Logging;
 
 namespace AK.Wwise
 {
@@ -47,7 +48,7 @@ namespace AK.Wwise
 #if UNITY_EDITOR
 			if (playingId == AkSoundEngine.AK_INVALID_PLAYING_ID && AkSoundEngine.IsInitialized())
 			{
-				UnityEngine.Debug.LogError("WwiseUnity: Could not post event (name: " + Name + ", ID: " + Id +
+				WwiseLogger.Error("WwiseUnity: Could not post event (name: " + Name + ", ID: " + Id +
 				                           "). Please make sure to load or rebuild the appropriate SoundBank.");
 			}
 #endif
@@ -236,4 +237,4 @@ namespace AK.Wwise
 		}
 	}
 }
-#endif // #if ! (UNITY_DASHBOARD_WIDGET || UNITY_WEBPLAYER || UNITY_WII || UNITY_WIIU || UNITY_NACL || UNITY_FLASH || UNITY_BLACKBERRY) // Disable under unsupported platforms.
+#endif // #if !(UNITY_QNX) // Disable under unsupported platforms.

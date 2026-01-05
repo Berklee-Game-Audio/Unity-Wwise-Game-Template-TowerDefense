@@ -13,11 +13,12 @@ Licensees holding valid licenses to the AUDIOKINETIC Wwise Technology may use
 this file in accordance with the end user license agreement provided with the
 software or, alternatively, in accordance with the terms contained
 in a written agreement between you and Audiokinetic Inc.
-Copyright (c) 2023 Audiokinetic Inc.
+Copyright (c) 2025 Audiokinetic Inc.
 *******************************************************************************/
 using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEditor;
+using AK.Wwise.Unity.Logging;
 
 public static class AkWwiseProjectInfo
 {
@@ -87,7 +88,7 @@ public static class AkWwiseProjectInfo
 					
 					if (dataExists)
 					{
-						UnityEngine.Debug.LogWarning("WwiseUnity: Unable to load asset at <" + dataAbsolutePath + ">.");
+						WwiseLogger.Warning("Unable to load asset at <" + dataAbsolutePath + ">.");
 					}
 					else
 					{
@@ -101,7 +102,7 @@ public static class AkWwiseProjectInfo
 			}
 			catch (System.Exception e)
 			{
-				UnityEngine.Debug.LogError("WwiseUnity: Unable to load Wwise Data: " + e);
+				WwiseLogger.Error("Unable to load Wwise Data: " + e);
 			}
 		}
 
@@ -118,13 +119,13 @@ public static class AkWwiseProjectInfo
 			//This happens on editor open if the asset is deleted while Unity is closed
 			if (!UnityEditor.AssetDatabase.Contains(ProjectData))
 			{
-				Debug.Log("WwiseUnity : Created new AkWwiseProjectData asset");
+				WwiseLogger.Log("Created new AkWwiseProjectData asset");
 				UnityEditor.AssetDatabase.CreateAsset(ProjectData, s_dataAssetPath);
 			}
 		}
 		else
 		{
-			Debug.Log("WwiseUnity : Can't create AkWwiseProjectData asset because it is null");
+			WwiseLogger.Log("Can't create AkWwiseProjectData asset because it is null");
 		}
 	}
 

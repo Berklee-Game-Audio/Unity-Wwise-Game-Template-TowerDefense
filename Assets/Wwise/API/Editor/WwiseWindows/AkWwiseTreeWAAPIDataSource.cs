@@ -13,7 +13,7 @@ Licensees holding valid licenses to the AUDIOKINETIC Wwise Technology may use
 this file in accordance with the end user license agreement provided with the
 software or, alternatively, in accordance with the terms contained
 in a written agreement between you and Audiokinetic Inc.
-Copyright (c) 2023 Audiokinetic Inc.
+Copyright (c) 2025 Audiokinetic Inc.
 *******************************************************************************/
 
 using System.Linq;
@@ -21,6 +21,7 @@ using System.Collections.Generic;
 using System.Collections.Concurrent;
 using System.Collections.ObjectModel;
 using UnityEditor.IMGUI.Controls;
+using AK.Wwise.Unity.Logging;
 
 /// <summary>
 /// This class communicates with Wwise Authoring via AkWaapiUtilities to keep track of the Wwise object hierarchy in the project.
@@ -185,8 +186,8 @@ public class AkWwiseTreeWAAPIDataSource : AkWwiseTreeDataSource
 		}
 		catch (System.Exception e)
 		{
-			UnityEngine.Debug.LogError("Search died");
-			UnityEngine.Debug.LogError(e.Message);
+			WwiseLogger.Error("Search died");
+			WwiseLogger.Error(e.Message);
 		}
 	}
 
@@ -378,6 +379,7 @@ public class AkWwiseTreeWAAPIDataSource : AkWwiseTreeDataSource
 		{ WwiseObjectType.Switch, @"\Switches"},
 		{ WwiseObjectType.SwitchGroup, @"\Switches"},
 		{ WwiseObjectType.AcousticTexture, @"\Virtual Acoustics" },
+		{ WwiseObjectType.Trigger, @"\Triggers" },
 		{ WwiseObjectType.GameParameter, @"\Game Parameters" },
 	 });
 

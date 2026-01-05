@@ -12,15 +12,48 @@ Licensees holding valid licenses to the AUDIOKINETIC Wwise Technology may use
 this file in accordance with the end user license agreement provided with the
 software or, alternatively, in accordance with the terms contained
 in a written agreement between you and Audiokinetic Inc.
-Copyright (c) 2023 Audiokinetic Inc.
+Copyright (c) 2025 Audiokinetic Inc.
 *******************************************************************************/
 
 ﻿#if (UNITY_STANDALONE_WIN && !UNITY_EDITOR) || UNITY_EDITOR_WIN
+
+#if UNITY_STANDALONE_WIN
+using AK.Wwise.Unity.Logging;
+#endif
+
 public partial class AkCommonUserSettings
 {
 	partial void SetSampleRate(AkPlatformInitSettings settings)
 	{
 		settings.uSampleRate = m_SampleRate;
+	}
+	
+	protected partial string GetPluginPath()
+	{
+#if UNITY_EDITOR_WIN
+		return System.IO.Path.GetFullPath(AkUtilities.GetPathInPackage(@"Runtime\Plugins\Windows\x86_64\DSP"));
+#elif UNITY_STANDALONE_WIN
+		string potentialPath = System.IO.Path.Combine(UnityEngine.Application.dataPath, "Plugins" + System.IO.Path.DirectorySeparatorChar);
+		string architectureName = "x86";
+#if UNITY_64
+		architectureName += "_64";
+#endif
+		if(System.IO.File.Exists(System.IO.Path.Combine(potentialPath, "AkSoundEngine.dll")))
+		{
+			return potentialPath;
+		}
+		else if(System.IO.File.Exists(System.IO.Path.Combine(potentialPath, architectureName, "AkSoundEngine.dll")))
+		{
+			return System.IO.Path.Combine(potentialPath, architectureName);
+		}
+		else
+		{
+			WwiseLogger.Log("Cannot find Wwise plugin path");
+			return null;
+		}
+#else
+		return System.IO.Path.Combine(UnityEngine.Application.dataPath, "Plugins" + System.IO.Path.DirectorySeparatorChar);		
+#endif
 	}
 }
 #endif

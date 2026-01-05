@@ -46,14 +46,14 @@ namespace ActionGameFramework.Projectiles
 
 			if (m_HomingTarget == null)
 			{
-				m_Rigidbody.rotation = Quaternion.LookRotation(m_Rigidbody.velocity);
+				m_Rigidbody.rotation = Quaternion.LookRotation(m_Rigidbody.linearVelocity);
 				return;
 			}
 
 			Quaternion aimDirection = Quaternion.LookRotation(GetHeading());
 
 			m_Rigidbody.rotation = aimDirection;
-			m_Rigidbody.velocity = transform.forward * m_Rigidbody.velocity.magnitude;
+			m_Rigidbody.linearVelocity = transform.forward * m_Rigidbody.linearVelocity.magnitude;
 
 			base.Update();
 		}
@@ -68,7 +68,7 @@ namespace ActionGameFramework.Projectiles
 			if (leadTarget)
 			{
 				heading = Ballistics.CalculateLinearLeadingTargetPoint(transform.position, m_HomingTarget.position,
-				                                                       m_TargetVelocity, m_Rigidbody.velocity.magnitude,
+				                                                       m_TargetVelocity, m_Rigidbody.linearVelocity.magnitude,
 				                                                       acceleration,
 				                                                       leadingPrecision) - transform.position;
 			}

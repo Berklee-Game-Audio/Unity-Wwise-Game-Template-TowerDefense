@@ -1,4 +1,4 @@
-#if ! (UNITY_DASHBOARD_WIDGET || UNITY_WEBPLAYER || UNITY_WII || UNITY_WIIU || UNITY_NACL || UNITY_FLASH || UNITY_BLACKBERRY) // Disable under unsupported platforms.
+#if !(UNITY_QNX) // Disable under unsupported platforms.
 /*******************************************************************************
 The content of this file includes portions of the proprietary AUDIOKINETIC Wwise
 Technology released in source code form as part of the game integration package.
@@ -13,8 +13,10 @@ Licensees holding valid licenses to the AUDIOKINETIC Wwise Technology may use
 this file in accordance with the end user license agreement provided with the
 software or, alternatively, in accordance with the terms contained
 in a written agreement between you and Audiokinetic Inc.
-Copyright (c) 2023 Audiokinetic Inc.
+Copyright (c) 2025 Audiokinetic Inc.
 *******************************************************************************/
+
+using AK.Wwise.Unity.Logging;
 
 /// <summary>
 ///     Event callback information.
@@ -33,6 +35,7 @@ public class AkEventCallbackMsg
 }
 
 [UnityEngine.AddComponentMenu("Wwise/AkEvent")]
+[UnityEngine.ExecuteInEditMode]
 [UnityEngine.RequireComponent(typeof(AkGameObj))]
 /// @brief Helper class that knows a Wwise Event and when to trigger it in Unity. As of 2017.2.0, the AkEvent inspector has buttons for play/stop, play multiple, stop multiple, and stop all.
 /// Play/Stop will play or stop the event such that it can be previewed both in edit mode and play mode. When multiple objects are selected, Play Multiple and Stop Multiple will play or stop the associated AkEvent for each object.
@@ -70,8 +73,10 @@ public class AkEvent : AkDragDropTriggerHandler
 				GameObject.SendMessage(FunctionName, eventCallbackMsg);
 		}
 	}
-
+	
+	private UnityEngine.GameObject otherGameObject;
 	public bool useCallbacks = false;
+	public bool stopSoundOnDestroy = true;
 	public System.Collections.Generic.List<CallbackData> Callbacks = new System.Collections.Generic.List<CallbackData>();
 
 	public uint playingId = AkSoundEngine.AK_INVALID_PLAYING_ID;
@@ -79,10 +84,24 @@ public class AkEvent : AkDragDropTriggerHandler
 	/// Game object onto which the Event will be posted.  By default, when empty, it is posted on the same object on which the component was added.
 	public UnityEngine.GameObject soundEmitterObject;
 
-	/// Duration of the fade.  See AK::SoundEngine::ExecuteEventOnAction()
+	/// Duration of the fade, in milliseconds. See <a href="https://www.audiokinetic.com/library/edge/?source=SDK&id=namespace_a_k_1_1_sound_engine_ac55e3d6ac464b0579a8487c88a755d8c.html" target="_blank">AK::SoundEngine::ExecuteEventOnAction()</a>.
 	public float transitionDuration = 0.0f;
 
 	private AkEventCallbackMsg EventCallbackMsg = null;
+	
+	protected override void Awake()
+	{
+		base.Awake();
+#if UNITY_EDITOR
+		var reference = AkWwiseTypes.DragAndDropObjectReference;
+		if (reference)
+		{
+			UnityEngine.GUIUtility.hotControl = 0;
+			data.ObjectReference = reference;
+			AkWwiseTypes.DragAndDropObjectReference = null;
+		}
+#endif
+	}
 
 	protected override void Start()
 	{
@@ -92,7 +111,9 @@ public class AkEvent : AkDragDropTriggerHandler
 #endif
 
 		if (useCallbacks)
+		{
 			EventCallbackMsg = new AkEventCallbackMsg { sender = gameObject };
+		}
 
 		soundEmitterObject = gameObject;
 
@@ -105,13 +126,19 @@ public class AkEvent : AkDragDropTriggerHandler
 		EventCallbackMsg.info = in_info;
 
 		for (var i = 0; i < Callbacks.Count; ++i)
+		{
 			Callbacks[i].CallFunction(EventCallbackMsg);
+		}
 	}
 
 	public override void HandleEvent(UnityEngine.GameObject in_gameObject)
 	{
 		var gameObj = useOtherObject && in_gameObject != null ? in_gameObject : gameObject;
 		soundEmitterObject = gameObj;
+		if (useOtherObject)
+		{
+			otherGameObject = in_gameObject;
+		}
 
 		if (enableActionOnEvent)
 		{
@@ -124,8 +151,10 @@ public class AkEvent : AkDragDropTriggerHandler
 			uint flags = 0;
 			for (var i = 0; i < Callbacks.Count; ++i)
 			{
-				if (Callbacks[i].GameObject && !string.IsNullOrEmpty(Callbacks[i].FunctionName))
+				if (Callbacks[i].GameObject)
+				{
 					flags |= Callbacks[i].Flags.value;
+				}
 			}
 
 			if (flags != 0)
@@ -136,6 +165,16 @@ public class AkEvent : AkDragDropTriggerHandler
 		}
 
 		playingId = data.Post(gameObj);
+	}
+
+	protected new void OnDestroy()
+	{
+		var akGameObj = gameObject.GetComponent<AkGameObj>();
+		if (stopSoundOnDestroy && akGameObj != null && akGameObj.GameObjIsRegistered())
+		{
+			var gameObj = useOtherObject && otherGameObject != null ? otherGameObject : gameObject;
+			data.ExecuteAction(gameObj, AkActionOnEventType.AkActionOnEventType_Stop, (int)transitionDuration * 1000, curveInterpolation);
+		}
 	}
 
 	public void Stop(int _transitionDuration)
@@ -206,7 +245,7 @@ public class AkEvent : AkDragDropTriggerHandler
 		var count = oldCallbackData.callbackFlags.Count;
 		if (count != oldCallbackData.callbackFunc.Count || count != oldCallbackData.callbackGameObj.Count)
 		{
-			UnityEngine.Debug.LogWarning("WwiseUnity: Inconsistent callback data!");
+			WwiseLogger.Warning("Inconsistent callback data!");
 			return hasMigrated;
 		}
 
@@ -220,7 +259,7 @@ public class AkEvent : AkDragDropTriggerHandler
 			data.FindPropertyRelative("GameObject").objectReferenceValue = oldCallbackData.callbackGameObj[i];
 			data.FindPropertyRelative("FunctionName").stringValue = oldCallbackData.callbackFunc[i];
 			data.FindPropertyRelative("Flags.value").intValue = oldCallbackData.callbackFlags[i];
-			UnityEngine.Debug.Log("WwiseUnity: Migrated Callback for function \"" + oldCallbackData.callbackFunc[i] + "\" on <" + oldCallbackData.callbackGameObj[i] + "> with flags <" + (AkCallbackType)oldCallbackData.callbackFlags[i] + ">.");
+			WwiseLogger.Log("Migrated Callback for function \"" + oldCallbackData.callbackFunc[i] + "\" on <" + oldCallbackData.callbackGameObj[i] + "> with flags <" + (AkCallbackType)oldCallbackData.callbackFlags[i] + ">.");
 		}
 
 		return true;
@@ -228,4 +267,4 @@ public class AkEvent : AkDragDropTriggerHandler
 #endif
 	#endregion
 }
-#endif // #if ! (UNITY_DASHBOARD_WIDGET || UNITY_WEBPLAYER || UNITY_WII || UNITY_WIIU || UNITY_NACL || UNITY_FLASH || UNITY_BLACKBERRY) // Disable under unsupported platforms.
+#endif // #if !(UNITY_QNX) // Disable under unsupported platforms.

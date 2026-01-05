@@ -1,6 +1,4 @@
 #if UNITY_EDITOR
-
-using System.Collections.Generic;
 /*******************************************************************************
 The content of this file includes portions of the proprietary AUDIOKINETIC Wwise
 Technology released in source code form as part of the game integration package.
@@ -15,12 +13,16 @@ Licensees holding valid licenses to the AUDIOKINETIC Wwise Technology may use
 this file in accordance with the end user license agreement provided with the
 software or, alternatively, in accordance with the terms contained
 in a written agreement between you and Audiokinetic Inc.
-Copyright (c) 2023 Audiokinetic Inc.
+Copyright (c) 2025 Audiokinetic Inc.
 *******************************************************************************/
+
+using System.Collections.Generic;
+using AK.Wwise.Unity.Logging;
+
 
 #pragma warning disable 0168
 [UnityEditor.InitializeOnLoad]
-public class AkWwiseWWUBuilder
+public class AkWwiseWWUBuilder : UnityEditor.AssetPostprocessor
 {
 	private const string s_progTitle = "Populating Wwise Picker";
 	private const int s_SecondsBetweenChecks = 3;
@@ -35,16 +37,22 @@ public class AkWwiseWWUBuilder
 	private int m_currentWwuCnt;
 	private int m_totWwuCnt = 1;
 
-	static AkWwiseWWUBuilder()
+	static void OnPostprocessAllAssets(string[] importedAssets, string[] deletedAssets, string[] movedAssets, string[] movedFromAssetPaths, bool didDomainReload)
 	{
 		if (UnityEditor.AssetDatabase.IsAssetImportWorkerProcess())
 		{
 			return;
 		}
 
-		// This method gets called from InitializeOnLoad and uses the AkWwiseProjectInfo later on so it needs to check if it can run right now
-		InitializeWwiseProjectData();
-
+		if (didDomainReload)
+		{
+			// This method gets called from InitializeOnLoad and uses the AkWwiseProjectInfo later on so it needs to check if it can run right now
+			InitializeWwiseProjectData();
+		}
+	}
+	
+	static AkWwiseWWUBuilder()
+	{
 		UnityEditor.EditorApplication.playModeStateChanged += (UnityEditor.PlayModeStateChange playMode) =>
 		{
 			if (playMode == UnityEditor.PlayModeStateChange.EnteredEditMode)
@@ -100,7 +108,7 @@ public class AkWwiseWWUBuilder
 		{
 			if (string.IsNullOrEmpty(AkWwiseEditorSettings.Instance.WwiseProjectPath))
 			{
-				UnityEngine.Debug.LogError("WwiseUnity: Wwise project needed to populate from Work Units. Aborting.");
+				WwiseLogger.Error("Wwise project needed to populate from Work Units. Aborting.");
 				return;
 			}
 
@@ -118,7 +126,7 @@ public class AkWwiseWWUBuilder
 		}
 		catch (System.Exception exception)
 		{
-			UnityEngine.Debug.LogError("Exception occured while initializing project data : \n" + exception.Message);
+			WwiseLogger.Error("Exception occured while initializing project data : \n" + exception.Message);
 		}
 	}
 
@@ -128,7 +136,7 @@ public class AkWwiseWWUBuilder
 		{
 			if (string.IsNullOrEmpty(AkWwiseEditorSettings.Instance.WwiseProjectPath))
 			{
-				UnityEngine.Debug.LogError("WwiseUnity: Wwise project needed to populate from Work Units. Aborting.");
+				WwiseLogger.Error("Wwise project needed to populate from Work Units. Aborting.");
 				return false;
 			}
 
@@ -151,7 +159,7 @@ public class AkWwiseWWUBuilder
 		}
 		catch (System.Exception e)
 		{
-			UnityEngine.Debug.LogError(e.ToString());
+			WwiseLogger.Error(e.ToString());
 			UnityEditor.EditorUtility.ClearProgressBar();
 			return true;
 		}
@@ -159,7 +167,7 @@ public class AkWwiseWWUBuilder
 
 	public static void UpdateWwiseObjectReferenceData()
 	{
-		UnityEngine.Debug.Log("WwiseUnity: Updating Wwise Object References");
+		WwiseLogger.Log("Updating Wwise Object References");
 
 		WwiseObjectReference.ClearWwiseObjectDataMap();
 		UpdateWwiseObjectReference(WwiseObjectType.AuxBus, AkWwiseProjectInfo.GetData().AuxBusWwu);
@@ -219,7 +227,7 @@ public class AkWwiseWWUBuilder
 							}
 							catch
 							{
-								UnityEngine.Debug.LogWarning("WwiseUnity: Error reading ID <" + ID + "> from work unit <" + in_workUnit.FullName + ">.");
+								WwiseLogger.Warning("Error reading ID <" + ID + "> from work unit <" + in_workUnit.FullName + ">.");
 								throw;
 							}
 						}
@@ -306,7 +314,7 @@ public class AkWwiseWWUBuilder
 		{
 			//We have failed to parse a workunit, we can't trust the _WwiseObjectsToRemove will be properly updated
 			_WwiseObjectsToRemove.Clear();
-			UnityEngine.Debug.LogError(e.ToString());
+			WwiseLogger.Error(e.ToString());
 			wwuIndex = -1;
 		}
 
@@ -522,7 +530,7 @@ public class AkWwiseWWUBuilder
 			}
 			catch (System.Exception exception)
 			{
-				UnityEngine.Debug.Log(exception);
+				WwiseLogger.Error(exception.Message);
 				_WwiseObjectsToRemove.Clear();
 				_WwiseObjectsToKeep.Clear();
 				return false;
@@ -823,7 +831,7 @@ public class AkWwiseWWUBuilder
 				break;
 
 			default:
-				UnityEngine.Debug.LogError("WwiseUnity: Unknown asset type in WWU parser");
+				WwiseLogger.Error("Unknown asset type in WWU parser");
 				break;
 		}
 	}
@@ -832,7 +840,7 @@ public class AkWwiseWWUBuilder
 	{
 		if (!_ParsedWwiseObjects.Add(valueToAdd.Guid))
 		{
-			UnityEngine.Debug.LogWarning("While parsing " + in_wwuPath + ", an already parsed Wwise Object with name: " + valueToAdd.Name + " GUID: " + valueToAdd.Guid + " was found. Are all work units up to date?");
+			WwiseLogger.Warning("While parsing " + in_wwuPath + ", an already parsed Wwise Object with name: " + valueToAdd.Name + " GUID: " + valueToAdd.Guid + " was found. Are all work units up to date?");
 			return;
 		}
 
@@ -897,7 +905,7 @@ public class AkWwiseWWUBuilder
 		}
 		catch (System.Exception e)
 		{
-			UnityEngine.Debug.Log("WwiseUnity: A changed Work unit wasn't found. It must have been deleted " + in_fullPath);
+			WwiseLogger.Log("A changed Work unit wasn't found. It must have been deleted " + in_fullPath);
 			return false;
 		}
 
@@ -911,7 +919,7 @@ public class AkWwiseWWUBuilder
 			}
 			catch
 			{
-				UnityEngine.Debug.LogWarning("WwiseUnity: \"OwnerID\" in <" + in_fullPath + "> cannot be converted to a GUID (" + ParentID + ")");
+				WwiseLogger.Warning("\"OwnerID\" in <" + in_fullPath + "> cannot be converted to a GUID (" + ParentID + ")");
 				return false;
 			}
 

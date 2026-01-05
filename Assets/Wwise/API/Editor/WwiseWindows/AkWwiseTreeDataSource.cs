@@ -13,11 +13,12 @@ Licensees holding valid licenses to the AUDIOKINETIC Wwise Technology may use
 this file in accordance with the end user license agreement provided with the
 software or, alternatively, in accordance with the terms contained
 in a written agreement between you and Audiokinetic Inc.
-Copyright (c) 2023 Audiokinetic Inc.
+Copyright (c) 2025 Audiokinetic Inc.
 *******************************************************************************/
 
 using System.Linq;
 using System.Collections.Generic;
+using AK.Wwise.Unity.Logging;
 using UnityEditor.IMGUI.Controls;
 
 public abstract class AkWwiseTreeDataSource
@@ -44,7 +45,7 @@ public abstract class AkWwiseTreeDataSource
 			}
 			catch (System.ArgumentException e)
 			{
-				UnityEngine.Debug.LogError(e.Message);
+				WwiseLogger.Error(e.Message);
 			}
 		}
 	}
@@ -61,20 +62,6 @@ public abstract class AkWwiseTreeDataSource
 	public AkWwiseTreeView TreeView { protected get; set; }
 
 	public event System.Action modelChanged;
-
-	static readonly List<TreeViewItem> collapsedChildren = new List<TreeViewItem>();
-	public static List<TreeViewItem> CreateCollapsedChild()
-	{
-		// To mark a collapsed parent we use a list with one element that is null.
-		// The null element in the children list ensures we show the collapse arrow.
-		// Reuse read-only list to prevent allocations.
-		if (collapsedChildren.Count != 1 || collapsedChildren[0] != null)
-		{
-			collapsedChildren.Clear();
-			collapsedChildren.Add(null);
-		}
-		return collapsedChildren;
-	}
 
 	public AkWwiseTreeViewItem CreateProjectRootItem()
 	{

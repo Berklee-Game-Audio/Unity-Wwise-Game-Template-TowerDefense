@@ -13,7 +13,7 @@ Licensees holding valid licenses to the AUDIOKINETIC Wwise Technology may use
 this file in accordance with the end user license agreement provided with the
 software or, alternatively, in accordance with the terms contained
 in a written agreement between you and Audiokinetic Inc.
-Copyright (c) 2023 Audiokinetic Inc.
+Copyright (c) 2025 Audiokinetic Inc.
 *******************************************************************************/
 
 using System;
@@ -21,6 +21,7 @@ using System.Collections;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using AK.Wwise.Unity.Logging;
 
 /// <summary>
 /// This class wraps the client that communicates with the Wwise Authoring application via WAAPI.
@@ -212,7 +213,7 @@ public class AkWaapiUtilities
 		//Handle socket issues caused by closing Wwise Authoring.
 		catch (System.Net.WebSockets.WebSocketException)
 		{
-			UnityEngine.Debug.Log("Wwise Unity : WAAPI disconnected because Wwise Authoring was closed");
+			WwiseLogger.Log("Wwise Unity : WAAPI disconnected because Wwise Authoring was closed");
 			Disconnecting?.Invoke(false);
 			waapiCommandQueue = new ConcurrentQueue<WaapiCommand>();
 			projectConnected = false;
@@ -278,7 +279,7 @@ public class AkWaapiUtilities
 						case ak.wwise.error.invalid_json:
 						case ak.wwise.error.invalid_arguments:
 						default:
-							UnityEngine.Debug.Log(ErrorMessage);
+							WwiseLogger.Log(ErrorMessage);
 							break;
 					}
 					break;
@@ -525,11 +526,11 @@ public class AkWaapiUtilities
 	}
 
 	/// <summary>
-	/// Use this function to enqueue a command with no expected return object.
+	/// Use this function to queue a command with no expected return object.
 	/// </summary>
-	/// <param name="uri">The URI of the waapi command</param>
-	/// <param name="args">The command-specific arguments</param>
-	/// <param name="options">The command-specific options</param>
+	/// <param name="uri">The URI of the WAAPI command</param>
+	/// <param name="args">Array of command-specific arguments, or <tt>{}</tt> if there are none.</param>
+	/// <param name="options">Array of command-specific options, or <tt>{}</tt> if there are none.</param>
 	public static void QueueCommand(string uri, string args, string options)
 	{
 		waapiCommandQueue.Enqueue(new WaapiCommand(
@@ -594,12 +595,15 @@ public class AkWaapiUtilities
 	public static void GetWwiseObjects<T>(List<System.Guid> guids, ReturnOptions options, GetResultListDelegate<T> callback)
 	{
 		string guidString = "";
-		foreach (var guid in guids)
+		for (int i = 0; i < guids.Count; i++)
 		{
-			guidString += $"{guid:B} ,";
-		}
-
-		var args = new WaqlArgs($"from object \"{guidString}\" ");
+			guidString += $"{guids[i]:B}";
+			if (i < guids.Count - 1)
+			{
+				guidString += ",";
+			}
+        }
+		var args = new WaqlArgs("from object \"" + guidString + "\" ");
 		QueueCommandWithReturnWwiseObjects(args, options, callback);
 	}
 
